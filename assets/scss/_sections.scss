@@ -22,38 +22,50 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
+  text-align: center;
   padding-bottom: 60px;
   position: relative;
 
   h2 {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0;
-    line-height: 1px;
-    margin: 0;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 32px;
+    font-weight: 700;
     position: relative;
 
-    &::after {
-      content: "";
-      width: 120px;
-      height: 1px;
-      display: inline-block;
+    &:before,
+    &:after {
+      content: '';
+      width: 50px;
+      height: 2px;
       background: var(--accent-color);
-      margin: 4px 10px;
+      display: inline-block;
+    }
+
+    &:before {
+      margin: 0 15px 10px 0;
+    }
+
+    &:after {
+      margin: 0 0 10px 15px;
     }
   }
 
-  div {
-    color: var(--heading-color);
-    margin: 0;
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: var(--heading-font);
+  p {
+    margin-bottom: 0;
+  }
+
+  @media(max-width: 768px) {
+    h2 {
+      font-size: 20px;
+
+      &:before,
+      &:after {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: var(--accent-color);
+        display: inline-block;
+      }
+    }
   }
 }
 
@@ -64,18 +76,16 @@ section,
 @import './sections/_call-to-action.scss';
 @import './sections/_contact.scss';
 @import './sections/_portfolio-details.scss';
+@import './sections/_hero-4.scss';
 @import './sections/_service-details.scss';
-@import './sections/_starter-section.scss';
+@import './sections/_call-to-action-3.scss';
 @import './sections/_blog-posts.scss';
 @import './sections/_blog-pagination.scss';
 @import './sections/_post-details.scss';
-@import './sections/_hero-2.scss';
-@import './sections/_about-2.scss';
-@import './sections/_post-slider.scss';
-@import './sections/_contact-2.scss';
 @import './sections/_features.scss';
 @import './sections/_contact-4.scss';
+@import './sections/_hero-2.scss';
+@import './sections/_about-3.scss';
 @import './sections/_hero-3.scss';
-@import './sections/_about-me.scss';
-@import './sections/_post-slider-2.scss';
-@import './sections/_contact-3.scss';
+@import './sections/_testimonials-2.scss';
+@import './sections/_call-to-action-2.scss';
