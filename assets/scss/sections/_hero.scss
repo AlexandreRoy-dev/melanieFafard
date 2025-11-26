@@ -1,0 +1,85 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  padding-top: 120px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+
+  &:before {
+    content: '';
+    background: color-mix(in srgb, var(--background-color), transparent 30%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 56px;
+  }
+
+  p {
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .btn-scroll {
+    transition: 0.4s;
+    color: color-mix(in srgb, var(--default-color), transparent 60%);
+    display: block;
+    margin-top: 30px;
+    animation: btn-up-down 1s ease-in-out infinite alternate-reverse both;
+
+    i {
+      font-size: 48px;
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+@keyframes btn-up-down {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}

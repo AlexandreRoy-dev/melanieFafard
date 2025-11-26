@@ -1,0 +1,132 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Contact 2 Section
+--------------------------------------------------------------*/
+.contact-2 {
+  .info-item {
+    background: var(--surface-color);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    transition: 0.3s;
+
+    &:hover {
+      border-color: var(--accent-color);
+      box-shadow: 0 5px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+
+    .icon-wrapper {
+      width: 50px;
+      height: 50px;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      flex-shrink: 0;
+      transition: 0.3s;
+
+      i {
+        color: var(--accent-color);
+        font-size: 24px;
+        transition: 0.3s;
+      }
+    }
+
+    &:hover .icon-wrapper {
+      background: var(--accent-color);
+
+      i {
+        color: var(--contrast-color);
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: var(--heading-color);
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--default-color);
+    }
+  }
+
+  .php-email-form {
+    background: var(--surface-color);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .form-control {
+      color: var(--default-color);
+      background-color: var(--surface-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+      padding: 12px 15px;
+      font-size: 14px;
+      border-radius: 5px;
+      transition: 0.3s;
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 80%);
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 70%);
+      }
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+    }
+
+    button[type="submit"] {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border: none;
+      padding: 12px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: color-mix(in srgb, var(--accent-color), transparent 20%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .info-item {
+      padding: 20px;
+
+      .icon-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+
+        i {
+          font-size: 20px;
+        }
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    .php-email-form {
+      padding: 30px 20px;
+    }
+  }
+}

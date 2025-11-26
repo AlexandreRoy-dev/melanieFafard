@@ -1,0 +1,301 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services {
+  background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/abstract-bg-3.webp') center/cover;
+    opacity: 0.03;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .service-card {
+    background: var(--surface-color);
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
+    box-shadow: 0 10px 40px color-mix(in srgb, var(--heading-color), transparent 90%);
+
+    &:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 60px color-mix(in srgb, var(--accent-color), transparent 80%);
+
+      .service-bg {
+        opacity: 1;
+        transform: scale(1.2) rotate(15deg);
+      }
+
+      .service-icon {
+        transform: scale(1.1) rotate(5deg);
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ff6b35 30%));
+      }
+
+      .btn-cta {
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ff6b35 30%));
+        transform: translateX(5px);
+      }
+    }
+
+    &.featured {
+      background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--accent-color), transparent 95%));
+      border: 2px solid var(--accent-color);
+      transform: scale(1.02);
+
+      .service-icon {
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ff6b35 20%));
+        width: 80px;
+        height: 80px;
+
+        i {
+          font-size: 40px;
+        }
+      }
+
+      .service-content h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .service-meta {
+        margin: 25px 0;
+      }
+    }
+
+    &.compact {
+      padding: 30px 25px;
+
+      .service-icon {
+        width: 60px;
+        height: 60px;
+
+        i {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .service-bg {
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 85%), color-mix(in srgb, var(--accent-color), transparent 95%));
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+
+    .service-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 10%), var(--accent-color));
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+
+      i {
+        font-size: 32px;
+        color: var(--contrast-color);
+        transition: all 0.3s ease;
+      }
+    }
+
+    .service-content {
+      position: relative;
+      z-index: 2;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.3;
+
+        a {
+          color: var(--heading-color);
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: var(--accent-color);
+          }
+        }
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        line-height: 1.6;
+        margin-bottom: 25px;
+        font-size: 15px;
+      }
+    }
+
+    .service-meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0 25px;
+      flex-wrap: wrap;
+
+      .badge {
+        background: linear-gradient(135deg, #ff6b35, #f7931e);
+        color: var(--contrast-color);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        &.popular {
+          background: linear-gradient(135deg, #28a745, #20c997);
+        }
+      }
+
+      .price {
+        color: var(--accent-color);
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 10%), var(--accent-color));
+      color: var(--contrast-color);
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px color-mix(in srgb, var(--accent-color), transparent 70%);
+
+      &:hover {
+        color: var(--contrast-color);
+        box-shadow: 0 8px 30px color-mix(in srgb, var(--accent-color), transparent 60%);
+      }
+
+      i {
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .stats-highlight {
+    background: var(--accent-color);
+    border-radius: 25px;
+    padding: 50px 30px;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, transparent, color-mix(in srgb, var(--accent-color), transparent 90%));
+      z-index: 1;
+    }
+
+    .row {
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: var(--contrast-color);
+
+      .stat-number {
+        font-size: 48px;
+        font-weight: 900;
+        color: var(--contrast-color);
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, var(--contrast-color), color-mix(in srgb, var(--accent-color), var(--contrast-color) 70%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width: 768px) {
+          font-size: 36px;
+        }
+      }
+
+      .stat-label {
+        font-size: 16px;
+        font-weight: 500;
+        opacity: 0.9;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-card {
+      padding: 30px 25px;
+      margin-bottom: 30px;
+
+      &.featured {
+        transform: none;
+        margin-bottom: 30px;
+
+        .service-content h3 {
+          font-size: 24px;
+        }
+      }
+
+      .service-icon {
+        width: 60px;
+        height: 60px;
+
+        i {
+          font-size: 28px;
+        }
+      }
+
+      .service-content h3 {
+        font-size: 20px;
+      }
+    }
+
+    .stats-highlight {
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+  }
+}
