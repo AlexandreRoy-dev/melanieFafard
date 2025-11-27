@@ -5390,3 +5390,12 @@ section,
 #hero.dark-background::before {
   display: none !important;
 }
+.hero .seo-hidden {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+}
