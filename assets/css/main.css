@@ -5387,3 +5387,6 @@ section,
   color: var(--contrast-color);
   border: 2px solid var(--accent-color);
 }
+#hero.dark-background::before {
+  display: none !important;
+}
