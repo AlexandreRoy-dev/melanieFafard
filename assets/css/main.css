@@ -5399,3 +5399,64 @@ section,
   overflow: hidden !important;
   opacity: 0 !important;
 }
+/* HEADER BACKGROUND + BORDER */
+#header.header {
+  background: #ffffff !important;
+  border-bottom: 2px solid #D0103A; /* primary color */
+  color: #000000;
+  box-shadow: none !important;
+}
+
+/* SITE NAME */
+#header .sitename {
+  color: #000000 !important;
+}
+
+/* NAV LINKS */
+#navmenu ul li a {
+  color: #000000 !important;
+}
+
+#navmenu ul li a:hover,
+#navmenu ul li a.active {
+  color: #D0103A !important; /* highlight in primary color */
+}
+
+/* SOCIAL ICONS */
+.header-social-links i {
+  color: #000000 !important;
+}
+
+.header-social-links a:hover i {
+  color: #D0103A !important;
+}
+
+/* MOBILE NAV ICON */
+.mobile-nav-toggle {
+  color: #000000 !important;
+}
+
+/* Remove any backdrop blur from theme */
+.header {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.header-logo {
+  height: 40px;    /* adjust as needed */
+  width: auto;
+}
+.btn-primary-mf {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #D0103A;
+  color: #ffffff !important;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary-mf:hover {
+  background-color: #a20c2f; /* slightly darker */
+  color: #ffffff !important;
+}
