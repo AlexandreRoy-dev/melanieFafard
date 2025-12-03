@@ -5460,3 +5460,60 @@ section,
   background-color: #a20c2f; /* slightly darker */
   color: #ffffff !important;
 }
+/* --------------- */
+/* Global settings */
+/* --------------- */
+
+/* Button for regular services */
+.btn-service {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  font-size: 15px;
+  border-radius: 6px;
+  background: #D0103A; /* primary color */
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-service:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* --------------------------- */
+/* Highlighted (4th) service   */
+/* --------------------------- */
+
+.service-highlight .details {
+  background: #D0103A;      /* primary color */
+  color: #fff;
+  padding: 25px;
+  border-radius: 0 0 10px 10px;  /* soft rounded bottom */
+}
+
+/* Titles + paragraphs inside highlighted service */
+.service-highlight .details h3,
+.service-highlight .details p {
+  color: #fff !important;
+}
+
+/* Button for highlighted service */
+.btn-service-light {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  font-size: 15px;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-service-light:hover {
+  background: #fff;
+  color: #D0103A;
+}
