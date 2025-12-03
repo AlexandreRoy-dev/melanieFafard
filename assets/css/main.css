@@ -5517,3 +5517,87 @@ section,
   background: #fff;
   color: #D0103A;
 }
+
+/* Full-width ABOUT banner */
+#hero-2.full-banner {
+  width: 100%;
+  height: 350px; /* adjust height */
+  background-image: url("../img/apropos.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 !important;
+  margin: 80px 0 0 0 !important; /* pushes the banner below the sticky header */
+  border: none;
+}
+
+/* Remove default section padding */
+#hero-2.section {
+  padding: 0 !important;
+}
+
+/* Remove dark background */
+#hero-2.dark-background {
+  background: transparent !important;
+}
+
+/* MOBILE FIX — Show the left side of the banner */
+@media (max-width: 768px) {
+  #hero-2.full-banner {
+    background-position: 18% center !important; /* adjust left/right */
+    height: 260px; /* optional */
+  }
+}
+.full-height-visual {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+/* Full-width ABOUT banner */
+#hero-3.full-banner {
+  width: 100%;
+  height: 350px; /* adjust height */
+  background-image: url("../img/temoignage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 !important;
+  margin: 80px 0 0 0 !important; /* pushes the banner below the sticky header */
+  border: none;
+}
+
+/* Remove default section padding */
+#hero-3.section {
+  padding: 0 !important;
+}
+
+/* Remove dark background */
+#hero-3.dark-background {
+  background: transparent !important;
+}
+
+/* MOBILE FIX — Show the left side of the banner */
+@media (max-width: 768px) {
+  #hero-3.full-banner {
+    background-position: 18% center !important; /* adjust left/right */
+    height: 260px; /* optional */
+  }
+}
+.footer-link-accent {
+  color: #D0103A !important; /* Proprio Direct red */
+  font-weight: 400 !important;
+  text-decoration: none;
+}
+
+.footer-link-accent:hover {
+  text-decoration: underline;
+}
+.footer-contact a {
+  font-size: 16px !important;   /* same as normal footer text */
+  font-weight: 400 !important;  /* remove bold */
+  color: #d0103a !important;    /* your red */
+  text-decoration: none;
+}
