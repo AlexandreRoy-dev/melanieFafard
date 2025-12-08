@@ -5601,3 +5601,112 @@ section,
   color: #d0103a !important;    /* your red */
   text-decoration: none;
 }
+/* ALIGNEMENT PARFAIT DES CARTES SERVICES */
+.services-equal-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-equal-height > div {
+  display: flex;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-item .img {
+  flex-shrink: 0;
+}
+
+.service-item .details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item .details p {
+  flex-grow: 1;
+}
+
+.service-item .btn-service {
+  margin-top: auto;
+}
+/* ======================================= */
+/*  FIX RED SERVICE CARDS OVERFLOW MOBILE  */
+/* ======================================= */
+
+@media (max-width: 768px) {
+
+  /* Let the entire card grow naturally */
+  .service-item,
+  .service-item.service-highlight {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* Let the red content expand */
+  .service-item .details {
+    position: relative;
+    height: auto !important;
+    min-height: unset !important;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 22px;
+  }
+
+  /* Remove ANY text restriction */
+  .service-item .details p {
+    overflow: visible !important;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+  }
+
+  /* Button always stays inside, no overlap */
+  .service-item .btn-service {
+    margin-top: 18px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+
+}
+/* ======================================= */
+/*  ROUND ALL CORNERS OF RED SERVICE CARDS */
+/* ======================================= */
+
+.service-item.service-highlight .details {
+  border-radius: 18px;          /* full rounding */
+}
+
+/* If your image is behind and clipping the top */
+.service-item.service-highlight {
+  border-radius: 18px;
+  overflow: hidden;
+}
+/* ================================= */
+/*  FEATURED BADGE – COUP DE COEUR   */
+/* ================================= */
+
+.testimonial-card {
+  position: relative; /* Required for badge positioning */
+  overflow: visible;  /* Prevents badge from being clipped */
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: #D0103A; /* Adjust to your brand red */
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  z-index: 20;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
