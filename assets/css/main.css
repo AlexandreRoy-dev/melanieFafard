@@ -5765,3 +5765,173 @@ section,
   transform: scale(1.1); /* Slight zoom effect */
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
+
+#scroll-top {
+  display: none !important;
+}
+
+/* --- 1. Contact Button (Forces White Text) --- */
+/* We target the 'a' tag specifically to override default link colors */
+a.btn-contact-nav {
+  background-color: #d0103a;
+  color: #ffffff !important; /* IMPORTANT: Forces text white */
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-left: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+
+
+a.btn-contact-nav:hover {
+  background-color: #a50b2d;
+  color: #ffffff !important; /* Keeps it white on hover */
+}
+
+/* --- 2. Desktop Phone Number (Red) --- */
+.desktop-phone {
+  font-weight: 700;
+  font-size: 18px;
+  color: #d0103a !important; /* Forces RED text */
+  text-decoration: none;
+  margin-right: 25px;
+  white-space: nowrap;
+}
+
+.desktop-phone:hover {
+  color: #a50b2d !important;
+}
+
+/* --- 3. Mobile Social Icons (Horizontal Line) --- */
+.mobile-social-icons {
+  display: flex;            /* Enables Flexbox */
+  flex-direction: row;      /* Forces Horizontal direction */
+  justify-content: center;  /* Centers them */
+  gap: 15px;                /* Space between icons */
+  margin-top: 10px;
+}
+
+.mobile-social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #fbebf0; /* Light pink background */
+  color: #d0103a;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.mobile-social-icons a:hover {
+  background-color: #d0103a;
+  color: #ffffff;
+}
+
+/* --- 1. Contact Button Styles --- */
+/* The text color is forced white in your HTML, this handles the shape/bg */
+a.btn-contact-nav {
+  background-color: #d0103a; /* Red Background */
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-left: 15px;
+  font-weight: 600;
+  display: inline-block; /* Ensures padding works */
+  text-decoration: none;
+  transition: 0.3s;
+  border: none;
+}
+
+a.btn-contact-nav:hover {
+  background-color: #a50b2d; /* Darker red on hover */
+  color: #ffffff !important;
+}
+
+/* --- 2. Desktop Phone Number --- */
+.desktop-phone {
+  font-weight: 700;
+  font-size: 17px;
+  color: #d0103a !important; /* Forces RED text */
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.desktop-phone:hover {
+  color: #a50b2d !important;
+}
+
+/* --- 3. Mobile Red Phone Icon --- */
+.mobile-phone-red i {
+  color: #d0103a;
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+/* --- 4. Mobile Social Icons (Horizontal & Pink Circles) --- */
+/* Target the container to ensure centering */
+.mobile-social-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers everything horizontally */
+  align-items: center;
+  gap: 10px; /* Spacing between the label and icons if needed */
+}
+
+/* Force the "Suivez-moi" text to take a full row so icons sit below it */
+.mobile-social-group span {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* --- 4. Mobile Social Icons (FIXED CIRCLES) --- */
+
+/* 1. The Container: Centers items horizontally and sets spacing */
+.mobile-social-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the group */
+  align-items: center;
+  gap: 15px; /* Controls space between the circles */
+  width: 100%;
+}
+
+/* Force the "Suivez-moi" text to take a full row */
+.mobile-social-group span {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* 2. The Icons: Forces perfect circles */
+.mobile-social-group a {
+  /* Use flex to center the icon inside the circle */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  /* VITAL: Prevents the circle from being squashed into an oval */
+  flex-shrink: 0 !important;
+
+  /* Force exact dimensions */
+  width: 45px !important;
+  height: 45px !important;
+
+  background-color: #fbebf0; /* Light pink background */
+  color: #d0103a;
+  border-radius: 50%; /* Makes it a circle */
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+
+  /* Reset margins (we use gap in the container now) */
+  margin: 0 !important;
+}
+
+.mobile-social-group a:hover {
+  background-color: #d0103a;
+  color: #ffffff;
+}
