@@ -6142,3 +6142,13 @@ section a.btn-primary:hover {
     padding-bottom: 20px;       /* Extra space for safety */
   }
 }
+/* --- Mobile Header Phone Icon --- */
+.mobile-phone-red i {
+  color: #d0103a !important; /* Forces the icon to be Red */
+  font-size: 24px;           /* Ensures it is large enough to tap */
+  transition: color 0.3s ease;
+}
+
+.mobile-phone-red:active i {
+  color: #a50b2d !important; /* Darker red when tapped */
+}
