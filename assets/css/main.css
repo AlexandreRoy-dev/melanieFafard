@@ -6130,3 +6130,15 @@ section a.btn-primary:hover {
     max-height: 400px; /* Cap height on mobile so it doesn't take whole screen */
   }
 }
+/* --- Mobile Hero Button Adjustment --- */
+@media (max-width: 768px) {
+  #hero .container {
+    position: absolute; /* Detach from the center */
+    bottom: 8vh;        /* Position it 8% from the bottom of the screen */
+    left: 0;
+    right: 0;
+    top: auto !important;       /* Override default centering */
+    transform: none !important; /* Override default centering transforms */
+    padding-bottom: 20px;       /* Extra space for safety */
+  }
+}
