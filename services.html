@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mes Services - Mélanie Fafard</title>
+  <meta name="description" content="Services immobiliers complets à Québec et Lévis : Vente, Achat et Évaluation.">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* --- Services Page Specific Styles --- */
+
+    /* INCREASED SPACING: Global Section Padding */
+    .section {
+      padding-top: 100px !important;
+      padding-bottom: 100px !important;
+    }
+
+    /* The small subtitle above the H2 */
+    .service-subtitle {
+      display: inline-block;
+      color: #d0103a; /* Your Brand Red */
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+      margin-bottom: 15px; /* Increased margin */
+    }
+
+    /* Headlines */
+    h2 {
+      margin-bottom: 25px; /* More space below headlines */
+    }
+
+    /* Paragraphs */
+    p.lead {
+      margin-bottom: 25px;
+    }
+
+    /* The list of benefits with checkmarks */
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px; /* Space above the list */
+    }
+
+    .service-list li {
+      padding-bottom: 25px; /* INCREASED: Space between list items */
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .service-list li i {
+      color: #d0103a; /* Red Icons */
+      font-size: 24px; /* Slightly larger icons */
+      padding-right: 15px; /* More space between icon and text */
+      line-height: 1.2;
+    }
+
+    /* Image Wrapper */
+    .service-image-wrapper img {
+      border-radius: 10px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 100%; /* Ensures responsive width */
+    }
+
+    .service-image-wrapper:hover img {
+      transform: translateY(-5px); /* Gentle float effect on hover */
+    }
+
+    /* Page Title / Hero Area */
+    .page-title {
+      background-size: cover;
+      background-position: center;
+      padding: 160px 0 80px 0; /* INCREASED: Taller hero header */
+      text-align: center;
+      position: relative;
+      color: #fff;
+    }
+
+    /* Dark Overlay for Page Title so text is readable */
+    .page-title::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .page-title .container {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body class="services-page">
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="assets/img/logo.svg" alt="Mélanie Fafard" class="header-logo">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html" >Accueil</a></li>
+        <li><a href="./apropos.html">À propos</a></li>
+        <li><a href="https://propriodirect.com/melanie-fafard/">Propriétés</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="programmes.html">Programmes</a></li>
+        <li><a href="./temoignages.html">Témoignages</a></li>
+        
+       <li>
+  <a href="index.html#contact" >Contact</a>
+</li>
+
+        <li class="d-xl-none mt-3 text-center">
+          <div class="mobile-social-group">
+            <span class="d-block mb-2 text-muted small">Suivez-moi</span>
+            <a href="https://www.facebook.com/profile.php?id=61575817391811" class="mx-2"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/melaniefafardimmo/" class="mx-2"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com/mfafardimmo" class="mx-2"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="mx-2"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <div class="header-social-links d-flex align-items-center">
+      
+      <div class="d-none d-xl-flex align-items-center">
+        <a href="tel:5813054442" class="desktop-phone me-4">(581) 305-4442</a>
+        
+        <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/mfafardimmo" class="channel-link"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <a href="tel:5813054442" class="mobile-phone-red d-xl-none">
+        <i class="bi bi-telephone-fill"></i>
+      </a>
+
+    </div>
+
+  </div>
+</header>
+
+
+<main class="main">
+
+  <section id="services-title" class="services-title-section">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title-wrapper text-center">
+        <h2 class="title-with-lines">Services</h2>
+        <p>Un accompagnement complet pour votre projet immobilier à Québec, Lévis et les environs.</p>
+      </div>
+    </div>
+  </section>
+  <section id="vente" class="service-details section pt-0">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <span class="service-subtitle">Vendre avec succès</span>
+          <h2>Vente de Propriété</h2>
+          <p class="lead">Vendez votre propriété au meilleur prix et dans les meilleurs délais grâce à une stratégie de mise en marché percutante.</p>
+          
+          <p>Vendre une maison est une étape majeure. Mon rôle est de simplifier ce processus tout en maximisant votre profit. Je m'occupe de tout, de la prise de photos professionnelles à la signature chez le notaire.</p>
+          
+          <div class="service-list-wrapper">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Mise en marché haute visibilité :</strong> Photos HDR, visite virtuelle et diffusion sur Centris, Facebook et Instagram.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Stratégie de prix :</strong> Analyse concurrentielle pour attirer les acheteurs sérieux dès le premier jour.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Négociation experte :</strong> Je défends vos intérêts pour obtenir les meilleures conditions de vente.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Tranquillité d'esprit :</strong> Gestion complète des visites, des appels et des documents légaux (DV, offres d'achat).</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary">Je veux vendre ma propriété</a>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="service-image-wrapper">
+            <img src="assets/img/services/vente.webp" alt="Vente de maison Québec" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="achat" class="service-details section light-background">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        
+        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
+          <div class="service-image-wrapper">
+            <img src="assets/img/services/achat.webp" alt="Achat maison Québec" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+          <span class="service-subtitle">Trouver la perle rare</span>
+          <h2>Achat Résidentiel</h2>
+          <p class="lead">Un accompagnement clé en main pour trouver la maison de vos rêves sans stress et en toute sécurité.</p>
+          
+          <p>Que vous soyez premier acheteur ou investisseur expérimenté, je vous guide à travers le marché immobilier actuel. Je filtre les opportunités pour ne vous présenter que ce qui correspond réellement à vos besoins.</p>
+          
+          <div class="service-list-wrapper">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-house-heart-fill"></i></div>
+              <div class="text"><strong>Recherche ciblée :</strong> Accès aux nouveautés en temps réel et alertes personnalisées.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-house-heart-fill"></i></div>
+              <div class="text"><strong>Visites accompagnées :</strong> Je vous accompagne à chaque visite pour identifier les points forts et les vices cachés potentiels.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-house-heart-fill"></i></div>
+              <div class="text"><strong>Protection de l'acheteur :</strong> Rédaction rigoureuse des offres d'achat et recommandation d'inspecteurs qualifiés.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-house-heart-fill"></i></div>
+              <div class="text"><strong>Accompagnement gratuit :</strong> Dans la majorité des cas, mes services sont entièrement gratuits pour l'acheteur.</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary">Je cherche une propriété</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="eval" class="service-details section">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <span class="service-subtitle">Connaître la vraie valeur</span>
+          <h2>Évaluation de la valeur marchande</h2>
+          <p class="lead">Ne laissez pas d'argent sur la table. Obtenez une estimation précise basée sur les données réelles du marché.</p>
+          
+          <p>Le bon prix est la clé d'une vente réussie. Une surestimation peut "brûler" votre propriété, tandis qu'une sous-estimation vous fait perdre de l'argent. J'utilise une méthode comparative rigoureuse pour déterminer le juste prix.</p>
+          
+          <div class="service-list-wrapper">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="text"><strong>Analyse comparative de marché (ACM) :</strong> Comparaison avec les propriétés vendues récemment dans votre secteur.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="text"><strong>Analyse des tendances :</strong> Prise en compte de l'offre et de la demande actuelles à Québec et Lévis.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="text"><strong>Conseils de valorisation :</strong> Recommandations pour augmenter la valeur de votre maison avant la mise en vente (Home Staging léger).</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="text"><strong>Rapport détaillé :</strong> Je vous remets un dossier complet justifiant le prix suggéré.</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary">Demander une évaluation gratuite</a>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="service-image-wrapper">
+            <img src="assets/img/services/eval.webp" alt="Évaluation immobilière" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--contact-->
+<section id="contact" class="contact section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Parlons de votre projet immobilier à Québec, Lévis ou dans les environs.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
+
+      <!-- Left Column -->
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="quick-contact-wrapper">
+
+          <div class="contact-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-envelope-open-heart"></i>
+            </div>
+            <h4>Courriel</h4>
+            <p class="contact-detail"><a href="mailto:mfafardimmobilier@gmail.com">mfafardimmobilier@gmail.com</a></p>
+            <span class="availability">Réponse rapide en tout temps</span>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-telephone-outbound"></i>
+            </div>
+            <h4>Téléphone</h4>
+            <p class="contact-detail"><a href="tel:+15813054442">(581) 305-4442</a></p>
+            <span class="availability">Appelez pour planifier un rendez-vous</span>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <h4>Secteurs desservis</h4>
+            <p class="contact-detail">
+              Québec & Lévis<br>
+              St-Augustin, Ste-Foy–Sillery–Cap-Rouge, Les Rivières, La Haute-St-Charles, La Cité-Limoilou,
+              Charlesbourg, Beauport, Lac-Beauport, Shannon, Stoneham-et-Tewkesbury, Saint-Jean-Chrysostome,
+              St-Nicolas, Charny, St-Romuald et Desjardins.
+            </p>
+            <span class="availability">En personne ou à distance</span>
+          </div>
+
+          <div class="trust-indicators">
+            <div class="indicator-item">
+              <div class="indicator-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="indicator-text">
+                <strong>Service professionnel</strong>
+                <span>Vos intérêts au cœur de chaque décision</span>
+              </div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div class="indicator-text">
+                <strong>Suivi rigoureux</strong>
+                <span>Accompagnement du début à la fin</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column (Form) -->
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="main-form-container">
+
+          <div class="form-intro">
+            <div class="intro-badge">
+              <i class="bi bi-stars"></i>
+              <span>Un premier contact simple et sans pression</span>
+            </div>
+            <h2>Envoyez-moi un message</h2>
+            <p>Expliquez-moi brièvement votre projet (vente, achat, évaluation, investissement) et je vous reviendrai rapidement avec les prochaines étapes possibles.</p>
+          </div>
+
+          <!-- FORM WITH FORMSPREE -->
+          <form action="https://formspree.io/f/meeqblzv" method="POST" id="contact-form" class="modern-form">
+
+            <input type="hidden" name="source" value="Site Mélanie Fafard">
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="name" placeholder="Votre nom complet" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Votre courriel" required>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="phone" placeholder="Téléphone (optionnel)">
+              </div>
+              <div class="col-md-6">
+                <select class="form-select" name="subject" required>
+                  <option value="">Type de demande</option>
+                  <option value="vente">Vente de propriété</option>
+                  <option value="achat">Achat d’une propriété</option>
+                  <option value="evaluation">Évaluation de propriété</option>
+                 
+                  <option value="autre">Autre projet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <textarea class="form-control" name="message" rows="6" placeholder="Décrivez votre projet, vos besoins ou vos questions" required></textarea>
+            </div>
+
+            <div class="my-3">
+              <div class="loading" style="display:none;">Envoi en cours…</div>
+              <div class="error-message" style="display:none;"></div>
+              <div class="sent-message" style="display:none;">Votre message a été envoyé. Merci!</div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <span>Envoyer mon message</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+
+            <div class="form-footer-note">
+              <i class="bi bi-info-circle"></i>
+              <span>Je vous répondrai dans les meilleurs délais.</span>
+            </div>
+
+          </form>
+
+
+</div>
+
+            <div class="social-channels">
+              <p>Retrouvez-moi aussi sur les réseaux sociaux</p>
+              <div class="channel-links">
+                <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-instagram"></i></a>
+                <a href="https://x.com/mfafardimmo" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+  <footer id="footer" class="footer dark-background">
+
+  
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Mélanie Fafard</span>
+          </a>
+          <div class="footer-contact pt-3">
+  <p>Québec & Lévis</p>
+  <p>Secteurs résidentiels et investissements</p>
+
+  <p class="mt-3">
+    <strong>Téléphone :</strong>
+    <a class="footer-link-accent" href="tel:+15813054442">(581) 305-4442</a>
+  </p>
+
+  <p>
+    <strong>Courriel :</strong>
+    <a class="footer-link-accent" href="mailto:mfafardimmobilier@gmail.com">
+      mfafardimmobilier@gmail.com
+    </a>
+  </p>
+</div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Accueil</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./apropos.html">À propos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./temoignages.html">Témoignages</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Types de projets</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="service.html#vente">Vente résidentielle</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service.html#achat">Achat de propriété</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html#eval">Évaluation de propriété</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Suivez-moi</h4>
+          <p>Pour découvrir les nouveautés, propriétés, conseils et coulisses de mon travail de courtière immobilière.</p>
+          <div class="social-links d-flex">
+                         <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/mfafardimmo" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-linkedin"></i></a>
+        
+          
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mélanie Fafard</strong> <span>Tous droits réservés</span> - Conception web par <a href="https://roymarketing.ca/">Roy Marketing</a></p>
+    </div>
+
+  </footer>
+
+  <a href="https://m.me/61575817391811" class="messenger-float" target="_blank" title="Discuter sur Messenger">
+    <i class="bi bi-messenger"></i>
+  </a>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

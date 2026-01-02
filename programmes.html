@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mes Programmes - Mélanie Fafard</title>
+  <meta name="description" content="Découvrez les programmes exclusifs Proprio Direct : Complici-T, Séréni-T et Visibili-T.">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* REUSING THE SAME CSS FROM SERVICES PAGE */
+    .section {
+      padding-top: 100px !important;
+      padding-bottom: 100px !important;
+    }
+    .service-subtitle {
+      display: inline-block;
+      color: #d0103a;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    h2 { margin-bottom: 25px; }
+    p.lead { margin-bottom: 25px; }
+    
+    .service-list-wrapper { margin-top: 30px; }
+    
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    
+    .service-item .icon {
+      flex: 0 0 40px;
+      min-width: 40px;
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      padding-top: 5px;
+    }
+    
+    .service-item .icon i {
+      color: #d0103a;
+      font-size: 24px;
+      line-height: 1;
+    }
+    
+    .service-item .text {
+      flex: 1;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+    .service-item .text strong {
+      color: #000;
+      font-weight: 700;
+      margin-right: 5px;
+    }
+    
+    /* Image Styles */
+    .row.align-items-center { align-items: stretch !important; }
+    .service-image-wrapper { height: 100%; display: flex; }
+    .service-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      min-height: 400px;
+    }
+
+    @media (max-width: 991px) {
+      .service-image-wrapper { height: auto; margin-top: 30px; }
+      .service-image-wrapper img { height: auto; max-height: 400px; }
+    }
+
+    /* Page Title */
+    .page-title {
+      background-size: cover;
+      background-position: center;
+      padding: 160px 0 80px 0;
+      text-align: center;
+      position: relative;
+      color: #fff;
+    }
+    .page-title::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .page-title .container { position: relative; z-index: 2; }
+    
+    /* Services Title Section */
+    .services-title-section { padding-bottom: 20px; margin-top: 100px; }
+    .section-title-wrapper { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .title-with-lines {
+      display: flex; align-items: center; gap: 20px;
+      font-size: 32px; font-weight: 700; text-transform: uppercase; color: #333; margin-bottom: 10px;
+    }
+    .title-with-lines::before, .title-with-lines::after {
+      content: ""; display: block; height: 3px; width: 60px; background-color: #d0103a;
+    }
+
+    /* Button Override */
+    section a.btn-primary {
+      background-color: #d0103a !important;
+      color: #ffffff !important;
+      padding: 12px 35px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-block;
+      margin-top: 20px;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    section a.btn-primary:hover {
+      background-color: #b0001b !important;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="services-page">
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="assets/img/logo.svg" alt="Mélanie Fafard" class="header-logo">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero">Accueil</a></li>
+        <li><a href="./apropos.html">À propos</a></li>
+        <li><a href="https://propriodirect.com/melanie-fafard/">Propriétés</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="programmes.html" class="active">Programmes</a></li>
+        <li><a href="./temoignages.html">Témoignages</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="d-xl-none mt-3 text-center">
+            <span class="d-block mb-3 text-muted small text-uppercase fw-bold">Suivez-moi</span>
+            <div class="mobile-social-group">
+               <a href="https://www.facebook.com/profile.php?id=61575817391811"><i class="bi bi-facebook"></i></a>
+               <a href="https://www.instagram.com/melaniefafardimmo/"><i class="bi bi-instagram"></i></a>
+               <a href="https://x.com/mfafardimmo"><i class="bi bi-twitter"></i></a>
+               <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <div class="header-social-links d-flex align-items-center">
+      <div class="d-none d-xl-flex align-items-center">
+        <a href="tel:5813054442" class="desktop-phone me-4">(581) 305-4442</a>
+        <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/mfafardimmo" class="channel-link"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <a href="tel:5813054442" class="mobile-phone-red d-xl-none"><i class="bi bi-telephone-fill"></i></a>
+    </div>
+
+  </div>
+</header>
+
+<main class="main">
+
+
+
+  <section id="programs-intro" class="services-title-section">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title-wrapper text-center">
+        <h2 class="title-with-lines">Programmes Exclusifs</h2>
+        <p>Découvrez les avantages uniques offerts par Proprio Direct.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="visibili-t" class="service-details section pt-0">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <span class="service-subtitle">Vu partout, vendu vite</span>
+          <h2>Programme Visibili-T</h2>
+          <p class="lead">Proprio Direct est la seule agence à vous offrir une visibilité aussi massive et gratuite.</p>
+          
+          <p>Plus votre propriété est vue, plus vite elle est vendue. Notre programme diffuse votre annonce sur plus de 100 sites nationaux et internationaux pour atteindre 100% des acheteurs.</p>
+          
+          <div class="service-list-wrapper">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-globe"></i></div>
+              <div class="text"><strong>Diffusion massive :</strong> Centris, Realtor (MLS), Logis Québec, et plus de 100 portails immobiliers.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-globe"></i></div>
+              <div class="text"><strong>Réseaux sociaux :</strong> Présence sur Facebook, Instagram et YouTube pour maximiser la portée.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-globe"></i></div>
+              <div class="text"><strong>International :</strong> Votre propriété est visible par les acheteurs du monde entier via notre réseau de sites partenaires.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-globe"></i></div>
+              <div class="text"><strong>Gratuit :</strong> Cette mise en marché exceptionnelle est incluse sans frais supplémentaires.</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary">Profiter de cette visibilité</a>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="service-image-wrapper">
+            <img src="assets/img/service6.webp" alt="Programme Visibili-T" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="complici-t" class="service-details section light-background">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        
+        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
+          <div class="service-image-wrapper">
+            <img src="assets/img/service4.webp" alt="Programme Complici-T" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+          <span class="service-subtitle">Le meilleur des deux mondes</span>
+          <h2>Programme Complici-T</h2>
+          <p class="lead">Vendez votre propriété avec un courtier tout en gardant la liberté de trouver votre acheteur.</p>
+          
+          <p>Profitez d'un taux de commission avantageux à partir de 2%*. Que vous trouviez l'acheteur vous-même ou que je le trouve, je m'occupe de tout le travail complexe.</p>
+          
+          <div class="service-list-wrapper">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Commission réduite :</strong> Taux à partir de 2% quand l’acheteur choisit d’acheter directement sans l’intermédiaire d’un autre courtier.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Prise en charge complète :</strong> Photos, mise en marché, négociations, et documents légaux gérés par votre courtier.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Visibilité maximale :</strong> Affichage sur Centris, Realtor (MLS) et plus de 100 sites.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div class="text"><strong>Tranquillité d'esprit :</strong> Je coordonne les visites, les appels et le suivi jusqu'au notaire.</div>
+            </div>
+          </div>
+          <p class="small text-muted mt-3">*Rétribution minimale de 3 000$, taxes en sus, quand l’acheteur achète directement.</p>
+          <a href="#contact" class="btn-primary">En savoir plus sur Complici-T</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="sereni-t" class="service-details section">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <span class="service-subtitle">Transaction sans souci</span>
+          <h2>Programme Séréni-T</h2>
+          <p class="lead">L'assurance tranquillité offerte gratuitement* pour protéger votre transaction immobilière.</p>
+          
+          <p>Parce que l'achat ou la vente est une étape majeure, Séréni-T vous protège financièrement et légalement contre les imprévus, les délais et les désistements.</p>
+          
+          <div class="service-list-wrapper">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <div class="text"><strong>Protection délais & désistements :</strong> Couvre les frais supplémentaires engendrés par un report ou une annulation hors de votre contrôle.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <div class="text"><strong>Frais juridiques couverts :</strong> Indemnisation jusqu'à 3 000$ en cas de litige (ex: vices cachés) pour 1 an.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <div class="text"><strong>Assistance légale :</strong> Accès illimité à des conseils juridiques spécialisés en immobilier.</div>
+            </div>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <div class="text"><strong>Gratuit :</strong> Offert sans frais lorsque vous faites affaire avec un courtier participant.</div>
+            </div>
+          </div>
+          <a href="assets/docs/brochure-sereni-t.pdf" class="btn-primary" target="_blank">Télécharger la brochure</a>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="service-image-wrapper">
+            <img src="assets/img/service5.webp" alt="Programme Séréni-T" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  
+<section id="contact" class="contact section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Parlons de votre projet immobilier à Québec, Lévis ou dans les environs.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
+
+      <!-- Left Column -->
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="quick-contact-wrapper">
+
+          <div class="contact-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-envelope-open-heart"></i>
+            </div>
+            <h4>Courriel</h4>
+            <p class="contact-detail"><a href="mailto:mfafardimmobilier@gmail.com">mfafardimmobilier@gmail.com</a></p>
+            <span class="availability">Réponse rapide en tout temps</span>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-telephone-outbound"></i>
+            </div>
+            <h4>Téléphone</h4>
+            <p class="contact-detail"><a href="tel:+15813054442">(581) 305-4442</a></p>
+            <span class="availability">Appelez pour planifier un rendez-vous</span>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <h4>Secteurs desservis</h4>
+            <p class="contact-detail">
+              Québec & Lévis<br>
+              St-Augustin, Ste-Foy–Sillery–Cap-Rouge, Les Rivières, La Haute-St-Charles, La Cité-Limoilou,
+              Charlesbourg, Beauport, Lac-Beauport, Shannon, Stoneham-et-Tewkesbury, Saint-Jean-Chrysostome,
+              St-Nicolas, Charny, St-Romuald et Desjardins.
+            </p>
+            <span class="availability">En personne ou à distance</span>
+          </div>
+
+          <div class="trust-indicators">
+            <div class="indicator-item">
+              <div class="indicator-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="indicator-text">
+                <strong>Service professionnel</strong>
+                <span>Vos intérêts au cœur de chaque décision</span>
+              </div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div class="indicator-text">
+                <strong>Suivi rigoureux</strong>
+                <span>Accompagnement du début à la fin</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column (Form) -->
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="main-form-container">
+
+          <div class="form-intro">
+            <div class="intro-badge">
+              <i class="bi bi-stars"></i>
+              <span>Un premier contact simple et sans pression</span>
+            </div>
+            <h2>Envoyez-moi un message</h2>
+            <p>Expliquez-moi brièvement votre projet (vente, achat, évaluation, investissement) et je vous reviendrai rapidement avec les prochaines étapes possibles.</p>
+          </div>
+
+          <!-- FORM WITH FORMSPREE -->
+          <form action="https://formspree.io/f/meeqblzv" method="POST" id="contact-form" class="modern-form">
+
+            <input type="hidden" name="source" value="Site Mélanie Fafard">
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="name" placeholder="Votre nom complet" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Votre courriel" required>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="phone" placeholder="Téléphone (optionnel)">
+              </div>
+              <div class="col-md-6">
+                <select class="form-select" name="subject" required>
+                  <option value="">Type de demande</option>
+                  <option value="vente">Vente de propriété</option>
+                  <option value="achat">Achat d’une propriété</option>
+                  <option value="evaluation">Évaluation de propriété</option>
+                 
+                  <option value="autre">Autre projet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <textarea class="form-control" name="message" rows="6" placeholder="Décrivez votre projet, vos besoins ou vos questions" required></textarea>
+            </div>
+
+            <div class="my-3">
+              <div class="loading" style="display:none;">Envoi en cours…</div>
+              <div class="error-message" style="display:none;"></div>
+              <div class="sent-message" style="display:none;">Votre message a été envoyé. Merci!</div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <span>Envoyer mon message</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+
+            <div class="form-footer-note">
+              <i class="bi bi-info-circle"></i>
+              <span>Je vous répondrai dans les meilleurs délais.</span>
+            </div>
+
+          </form>
+
+
+</div>
+
+            <div class="social-channels">
+              <p>Retrouvez-moi aussi sur les réseaux sociaux</p>
+              <div class="channel-links">
+                <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-instagram"></i></a>
+                <a href="https://x.com/mfafardimmo" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <footer id="footer" class="footer dark-background">
+
+  
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Mélanie Fafard</span>
+          </a>
+          <div class="footer-contact pt-3">
+  <p>Québec & Lévis</p>
+  <p>Secteurs résidentiels et investissements</p>
+
+  <p class="mt-3">
+    <strong>Téléphone :</strong>
+    <a class="footer-link-accent" href="tel:+15813054442">(581) 305-4442</a>
+  </p>
+
+  <p>
+    <strong>Courriel :</strong>
+    <a class="footer-link-accent" href="mailto:mfafardimmobilier@gmail.com">
+      mfafardimmobilier@gmail.com
+    </a>
+  </p>
+</div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Accueil</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./apropos.html">À propos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./temoignages.html">Témoignages</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Types de projets</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="service.html#vente">Vente résidentielle</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service.html#achat">Achat de propriété</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html#eval">Évaluation de propriété</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Suivez-moi</h4>
+          <p>Pour découvrir les nouveautés, propriétés, conseils et coulisses de mon travail de courtière immobilière.</p>
+          <div class="social-links d-flex">
+                         <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/mfafardimmo" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-linkedin"></i></a>
+        
+          
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mélanie Fafard</strong> <span>Tous droits réservés</span> - Conception web par <a href="https://roymarketing.ca/">Roy Marketing</a></p>
+    </div>
+
+  </footer>
+
+<a href="https://m.me/61575817391811" class="messenger-float" target="_blank"><i class="bi bi-messenger"></i></a>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

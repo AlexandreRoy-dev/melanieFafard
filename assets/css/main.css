@@ -5935,3 +5935,198 @@ a.btn-contact-nav:hover {
   background-color: #d0103a;
   color: #ffffff;
 }
+
+/* --- 1. ROBUST LIST ALIGNMENT --- */
+.service-list-wrapper {
+  margin-top: 30px;
+}
+
+.service-item {
+  display: flex;          /* Activates Flexbox */
+  align-items: flex-start; /* Aligns icon to the top of the text */
+  margin-bottom: 25px;    /* Space between list items */
+}
+
+/* The Icon Column - FIXED WIDTH */
+.service-item .icon {
+  flex: 0 0 40px;         /* Don't grow, don't shrink, fixed at 40px */
+  min-width: 40px;        /* Double safety to prevent squashing */
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;       /* Slight offset to align with text cap-height */
+}
+
+.service-item .icon i {
+  color: #d0103a;         /* Red Icon */
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* The Text Column - TAKES REMAINING SPACE */
+.service-item .text {
+  flex: 1;                /* Takes up all remaining width */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.service-item .text strong {
+  color: #000;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+/* --- 2. BUTTON STYLE (High Specificity) --- */
+/* We target 'section a.btn-primary' to override any theme defaults */
+section a.btn-primary {
+  background-color: #d0103a !important;
+  color: #ffffff !important;
+  padding: 12px 35px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+section a.btn-primary:hover {
+  background-color: #b0001b !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Services Button Styles --- */
+
+/* 1. Standard Red Button (For Vente, Achat, Eval) */
+.service-item .btn-service {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #d0103a; /* Your Brand Red */
+  color: #ffffff;
+  border-radius: 5px; 
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.service-item .btn-service:hover {
+  background-color: #a50b2d; /* Darker red on hover */
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* 2. Light Button Override (For Programs inside Red/Highlight cards if needed) */
+/* This ensures the existing buttons in the highlight sections stay white */
+.service-item.service-highlight .btn-service-light {
+  background-color: #ffffff;
+  color: #d0103a;
+}
+
+.service-item.service-highlight .btn-service-light:hover {
+  background-color: #f8f9fa;
+  color: #a50b2d;
+}
+
+/* Full-width ABOUT banner */
+#hero-4.full-banner {
+  width: 100%;
+  height: 350px; /* adjust height */
+  background-image: url("../img/services.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 !important;
+  margin: 80px 0 0 0 !important; /* pushes the banner below the sticky header */
+  border: none;
+}
+
+/* Remove default section padding */
+#hero-4.section {
+  padding: 0 !important;
+}
+
+/* Remove dark background */
+#hero-4.dark-background {
+  background: transparent !important;
+}
+
+/* --- Services Title Section (Top of Page) --- */
+.services-title-section {
+  padding-bottom: 20px;
+  /* Adjust this value to push the title down below your fixed navbar */
+  margin-top: 100px; 
+}
+
+/* Wrapper for centering text */
+.section-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- THE TITLE WITH RED LINES --- */
+.title-with-lines {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the text and the lines */
+  
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333; /* Dark Grey Text */
+  margin-bottom: 10px;
+}
+
+/* The Red Lines (Left and Right) */
+.title-with-lines::before,
+.title-with-lines::after {
+  content: "";
+  display: block;
+  height: 3px;         /* Thickness of the line */
+  width: 60px;         /* Length of the line */
+  background-color: #d0103a; /* Your Brand Red */
+}
+
+/* --- Equal Height Images & Text on Desktop --- */
+
+/* Ensure the row uses flexbox to stretch columns (Bootstrap does this by default) */
+.row.align-items-center {
+  align-items: stretch !important; /* Force columns to be same height */
+}
+
+/* Make the image wrapper fill the full height of the column */
+.service-image-wrapper {
+  height: 100%;
+  display: flex; /* Ensures the image inside can stretch */
+}
+
+/* Make the image itself cover the full area */
+.service-image-wrapper img {
+  width: 100%;
+  height: 100%;          /* Forces image to match text column height */
+  object-fit: cover;     /* Crops image to fit without distorting */
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  min-height: 400px;     /* Optional: Ensures image isn't too short if text is brief */
+}
+
+/* --- Mobile Adjustment (Keep images normal on phones) --- */
+@media (max-width: 991px) {
+  .service-image-wrapper {
+    height: auto; /* Let image be its natural height on mobile */
+    margin-top: 30px;
+  }
+  
+  .service-image-wrapper img {
+    height: auto;
+    max-height: 400px; /* Cap height on mobile so it doesn't take whole screen */
+  }
+}
