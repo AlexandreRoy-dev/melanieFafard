@@ -5710,3 +5710,58 @@ section,
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
+/* Button Style matching the reference image */
+.btn-red-cta {
+  background-color: #D60021; /* Vivid Red */
+  color: #ffffff;
+  font-family: sans-serif; /* Uses your site's default font */
+  font-weight: 700; /* Bold text */
+  font-size: 16px;
+  text-decoration: none;
+  
+  /* Sizing and Spacing */
+  padding: 12px 30px;
+  border-radius: 6px; /* Rounded corners */
+  display: inline-block;
+  border: none;
+  
+  /* Transition for hover effect */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover State (Slightly darker red) */
+.btn-red-cta:hover {
+  background-color: #b0001b; 
+  color: #ffffff;
+}
+/* Floating Messenger Button */
+.messenger-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #d0103a;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999; /* Ensures it stays on top of everything */
+  
+  /* Flexbox to center the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Smooth transition */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.messenger-float:hover {
+  color: #FFF;
+  background-color: #a50b2d; /* Slightly darker for interaction */
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
