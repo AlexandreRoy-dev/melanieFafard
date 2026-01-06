@@ -6152,3 +6152,316 @@ section a.btn-primary:hover {
 .mobile-phone-red:active i {
   color: #a50b2d !important; /* Darker red when tapped */
 }
+
+/*--------------------------------------------------------------
+# Blog Section Styles
+--------------------------------------------------------------*/
+.blog .blog-item {
+  background-color: #fff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.08); /* Matches service cards shadow */
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  border-radius: 8px; /* Consistent with other elements */
+  overflow: hidden;
+  position: relative;
+  border-bottom: 3px solid transparent; /* Preparation for hover effect */
+}
+
+.blog .blog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+  border-bottom: 3px solid #ce1212; /* Red accent line on hover */
+}
+
+.blog .post-img {
+  overflow: hidden;
+  height: 240px; /* Fixed height for alignment */
+  position: relative;
+}
+
+.blog .post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Zoom effect on image hover */
+.blog .blog-item:hover .post-img img {
+  transform: scale(1.1);
+}
+
+.blog .post-content {
+  padding: 30px;
+}
+
+.blog .meta {
+  font-family: "Archivo", sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.blog .meta i {
+  color: #ce1212; /* Matches your 'btn-red-cta' color */
+  margin-right: 5px;
+}
+
+.blog .post-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  font-family: "Archivo", sans-serif;
+}
+
+.blog .post-title a {
+  color: #212529;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.blog .post-title a:hover {
+  color: #ce1212;
+}
+
+.blog .post-content p {
+  font-family: "Archivo", sans-serif;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.blog .read-more {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ce1212;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.blog .read-more i {
+  margin-left: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.blog .read-more:hover {
+  color: #a50e0e; /* Darker red on hover */
+}
+
+.blog .read-more:hover i {
+  transform: translateX(5px);
+}
+
+/*--------------------------------------------------------------
+# Blog Details Page (No Sidebar Version)
+--------------------------------------------------------------*/
+
+/* --- Hero / Page Title Section --- */
+.page-title {
+  background-size: cover;
+  background-position: center;
+  padding: 160px 0 60px 0;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.page-title:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Darker overlay for better text contrast */
+  z-index: 1;
+}
+
+.page-title .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-title h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: var(--heading-font, "Archivo", sans-serif);
+}
+
+/* --- Breadcrumbs Navigation --- */
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--nav-font, "Archivo", sans-serif);
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  content: "/";
+}
+
+.breadcrumbs ol li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.breadcrumbs ol li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.breadcrumbs ol li.current {
+  color: #fff;
+}
+
+/* --- Article Content Styling --- */
+.blog-details .article {
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+/* Main Image */
+.blog-details .post-img {
+  margin: -40px -40px 30px -40px; /* Pull image to edges of container */
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  max-height: 500px; /* Prevent image from being too tall on large screens */
+}
+
+.blog-details .post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Article Title */
+.blog-details .title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #212529;
+  margin-bottom: 20px;
+  font-family: var(--heading-font, "Archivo", sans-serif);
+}
+
+/* Meta Data (Date, Author) */
+.blog-details .meta-top {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-details .meta-top ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-details .meta-top ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  font-size: 15px;
+  color: #777;
+}
+
+.blog-details .meta-top ul li i {
+  color: #ce1212; /* Brand Red */
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.blog-details .meta-top ul li a {
+  color: #777;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.blog-details .meta-top ul li a:hover {
+  color: #ce1212;
+}
+
+/* Text Content */
+.blog-details .content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.blog-details .content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212529;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: var(--heading-font, "Archivo", sans-serif);
+}
+
+/* Blockquote Styling */
+.blog-details .content blockquote {
+  background-color: #f8f9fa;
+  border-left: 5px solid #ce1212; /* Brand Red Border */
+  padding: 30px;
+  margin: 30px 0;
+  font-style: italic;
+  font-size: 18px;
+  color: #555;
+  border-radius: 4px;
+}
+
+.blog-details .content ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.blog-details .content ul li {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+/* Custom Alert Box for CTA */
+.blog-details .alert-light {
+  background-color: #fff5f5;
+  border-left-color: #ce1212 !important; /* Force red border */
+}
+
+.blog-details .btn-danger {
+  background-color: #ce1212;
+  border-color: #ce1212;
+}
+
+.blog-details .btn-danger:hover {
+  background-color: #b00e0e;
+  border-color: #b00e0e;
+}
