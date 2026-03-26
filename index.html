@@ -2,221 +2,159 @@
 <html lang="fr">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17751777472"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17751777472');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17751777472"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17751777472');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Mélanie Fafard – Courtière immobilière à Québec et Lévis</title>
   <meta name="description" content="Mélanie Fafard, courtière immobilière résidentielle à Québec et Lévis. Vente, achat, évaluation et investissement. Service humain, professionnel et stratégique dans les secteurs de St-Augustin, Ste-Foy, Cap-Rouge, Lévis, Charlesbourg, Beauport et plus.">
   <meta name="keywords" content="Mélanie Fafard, courtière immobilière, courtier immobilier Québec, courtier immobilier Lévis, St-Augustin-de-Desmaures, Ste-Foy-Sillery-Cap-Rouge, Les Rivières, La Haute-St-Charles, La Cité-Limoilou, Charlesbourg, Beauport, Lac-Beauport, Shannon, Stoneham-et-Tewkesbury, Ste-Catherine-de-la-Jacques-Cartier, Fossambault-sur-le-Lac, St-Nicolas, Charny, St-Romuald, St-Rédempteur, Desjardins">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.svg" rel="icon">
   <link href="assets/img/favicon.svg" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
   <link href="assets/css/main.css" rel="stylesheet">
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://melaniefafardimmo.com/" />
-
-<!-- Open Graph - Facebook / LinkedIn -->
-<meta property="og:title" content="Mélanie Fafard – Courtière immobilière à Québec et Lévis">
-<meta property="og:description" content="Courtière immobilière résidentielle offrant un accompagnement humain, stratégique et professionnel pour vendre, acheter ou évaluer une propriété à Québec et Lévis.">
-<meta property="og:image" content="https://melaniefafardimmo.com/assets/img/herobanner.webp">
-<meta property="og:url" content="https://melaniefafardimmo.com/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fr_CA">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mélanie Fafard – Courtière immobilière à Québec et Lévis">
-<meta name="twitter:description" content="Vente, achat, évaluation et investissement immobilier à Québec et Lévis. Un service humain, transparent et efficace.">
-<meta name="twitter:image" content="https://melaniefafardimmo.com/assets/img/herobanner.webp">
-
-<!-- Geo Tags for Local SEO -->
-<meta name="geo.region" content="CA-QC">
-<meta name="geo.placename" content="Québec, Lévis">
-<meta name="geo.position" content="46.8139;-71.2080">
-<meta name="ICBM" content="46.8139, -71.2080">
-
-<!-- LocalBusiness + RealEstateAgent Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "RealEstateAgent"],
-  "name": "Mélanie Fafard – Courtière immobilière",
-  "image": "https://melaniefafardimmo.com/assets/img/herobanner.webp",
-  "url": "https://melaniefafardimmo.com/",
-  "logo": "https://melaniefafardimmo.com/assets/img/logo.svg",
-  "telephone": "+1-581-305-4442",
-  "email": "mfafardimmobilier@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Québec",
-    "addressRegion": "QC",
-    "addressCountry": "CA"
-  },
-  "areaServed": [
-    "Québec", "Lévis", "St-Augustin-de-Desmaures", "Ste-Foy–Sillery–Cap-Rouge",
-    "Les Rivières", "La Haute-St-Charles", "Charlesbourg", "Beauport",
-    "Lac-Beauport", "Shannon", "Stoneham-et-Tewkesbury",
-    "Ste-Catherine-de-la-Jacques-Cartier", "Fossambault-sur-le-Lac",
-    "St-Nicolas", "Charny", "St-Romuald", "St-Rédempteur", "Desjardins"
-  ],
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61575817391811"
-  ],
-  "description": "Courtière immobilière résidentielle à Québec et Lévis offrant un accompagnement complet pour la vente, l’achat, l’évaluation et l’investissement immobilier."
-}
-</script>
-
-<!-- FAQ Schema for SEO Boost -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Quels secteurs Mélanie Fafard dessert-elle ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mélanie dessert Québec, Lévis, St-Augustin, Ste-Foy–Sillery–Cap-Rouge, Les Rivières, Charlesbourg, Beauport, Lac-Beauport, Stoneham, Shannon, St-Nicolas, Charny, St-Romuald et les environs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quels services immobiliers sont offerts ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Elle offre la vente, l’achat, l’évaluation de propriété, l’accompagnement pour investisseurs et le programme exclusif Complici-T."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Comment contacter la courtière ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vous pouvez la contacter au (581) 305-4442 ou par courriel à mfafardimmobilier@gmail.com."
-      }
+  <style>
+    .marker-cluster-small,
+    .marker-cluster-medium,
+    .marker-cluster-large {
+      background-color: rgba(220, 53, 69, 0.6) !important; /* Brand Red with transparency */
     }
-  ]
-}
-</script>
+    .marker-cluster-small div,
+    .marker-cluster-medium div,
+    .marker-cluster-large div {
+      background-color: rgba(220, 53, 69, 0.9) !important; /* Solid Brand Red */
+      color: white !important;
+      font-weight: bold;
+    }
+  </style>
+
+  <link rel="canonical" href="https://melaniefafardimmo.com/" />
+
+  <meta property="og:title" content="Mélanie Fafard – Courtière immobilière à Québec et Lévis">
+  <meta property="og:description" content="Courtière immobilière résidentielle offrant un accompagnement humain, stratégique et professionnel pour vendre, acheter ou évaluer une propriété à Québec et Lévis.">
+  <meta property="og:image" content="https://melaniefafardimmo.com/assets/img/herobanner.webp">
+  <meta property="og:url" content="https://melaniefafardimmo.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CA">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mélanie Fafard – Courtière immobilière à Québec et Lévis">
+  <meta name="twitter:description" content="Vente, achat, évaluation et investissement immobilier à Québec et Lévis. Un service humain, transparent et efficace.">
+  <meta name="twitter:image" content="https://melaniefafardimmo.com/assets/img/herobanner.webp">
+
+  <meta name="geo.region" content="CA-QC">
+  <meta name="geo.placename" content="Québec, Lévis">
+  <meta name="geo.position" content="46.8139;-71.2080">
+  <meta name="ICBM" content="46.8139, -71.2080">
 
 </head>
 
 <body class="index-page">
 
-<header id="header" class="header d-flex align-items-center fixed-top">
-  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.svg" alt="Mélanie Fafard" class="header-logo">
-    </a>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active">Accueil</a></li>
-        <li><a href="./apropos.html">À propos</a></li>
-        <li><a href="https://propriodirect.com/melanie-fafard">Propriétés</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="programmes.html">Programmes</a></li>
-        <li><a href="./temoignages.html">Témoignages</a></li>
-        
-       <li>
-   <a href="#contact" >Contact</a>
-</li>
-
-        <li class="d-xl-none mt-3 text-center">
-          <div class="mobile-social-group">
-            <span class="d-block mb-2 text-muted small">Suivez-moi</span>
-            <a href="https://www.facebook.com/profile.php?id=61575817391811" class="mx-2"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/melaniefafardimmo/" class="mx-2"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/mfafardimmo" class="mx-2"><i class="bi bi-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="mx-2"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </li>
-      </ul>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </nav>
-
-    <div class="header-social-links d-flex align-items-center">
-      
-      <div class="d-none d-xl-flex align-items-center">
-        <a href="tel:5813054442" class="desktop-phone me-4">(581) 305-4442</a>
-        
-        <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link"><i class="bi bi-instagram"></i></a>
-        <a href="https://x.com/mfafardimmo" class="channel-link"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link"><i class="bi bi-linkedin"></i></a>
-      </div>
-
-      <a href="tel:5813054442" class="mobile-phone-red d-xl-none">
-        <i class="bi bi-telephone-fill"></i>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.svg" alt="Mélanie Fafard" class="header-logo">
       </a>
 
-    </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Accueil</a></li>
+          <li><a href="./apropos.html">À propos</a></li>
+          <li><a href="https://propriodirect.com/melanie-fafard">Propriétés</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="./temoignages.html">Témoignages</a></li>
+          
+          <li>
+            <a href="#contact" >Contact</a>
+          </li>
 
-  </div>
-</header>
+          <li class="d-xl-none mt-3 text-center">
+            <div class="mobile-social-group">
+              <span class="d-block mb-2 text-muted small">Suivez-moi</span>
+              <a href="https://www.facebook.com/profile.php?id=61575817391811" class="mx-2"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/melaniefafardimmo/" class="mx-2"><i class="bi bi-instagram"></i></a>
+              <a href="https://x.com/mfafardimmo" class="mx-2"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="mx-2"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links d-flex align-items-center">
+        
+        <div class="d-none d-xl-flex align-items-center">
+          <a href="tel:5813054442" class="desktop-phone me-4">(581) 305-4442</a>
+          
+          <a href="https://www.facebook.com/profile.php?id=61575817391811" class="channel-link"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/melaniefafardimmo/" class="channel-link"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/mfafardimmo" class="channel-link"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/" class="channel-link"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <a href="tel:5813054442" class="mobile-phone-red d-xl-none">
+          <i class="bi bi-telephone-fill"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
 
   <main class="main">
 
-<!-- Hero Section -->
-<section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section dark-background">
 
-  <picture>
-    <source srcset="assets/img/mobilebanner.webp" media="(max-width: 768px)">
+      <picture>
+        <source srcset="assets/img/mobilebanner.webp" media="(max-width: 768px)">
 
-    <img src="assets/img/herobanner.webp"
-         alt="Mélanie Fafard – Courtière immobilière"
-         class="hero-img"
-         data-aos="fade-in">
-  </picture>
+        <img src="assets/img/herobanner.webp"
+             alt="Mélanie Fafard – Courtière immobilière"
+             class="hero-img"
+             data-aos="fade-in">
+      </picture>
 
-  <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
 
-    <h2 class="seo-hidden">Votre courtier immobilier à Québec et Lévis</h2>
-    <p class="seo-hidden">Accompagnement haut de gamme pour vendre, acheter ou investir à Québec, Lévis et les environs.</p>
+        <h2 class="seo-hidden">Votre courtier immobilier à Québec et Lévis</h2>
+        <p class="seo-hidden">Accompagnement haut de gamme pour vendre, acheter ou investir à Québec, Lévis et les environs.</p>
 
-    <a href="#contact" class="btn-red-cta">Me contacter</a>
-    
-  </div>
+        <a href="#contact" class="btn-red-cta">Me contacter</a>
+        
+      </div>
 
-</section>
+    </section>
 
-
-    <!-- About Section -->
     <section id="about" class="about section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>À propos</h2>
         <p>Une approche immobilière humaine, stratégique et orientée résultats.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row align-items-center">
 
@@ -280,9 +218,32 @@
 
       </div>
 
-    </section><!-- /About Section -->
-
-    <!-- Testimonials Section -->
+    </section><section id="transactions-map-section" class="section" style="background-color: #f8f9fa; padding: 80px 0;">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-4" data-aos="fade-right">
+            <span class="text-danger fw-bold text-uppercase" style="letter-spacing: 2px; font-size: 0.85rem;">Portfolio</span>
+            <h2 class="fw-black mt-2 mb-4" style="font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; color: #1a1a1a;">TRANSACTIONS</h2>
+            <p class="text-muted mb-5" style="font-size: 1.1rem; line-height: 1.6;">
+              Explorez mes transactions récentes à travers la grande région de Québec et Lévis. Chaque point sur la carte représente un projet immobilier accompli et un client satisfait.
+            </p>
+            
+            <div>
+              <a href="https://propriodirect.com/melanie-fafard" target="_blank" class="btn btn-danger text-white px-4 py-3 fw-bold text-uppercase" style="border-radius: 4px; letter-spacing: 1px; font-size: 0.85rem; transition: all 0.3s ease;">
+                <span>Voir nos propriétés</span>
+                <i class="bi bi-arrow-right ms-2 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-8" data-aos="fade-left">
+            <div class="position-relative w-100 bg-white rounded shadow-lg overflow-hidden z-1" style="height: 500px;">
+              <div id="transactionsMap" class="w-100 h-100 bg-light"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="testimonials" class="testimonials section dark-background">
 
       <img src="assets/img/backgroundtemoignages.webp" class="testimonials-bg" alt="Fond abstrait témoignages">
@@ -325,9 +286,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
+            </div><div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Lise Piché</h3>
                 <h4>Vente de propriété</h4>
@@ -340,9 +299,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
+            </div><div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Charles Aoussou</h3>
                 <h4>Achat &amp; vente</h4>
@@ -355,9 +312,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
+            </div><div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Philippe Veilleux</h3>
                 <h4>Achat puis revente</h4>
@@ -370,9 +325,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
+            </div><div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Noémie Duval</h3>
                 <h4>Vente – Région de Québec</h4>
@@ -385,9 +338,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
-
-          </div>
+            </div></div>
           <div class="swiper-pagination"></div>
         </div>
 
@@ -396,10 +347,7 @@
   <a href="temoignages.html" class="btn-primary-mf">Voir tous les témoignages</a>
 </div>
 
-    </section><!-- /Testimonials Section -->
-
-<!-- Services Section -->
-<section id="services" class="services section">
+    </section><section id="services" class="services section">
 
   <div class="container section-title" data-aos="fade-up">
     <h2>Services</h2>
@@ -512,9 +460,6 @@
 
 </section>
 
-
-
-    <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -534,8 +479,6 @@
                   <div class="overlay-circle circle-1"></div>
                   <div class="overlay-circle circle-2"></div>
                 </div>
-
-               
 
                 <div class="stats-card card-2" data-aos="zoom-in" data-aos-delay="500">
                   <div class="stat-icon">
@@ -609,9 +552,7 @@
 
       </div>
 
-    </section><!-- /Call To Action Section -->
-
-<section id="blog" class="blog section">
+    </section><section id="blog" class="blog section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Actualités & Conseils</h2>
@@ -682,19 +623,13 @@
 
     </section>
 
-    
-<!-- Contact Section -->
 <section id="contact" class="contact section">
-  <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Parlons de votre projet immobilier à Québec, Lévis ou dans les environs.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  </div><div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row g-4">
 
-      <!-- Left Column -->
       <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
         <div class="quick-contact-wrapper">
 
@@ -754,7 +689,6 @@
         </div>
       </div>
 
-      <!-- Right Column (Form) -->
       <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
         <div class="main-form-container">
 
@@ -767,7 +701,6 @@
             <p>Expliquez-moi brièvement votre projet (vente, achat, évaluation, investissement) et je vous reviendrai rapidement avec les prochaines étapes possibles.</p>
           </div>
 
-          <!-- FORM WITH FORMSPREE -->
           <form action="https://formspree.io/f/meeqblzv" method="POST" id="contact-form" class="modern-form">
 
             <input type="hidden" name="source" value="Site Mélanie Fafard">
@@ -791,7 +724,7 @@
                   <option value="vente">Vente de propriété</option>
                   <option value="achat">Achat d’une propriété</option>
                   <option value="evaluation">Évaluation de propriété</option>
-                 
+                  
                   <option value="autre">Autre projet</option>
                 </select>
               </div>
@@ -839,7 +772,6 @@
     </div>
   </div>
 </section>
-
 
   </main>
 
@@ -915,22 +847,164 @@
 
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Map configuration (centered around Québec/Lévis)
+      var map = L.map('transactionsMap').setView([46.8139, -71.2080], 9);
+      
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      // Initialize the Marker Cluster Group
+      var markers = L.markerClusterGroup({
+        maxClusterRadius: 40
+      });
+      
+      // Custom Red Marker to match the brand
+      var redIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      // Dataset with all 94 provided addresses (coordinates are approximate for visual mapping)
+      var properties = [
+        // --- VENDUES ---
+        { lat: 46.815, lng: -71.185, title: "25, rue Louis-Philippe Ruel", area: "Lévis" },
+        { lat: 46.850, lng: -71.260, title: "7640 rue de Liret", area: "Charlesbourg" },
+        { lat: 46.970, lng: -71.015, title: "Cadastre du Québec", area: "Château-Richer" },
+        { lat: 46.980, lng: -70.550, title: "70 9e Rue", area: "Montmagny" },
+        { lat: 46.520, lng: -70.930, title: "745 route 275", area: "Sainte-Marguerite" },
+        { lat: 46.755, lng: -71.695, title: "18 Carré du Golf", area: "Pont-Rouge" },
+        { lat: 46.780, lng: -71.290, title: "210-2745 chemin Sainte-Foy", area: "Sainte-Foy" },
+        { lat: 46.975, lng: -70.560, title: "825, Boul Taché Ouest #4", area: "Montmagny" },
+        { lat: 46.521, lng: -70.931, title: "745 route 275", area: "Sainte-Marguerite" },
+        { lat: 46.865, lng: -71.430, title: "1091 rue de l'Élysée", area: "Val-Bélair" },
+        { lat: 46.814, lng: -71.184, title: "27 rue Louis-Philippe Ruel", area: "Lévis" },
+        { lat: 46.810, lng: -71.170, title: "36 Rue Létourneau", area: "Lévis" },
+        { lat: 46.705, lng: -71.585, title: "701 Chemin du Lac", area: "Neuville" },
+        { lat: 46.885, lng: -71.410, title: "1041 Vaillancourt", area: "Charlesbourg" },
+        { lat: 46.735, lng: -71.285, title: "3664 avenue Saint-Augustin", area: "Lévis" },
+        { lat: 46.755, lng: -71.315, title: "102-3265 France-Prime", area: "Sainte-Foy" },
+        { lat: 46.795, lng: -70.735, title: "13 Avenue Saint-Paul", area: "Saint-Raphael" },
+        { lat: 46.730, lng: -71.280, title: "3806 avenue Saint-Augustin", area: "Lévis" },
+        { lat: 46.750, lng: -71.345, title: "1192 de la Rivière", area: "Cap-Rouge" },
+        { lat: 46.735, lng: -71.190, title: "963 Av Taniata", area: "Lévis" },
+        { lat: 46.545, lng: -71.440, title: "6-1176 rue Croteau", area: "Saint-Agapit" },
+        { lat: 46.795, lng: -71.240, title: "1-810 ave des Jésuites", area: "Québec" },
+        { lat: 46.860, lng: -71.435, title: "1064 rue de l' Échiquier", area: "Val-Bélair" },
+        { lat: 46.715, lng: -71.320, title: "325 rue de la Corniche", area: "Saint-Nicolas" },
+        { lat: 46.720, lng: -71.330, title: "260 Rue des Grives", area: "Saint-Nicolas" },
+        { lat: 46.800, lng: -71.340, title: "7860 Boulevard Wilfrid-Hamel", area: "Québec" },
+        { lat: 46.815, lng: -71.300, title: "2852 boulevard Père-Lelièvre", area: "Les Rivières" },
+        { lat: 46.790, lng: -71.155, title: "1720 Rue Charles-Rodrigue", area: "Lévis" },
+        { lat: 46.725, lng: -71.275, title: "7133 Rue du Merlebleu", area: "Charny" },
+        { lat: 46.810, lng: -71.330, title: "4050 avenue Terriot", area: "Les Rivières" },
+        { lat: 46.865, lng: -71.445, title: "1365 rue Émond", area: "Val-Bélair" },
+        { lat: 46.750, lng: -71.450, title: "117 Rue du Mil", area: "Saint-Augustin" },
+        { lat: 46.855, lng: -71.200, title: "335 rue du Ruisseau", area: "Beauport" },
+        { lat: 46.813, lng: -71.203, title: "411-205 rue du Porche", area: "Vieux-Québec" },
+        { lat: 46.870, lng: -71.160, title: "828-830 boulevard des Chutes", area: "Beauport" },
+        { lat: 46.615, lng: -71.440, title: "121 rue des Orchidées", area: "Saint-Apollinaire" },
+        { lat: 46.616, lng: -71.442, title: "75 Rue Principale", area: "Saint-Apollinaire" },
+        { lat: 46.770, lng: -71.310, title: "1623 rue Ranvoyze", area: "Sainte-Foy" },
+        { lat: 46.815, lng: -71.220, title: "313-936 rue des Prairies", area: "Saint-Roch" },
+        { lat: 46.805, lng: -71.345, title: "1531 rue Annette-Leclerc", area: "L'Ancienne-Lorette" },
+        { lat: 46.808, lng: -71.165, title: "78 Rue des Gaspésiennes", area: "Lévis" },
+        { lat: 46.862, lng: -71.440, title: "1327 rue des Camarades", area: "Val-Bélair" },
+        { lat: 46.938, lng: -71.298, title: "35 chemin de la Cornière", area: "Lac-Beauport" },
+        { lat: 46.851, lng: -71.270, title: "232-6100 rue de la Griotte", area: "Charlesbourg" },
+        { lat: 46.690, lng: -71.880, title: "218 Rue Helene", area: "Portneuf" },
+        { lat: 46.765, lng: -71.315, title: "203-3475 chemin Saint-Louis", area: "Sainte-Foy" },
+        { lat: 46.805, lng: -71.170, title: "305-5191 Rue Saint-Georges", area: "Lévis" },
+        { lat: 46.855, lng: -71.265, title: "7585 rue La Fraîcheur", area: "Charlesbourg" },
+        { lat: 46.845, lng: -71.330, title: "6683 carré du Brûlé", area: "Neufchâtel" },
+        { lat: 46.710, lng: -71.335, title: "269 Rue du Château", area: "Saint-Nicolas" },
+        { lat: 46.865, lng: -71.185, title: "191 rue d'Orléans", area: "Beauport" },
+        { lat: 46.810, lng: -71.175, title: "78 Rue Massé", area: "Lévis" },
+        { lat: 46.780, lng: -71.285, title: "203-2761 chemin Sainte-Foy", area: "Sainte-Foy" },
+        { lat: 46.910, lng: -71.360, title: "79 Rue Prénoveau", area: "Lac-Saint-Charles" },
+
+        // --- ACHETÉES ---
+        { lat: 46.870, lng: -71.440, title: "1360 Av. du Golf-de-Bélair, app. 312", area: "Val-Bélair" },
+        { lat: 46.745, lng: -71.340, title: "1154 Rue du Domaine", area: "Cap-Rouge" },
+        { lat: 46.685, lng: -71.065, title: "84 Rue Laliberté", area: "Saint-Henri" },
+        { lat: 46.671, lng: -71.785, title: "32 Rue du Manoir", area: "Cap-Santé" },
+        { lat: 46.860, lng: -71.210, title: "576 Av. Nordique", area: "Beauport" },
+        { lat: 46.780, lng: -71.250, title: "1214 Av. Maguire", area: "Sillery" },
+        { lat: 46.775, lng: -71.295, title: "845 Rue Beauregard, app. 303", area: "Sainte-Foy" },
+        { lat: 46.755, lng: -71.330, title: "4771 Rue Pauline-Roy-Rouillard", area: "Cap-Rouge" },
+        { lat: 46.815, lng: -71.305, title: "2645 Boul. Père-Lelièvre, app. 113", area: "Les Rivières" },
+        { lat: 46.810, lng: -71.176, title: "574 Rue de la Falaise", area: "Lévis" },
+        { lat: 46.845, lng: -71.360, title: "4278 Rue René-Chaloult", area: "Haute-Saint-Charles" },
+        { lat: 46.800, lng: -71.180, title: "92 Rue St-Édouard", area: "Lévis" },
+        { lat: 46.475, lng: -71.155, title: "493 Rue des Érables", area: "Saint-Bernard" },
+        { lat: 46.765, lng: -71.305, title: "3047 Rue Chambalon", area: "Sainte-Foy" },
+        { lat: 46.530, lng: -71.350, title: "301 Route 269 Nord", area: "Saint-Gilles" },
+        { lat: 46.825, lng: -71.265, title: "34 Rue Général-Vanier", area: "Limoilou" },
+        { lat: 46.754, lng: -71.314, title: "3310 Rue France-Prime, app. 404", area: "Sainte-Foy" },
+        { lat: 46.805, lng: -71.240, title: "945 Av. Joffre, app. 1", area: "Limoilou" },
+        { lat: 46.715, lng: -71.310, title: "25 Rue Bélanger", area: "Chutes-de-la-Chaudière" },
+        { lat: 46.813, lng: -71.182, title: "Saint-Hilaire", area: "Lévis" },
+        { lat: 46.805, lng: -71.165, title: "67 rue Joseph-Garant", area: "Lévis" },
+        { lat: 46.820, lng: -71.320, title: "2185 Rue d'Ars", area: "Les Rivières" },
+        { lat: 46.835, lng: -70.850, title: "497 Rue du Piedmont", area: "La Durantaye" },
+        { lat: 46.995, lng: -71.365, title: "15 Mtée du Boisé", area: "Stoneham" },
+        { lat: 46.810, lng: -71.350, title: "201-7438 Rue Jacqueline-Auriol", area: "Aéroport" },
+        { lat: 46.885, lng: -70.825, title: "352 Ch. d'Azur", area: "Saint-Vallier" },
+        { lat: 46.805, lng: -71.185, title: "3656 de la Fabrique", area: "Lévis" },
+        { lat: 46.815, lng: -71.170, title: "25 Rue Duplessis", area: "Lévis" },
+        { lat: 46.785, lng: -71.145, title: "757 rue Félix-Leclerc", area: "Lévis" },
+        { lat: 46.865, lng: -71.435, title: "1114 des Incas", area: "Val-Bélair" },
+        { lat: 46.720, lng: -71.315, title: "1162 rue Léon-Provancher", area: "Saint-Nicolas" },
+        { lat: 46.535, lng: -71.355, title: "111 rue du Havre", area: "Saint-Gilles" },
+        { lat: 46.735, lng: -71.275, title: "210 Rue du Marqueur", area: "Lévis" },
+        { lat: 46.920, lng: -71.365, title: "2070 Av. de la Rivière-Jaune", area: "Lac-Saint-Charles" },
+        { lat: 46.755, lng: -71.240, title: "1939 Ch. du Sault", area: "Saint-Romuald" },
+        { lat: 46.630, lng: -70.670, title: "22 Rue St-François", area: "Saint-Damien" },
+        { lat: 46.800, lng: -71.350, title: "1386 St-Charles", area: "L'Ancienne-Lorette" },
+        { lat: 46.840, lng: -71.615, title: "10 Rue Gingras", area: "Sainte-Catherine-de-la-JC" },
+        { lat: 46.975, lng: -71.010, title: "7930 Av. Royale", area: "Château-Richer" },
+        { lat: 46.756, lng: -71.318, title: "3245 Rue France-Prime, app. 309", area: "Sainte-Foy" }
+      ];
+
+      // Add properties to the Marker Cluster Group
+      properties.forEach(function(prop) {
+        var marker = L.marker([prop.lat, prop.lng], {icon: redIcon})
+          .bindPopup(`
+            <div class="text-center" style="font-family: inherit;">
+              <div class="text-danger text-uppercase fw-bold mb-1" style="font-size: 10px; letter-spacing: 1px;">${prop.area}</div>
+              <div class="fw-bold text-dark mb-2" style="font-size: 14px;">${prop.title}</div>
+              <div class="badge bg-danger p-2 text-white">TRANSACTION RÉUSSIE</div>
+            </div>
+          `);
+        markers.addLayer(marker);
+      });
+
+      // Add the Cluster Group to the Map
+      map.addLayer(markers);
+    });
+  </script>
 
   <script>
 document.getElementById("contact-form").addEventListener("submit", async function(e) {
@@ -966,44 +1040,6 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   } catch (err) {
     loading.style.display = "none";
     errorMsg.textContent = "Impossible d'envoyer votre message.";
-    errorMsg.style.display = "block";
-  }
-});
-</script>
-<script>
-document.getElementById("newsletter-form").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const formData = new FormData(form);
-
-  const loading = form.querySelector(".loading");
-  const errorMsg = form.querySelector(".error-message");
-  const successMsg = form.querySelector(".sent-message");
-
-  loading.style.display = "block";
-  errorMsg.style.display = "none";
-  successMsg.style.display = "none";
-
-  try {
-    const res = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { "Accept": "application/json" }
-    });
-
-    loading.style.display = "none";
-
-    if (res.ok) {
-      successMsg.style.display = "block";
-      form.reset();
-    } else {
-      errorMsg.textContent = "Impossible de valider votre inscription.";
-      errorMsg.style.display = "block";
-    }
-  } catch (err) {
-    loading.style.display = "none";
-    errorMsg.textContent = "Une erreur est survenue. Réessayez plus tard.";
     errorMsg.style.display = "block";
   }
 });
