@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-07-14T14:19:46.990834+00:00",
+  "generatedAt": "2026-07-14T15:21:55.481570+00:00",
   "listings": [
     {
       "uls": "15187483",
@@ -30,6 +30,8 @@
       "datePosted": "2026/07/08",
       "yearBuilt": "1980",
       "livingArea": "97.8 mc",
+      "floorLevel": "",
+      "condoFees": "",
       "parking": "Extérieur, Au garage",
       "highlights": {
         "Année de construction": "1980",
@@ -50,15 +52,7 @@
         "Approvisionnement en eau": "Municipalité"
       },
       "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle, meuble suspendu de télévision au salon, tablette en bois de la chambre principale, étagère blanche de la salle de bain, établi dans l'atelier (pas étagères noires), balayeuse centrale et accessoires, gazebo extérieur, outils de jardinage et bois de chauffage dans le cabanon.",
-      "taxes": {
-        "Total taxes": "4,060 $",
-        "Taxes municipales": "3,776 $",
-        "Taxes scolaires": "284 $",
-        "Terrain": "207,000 $",
-        "Bâtiment": "221,000 $",
-        "Évaluation totale": "428,000 $"
-      },
-      "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix.",
+      "exclusions": "",
       "rooms": [
         {
           "name": "Cuisine",
@@ -126,7 +120,16 @@
           "dimensions": "14.1x12.11 P",
           "flooring": "Plancher flottant"
         }
-      ]
+      ],
+      "taxes": {
+        "Total taxes": "4,060 $",
+        "Taxes municipales": "3,776 $",
+        "Taxes scolaires": "284 $",
+        "Terrain": "207,000 $",
+        "Bâtiment": "221,000 $",
+        "Évaluation totale": "428,000 $"
+      },
+      "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
     {
       "uls": "27739903",
@@ -183,6 +186,7 @@
         "Facilité d'accès": "Ascenseur"
       },
       "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle, divan du salon, climatiseur mural, balayeuse centrale et accessoires, ouvre-porte électrique du garage.",
+      "exclusions": "",
       "rooms": [
         {
           "name": "Hall d'entrée/Vestibule",
