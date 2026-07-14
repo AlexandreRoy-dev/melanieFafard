@@ -137,8 +137,9 @@ def parse_agent_listings(html: str) -> list[dict]:
                 photo_urls.append(large)
 
         price_raw = html_lib.unescape(price_match.group(1)).strip() if price_match else ""
-        if sold and (not price_raw or "$" not in price_raw):
-            price_raw = "Vendu"
+        if sold:
+            # Never expose sold listing prices on the site
+            price_raw = ""
 
         listings.append(
             {
@@ -918,7 +919,13 @@ def main() -> int:
     parser.add_argument(
         "--include-sold",
         action="store_true",
-        help="Also sync sold listings shown on the broker page",
+        default=True,
+        help="Sync sold listings from the broker page (default: on)",
+    )
+    parser.add_argument(
+        "--exclude-sold",
+        action="store_true",
+        help="Only sync active listings (hide sold)",
     )
     parser.add_argument(
         "--skip-generate",
@@ -949,12 +956,14 @@ def main() -> int:
     if not discovered:
         raise RuntimeError("No listings found on Proprio Direct agent page.")
 
-    if not args.include_sold:
+    include_sold = args.include_sold and not args.exclude_sold
+    if not include_sold:
         active = [item for item in discovered if not item["sold"]]
         if active:
             discovered = active
         else:
             print("WARN: no active listings; keeping sold ones for sync")
+            include_sold = True
 
     if args.max_listings > 0:
         discovered = discovered[: args.max_listings]
@@ -1023,7 +1032,7 @@ def main() -> int:
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "agentUrl": args.agent_url,
-        "includeSold": args.include_sold,
+        "includeSold": include_sold,
         "maxListings": args.max_listings,
         "removedStale": removed,
         "listings": results,

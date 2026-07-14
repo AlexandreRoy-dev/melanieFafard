@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-14T14:19:46.992346+00:00",
+  "generatedAt": "2026-07-14T15:24:53.109603+00:00",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "includeSold": false,
+  "includeSold": true,
   "maxListings": 30,
   "removedStale": [],
   "listings": [
@@ -54,6 +54,26 @@
       "ogShareImage": "assets/img/proprietes/15187483/og-share.jpg"
     },
     {
+      "uls": "9990226",
+      "photoCount": 1,
+      "photos": [
+        "01.jpg"
+      ],
+      "source": "centris",
+      "publicPath": "/ca/qc/quebec/la-haute-saint-charles/1618-rue-aladin/",
+      "ogShareImage": "assets/img/proprietes/9990226/og-share.jpg"
+    },
+    {
+      "uls": "11559911",
+      "photoCount": 1,
+      "photos": [
+        "01.jpg"
+      ],
+      "source": "centris",
+      "publicPath": "/ca/qc/beaupre/centre/360-l6-rue-dupont-2106/",
+      "ogShareImage": "assets/img/proprietes/11559911/og-share.jpg"
+    },
+    {
       "uls": "27739903",
       "photoCount": 30,
       "photos": [
@@ -91,6 +111,26 @@
       "source": "centris",
       "publicPath": "/ca/qc/quebec/les-rivieres/1630-rue-claire-bonenfant-404/",
       "ogShareImage": "assets/img/proprietes/27739903/og-share.jpg"
+    },
+    {
+      "uls": "26771434",
+      "photoCount": 1,
+      "photos": [
+        "01.jpg"
+      ],
+      "source": "centris",
+      "publicPath": "/ca/qc/levis/les-chutes-de-la-chaudiere-est/1093a-rue-de-la-prairie/",
+      "ogShareImage": "assets/img/proprietes/26771434/og-share.jpg"
+    },
+    {
+      "uls": "21270396",
+      "photoCount": 1,
+      "photos": [
+        "01.jpg"
+      ],
+      "source": "centris",
+      "publicPath": "/ca/qc/quebec/beauport/3882-boul-ste-anne-305/",
+      "ogShareImage": "assets/img/proprietes/21270396/og-share.jpg"
     }
   ]
 }

@@ -213,16 +213,23 @@ def listing_card_html(listing: dict, depth: int = 0) -> str:
             f'<span><i class="bi bi-bounding-box"></i> {escape(str(size_value))}</span>'
         )
 
+    is_sold = bool(listing.get("sold"))
+    price_html = (
+        '<p class="prop-price prop-sold-label">Vendu</p>'
+        if is_sold
+        else f'<p class="prop-price">{escape(listing.get("price") or "")}</p>'
+    )
+
     return f"""
         <div class="col-lg-4 col-md-6" data-aos="fade-up">
-          <article class="prop-card h-100">
+          <article class="prop-card h-100{" prop-card-sold" if is_sold else ""}">
             <a href="{escape(href)}" class="prop-card-media">
               <img src="{escape(img)}" alt="{escape(listing.get('title') or listing.get('address') or '')}" loading="lazy">
               {badge}
             </a>
             <div class="prop-card-body">
               <span class="prop-subtitle mb-1">{escape(listing.get('propertyType') or 'Propriété')}</span>
-              <p class="prop-price">{escape(listing.get('price') or '')}</p>
+              {price_html}
               <h3 class="prop-address">{escape(listing.get('address') or '')}</h3>
               <p class="prop-city">{escape(listing.get('cityLabel') or '')}</p>
               <div class="prop-meta">{''.join(meta_bits)}</div>
@@ -267,7 +274,7 @@ def generate_listings_page(registry: dict) -> None:
     <div class="container" data-aos="fade-up">
       <div class="section-title-wrapper text-center">
         <h1 class="title-with-lines">Propriétés</h1>
-        <p>Découvrez mes inscriptions actuelles à Québec, Lévis et les environs.</p>
+        <p>Découvrez mes inscriptions actuelles et mes propriétés vendues à Québec, Lévis et les environs.</p>
       </div>
     </div>
   </section>
@@ -390,6 +397,27 @@ def generate_detail_page(listing: dict) -> None:
     if listing.get("postalCode"):
         city_line += f" · {escape(str(listing['postalCode']))}"
 
+    is_sold = bool(listing.get("sold"))
+    price_html = (
+        '<p class="prop-price prop-sold-label">Vendu</p>'
+        if is_sold
+        else f'<p class="prop-price">{escape(listing.get("price") or "")}</p>'
+    )
+    actions_html = ""
+    if is_sold:
+        actions_html = f"""
+            <div class="property-actions">
+              <a class="btn-outline" href="{escape(listing.get('proprioUrl') or '#')}" target="_blank" rel="noopener">Voir sur Proprio Direct</a>
+              <a class="btn-outline" href="{escape(listing.get('centrisUrl') or '#')}" target="_blank" rel="noopener">Voir sur Centris</a>
+            </div>"""
+    else:
+        actions_html = f"""
+            <div class="property-actions">
+              <a class="btn-primary" href="{p}index.html#contact">Demander une visite</a>
+              <a class="btn-outline" href="{escape(listing.get('proprioUrl') or '#')}" target="_blank" rel="noopener">Voir sur Proprio Direct</a>
+              <a class="btn-outline" href="{escape(listing.get('centrisUrl') or '#')}" target="_blank" rel="noopener">Voir sur Centris</a>
+            </div>"""
+
     highlights_html = ""
     if listing.get("highlights"):
         highlights_html = f"""
@@ -502,17 +530,13 @@ def generate_detail_page(listing: dict) -> None:
         <div class="col-lg-5" data-aos="fade-up" data-aos-delay="120">
           <div class="property-summary">
             <span class="prop-subtitle">{escape(listing.get('propertyType') or 'Propriété')}</span>
-            <p class="prop-price">{escape(listing.get('price') or '')}</p>
+            {price_html}
             <h1>{escape(listing.get('address') or listing.get('title') or '')}</h1>
             <p class="prop-city">{city_line}</p>
             <ul class="property-facts">
               {''.join(meta_rows)}
             </ul>
-            <div class="property-actions">
-              <a class="btn-primary" href="{p}index.html#contact">Demander une visite</a>
-              <a class="btn-outline" href="{escape(listing.get('proprioUrl') or '#')}" target="_blank" rel="noopener">Voir sur Proprio Direct</a>
-              <a class="btn-outline" href="{escape(listing.get('centrisUrl') or '#')}" target="_blank" rel="noopener">Voir sur Centris</a>
-            </div>
+            {actions_html}
           </div>
         </div>
       </div>

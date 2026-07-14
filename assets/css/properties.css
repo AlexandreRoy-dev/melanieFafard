@@ -131,6 +131,17 @@
   margin-bottom: 0.35rem;
 }
 
+.prop-price.prop-sold-label {
+  color: #282828;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1.1rem;
+}
+
+.prop-card-sold .prop-card-media img {
+  filter: grayscale(0.2);
+}
+
 .prop-type {
   color: #6b6b6b;
   font-size: 0.9rem;
@@ -450,6 +461,10 @@
 .property-summary .prop-price {
   font-size: 1.75rem;
   margin-bottom: 0.15rem;
+}
+
+.property-summary .prop-price.prop-sold-label {
+  font-size: 1.25rem;
 }
 
 .property-facts {

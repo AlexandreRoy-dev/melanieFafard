@@ -19,7 +19,7 @@ on:
       include_sold:
         description: Include sold listings from the broker page
         required: false
-        default: false
+        default: true
         type: boolean
 
 permissions:
@@ -51,9 +51,9 @@ jobs:
           PROPRIO_AGENT_URL: ${{ vars.PROPRIO_AGENT_URL }}
         run: |
           AGENT_URL="${PROPRIO_AGENT_URL:-https://propriodirect.com/melanie-fafard}"
-          INCLUDE_SOLD_FLAG=""
-          if [ "${{ github.event.inputs.include_sold }}" = "true" ]; then
-            INCLUDE_SOLD_FLAG="--include-sold"
+          INCLUDE_SOLD_FLAG="--include-sold"
+          if [ "${{ github.event.inputs.include_sold }}" = "false" ]; then
+            INCLUDE_SOLD_FLAG="--exclude-sold"
           fi
           python scripts/proprio_sync.py \
             --agent-url "$AGENT_URL" \
