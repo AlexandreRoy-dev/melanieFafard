@@ -383,17 +383,21 @@
 #property-share-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.55rem;
+  align-items: center;
 }
 
 .share-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 2.55rem;
+  height: 2.55rem;
   border: 0;
-  border-radius: 5px;
-  padding: 0.45rem 0.85rem;
-  font-size: 0.75rem;
-  font-weight: 600;
+  border-radius: 999px;
+  padding: 0;
+  font-size: 1.05rem;
+  line-height: 1;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
@@ -406,15 +410,25 @@
   color: #fff;
 }
 
+.share-btn i {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
 .share-facebook { background: #1877f2; }
 .share-x { background: #111; }
 .share-linkedin { background: #0a66c2; }
+.share-pinterest { background: #bd081c; }
 .share-whatsapp { background: #25d366; }
 .share-email { background: #282828; }
 .share-copy {
   background: #fff;
   color: #282828 !important;
   border: 1px solid rgba(40, 40, 40, 0.15);
+}
+.share-copy:hover {
+  color: #282828 !important;
+  border-color: var(--accent-color, #d0103a);
 }
 .share-native { background: var(--accent-color, #d0103a); }
 
@@ -478,19 +492,67 @@
   margin-top: 1.5rem;
 }
 
-.property-description h2 {
+.property-description h2,
+.property-panel h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--heading-color, #282828);
 }
 
-.property-description p {
+.property-description p,
+.property-panel p {
   white-space: pre-wrap;
   line-height: 1.75;
   color: #444;
   margin: 0;
   font-size: 1.02rem;
+}
+
+.property-panel {
+  background: var(--surface-color, #fff);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.property-panel-muted {
+  background: #f8f6f3;
+}
+
+.property-panel .property-facts {
+  margin: 0;
+}
+
+.property-rooms-table {
+  margin-top: 0.5rem;
+}
+
+.property-rooms-table table {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.property-rooms-table thead th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b6b6b;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(40, 40, 40, 0.1);
+  padding: 0.75rem 0.5rem;
+}
+
+.property-rooms-table tbody td {
+  padding: 0.85rem 0.5rem;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.08);
+  color: #444;
+  vertical-align: middle;
+}
+
+.property-rooms-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 @media (max-width: 768px) {
@@ -508,7 +570,8 @@
   }
 
   .property-summary,
-  .property-description {
+  .property-description,
+  .property-panel {
     padding: 1.35rem;
   }
 }

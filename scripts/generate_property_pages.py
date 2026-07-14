@@ -171,9 +171,11 @@ def head_block(
   <meta property="og:title" content="{escape(title)}">
   <meta property="og:description" content="{escape(description)}">
   <meta property="og:image" content="{escape(og_image)}">
+  <meta property="og:image:secure_url" content="{escape(og_image)}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="{escape(title)}">
   <meta property="og:url" content="{escape(canonical)}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_CA">
@@ -181,6 +183,7 @@ def head_block(
   <meta name="twitter:title" content="{escape(title)}">
   <meta name="twitter:description" content="{escape(description)}">
   <meta name="twitter:image" content="{escape(og_image)}">
+  <meta name="twitter:image:alt" content="{escape(title)}">
 {extra}
 </head>"""
 
@@ -204,9 +207,10 @@ def listing_card_html(listing: dict, depth: int = 0) -> str:
         meta_bits.append(
             f'<span><i class="bi bi-droplet"></i> {escape(str(listing["baths"]))} sdb</span>'
         )
-    if listing.get("size"):
+    size_value = listing.get("livingArea") or listing.get("size")
+    if size_value:
         meta_bits.append(
-            f'<span><i class="bi bi-bounding-box"></i> {escape(str(listing["size"]))}</span>'
+            f'<span><i class="bi bi-bounding-box"></i> {escape(str(size_value))}</span>'
         )
 
     return f"""
@@ -288,6 +292,42 @@ def generate_listings_page(registry: dict) -> None:
     print("wrote proprietes.html")
 
 
+def kv_list_html(data: dict | None, empty_message: str = "") -> str:
+    if not data:
+        return (
+            f'<p class="text-muted mb-0">{escape(empty_message)}</p>'
+            if empty_message
+            else ""
+        )
+    rows = [
+        f"<li><strong>{escape(str(key))}</strong><span>{escape(str(value))}</span></li>"
+        for key, value in data.items()
+    ]
+    return f'<ul class="property-facts">{"".join(rows)}</ul>'
+
+
+def rooms_table_html(rooms: list | None) -> str:
+    if not rooms:
+        return ""
+    rows = []
+    for room in rooms:
+        rows.append(
+            "<tr>"
+            f"<td>{escape(str(room.get('name') or ''))}</td>"
+            f"<td>{escape(str(room.get('level') or ''))}</td>"
+            f"<td>{escape(str(room.get('dimensions') or ''))}</td>"
+            f"<td>{escape(str(room.get('flooring') or ''))}</td>"
+            "</tr>"
+        )
+    return (
+        '<div class="table-responsive property-rooms-table">'
+        '<table class="table">'
+        "<thead><tr><th>Pièce</th><th>Étage</th><th>Dimensions</th><th>Plancher</th></tr></thead>"
+        f"<tbody>{''.join(rows)}</tbody>"
+        "</table></div>"
+    )
+
+
 def generate_detail_page(listing: dict) -> None:
     depth = 5  # /ca/qc/city/sector/street/index.html
     header, footer = site_chrome("proprietes", depth=depth)
@@ -308,14 +348,37 @@ def generate_detail_page(listing: dict) -> None:
 
     meta_rows = []
     if listing.get("beds"):
-        meta_rows.append(f"<li><strong>Chambres</strong><span>{escape(str(listing['beds']))}</span></li>")
+        meta_rows.append(
+            f"<li><strong>Chambres</strong><span>{escape(str(listing['beds']))}</span></li>"
+        )
     if listing.get("baths"):
         meta_rows.append(
             f"<li><strong>Salles de bain</strong><span>{escape(str(listing['baths']))}</span></li>"
         )
-    if listing.get("size"):
+    size_value = listing.get("livingArea") or listing.get("size")
+    if size_value:
         meta_rows.append(
-            f"<li><strong>Superficie</strong><span>{escape(str(listing['size']))}</span></li>"
+            f"<li><strong>Superficie</strong><span>{escape(str(size_value))}</span></li>"
+        )
+    if listing.get("yearBuilt"):
+        meta_rows.append(
+            f"<li><strong>Année</strong><span>{escape(str(listing['yearBuilt']))}</span></li>"
+        )
+    if listing.get("floorLevel"):
+        meta_rows.append(
+            f"<li><strong>Niveau</strong><span>{escape(str(listing['floorLevel']))}</span></li>"
+        )
+    if listing.get("condoFees"):
+        meta_rows.append(
+            f"<li><strong>Frais de condo</strong><span>{escape(str(listing['condoFees']))}</span></li>"
+        )
+    if listing.get("parking"):
+        meta_rows.append(
+            f"<li><strong>Stationnement</strong><span>{escape(str(listing['parking']))}</span></li>"
+        )
+    if listing.get("postalCode"):
+        meta_rows.append(
+            f"<li><strong>Code postal</strong><span>{escape(str(listing['postalCode']))}</span></li>"
         )
     meta_rows.append(
         f"<li><strong>Inscription</strong><span>{escape(str(listing['uls']))}</span></li>"
@@ -323,6 +386,73 @@ def generate_detail_page(listing: dict) -> None:
 
     city_label = listing["city"].replace("-", " ").title()
     sector_label = listing["sector"].replace("-", " ").title()
+    city_line = escape(listing.get("cityLabel") or "")
+    if listing.get("postalCode"):
+        city_line += f" · {escape(str(listing['postalCode']))}"
+
+    highlights_html = ""
+    if listing.get("highlights"):
+        highlights_html = f"""
+          <div class="property-panel" data-aos="fade-up">
+            <span class="prop-subtitle">Aperçu</span>
+            <h2>Points saillants</h2>
+            {kv_list_html(listing.get("highlights"))}
+          </div>"""
+
+    details_html = ""
+    if listing.get("details"):
+        details_html = f"""
+          <div class="property-panel" data-aos="fade-up">
+            <span class="prop-subtitle">Caractéristiques</span>
+            <h2>Détails de la propriété</h2>
+            {kv_list_html(listing.get("details"))}
+          </div>"""
+
+    inclusions_html = ""
+    if listing.get("inclusions"):
+        inclusions_html = f"""
+          <div class="property-panel" data-aos="fade-up">
+            <span class="prop-subtitle">Ce qui est inclus</span>
+            <h2>Inclusions</h2>
+            <p>{escape(listing.get("inclusions") or "")}</p>
+          </div>"""
+
+    exclusions_html = ""
+    if listing.get("exclusions"):
+        exclusions_html = f"""
+          <div class="property-panel" data-aos="fade-up">
+            <span class="prop-subtitle">Non inclus</span>
+            <h2>Exclusions</h2>
+            <p>{escape(listing.get("exclusions") or "")}</p>
+          </div>"""
+
+    rooms_html = ""
+    rooms_table = rooms_table_html(listing.get("rooms"))
+    if rooms_table:
+        rooms_html = f"""
+          <div class="property-panel" data-aos="fade-up">
+            <span class="prop-subtitle">Aménagement</span>
+            <h2>Pièces</h2>
+            {rooms_table}
+          </div>"""
+
+    taxes_html = ""
+    if listing.get("taxes"):
+        taxes_html = f"""
+          <div class="property-panel" data-aos="fade-up">
+            <span class="prop-subtitle">Finances</span>
+            <h2>Taxes et évaluation</h2>
+            {kv_list_html(listing.get("taxes"))}
+          </div>"""
+
+    additional_html = ""
+    if listing.get("additionalInfo"):
+        additional_html = f"""
+          <div class="property-panel property-panel-muted" data-aos="fade-up">
+            <span class="prop-subtitle">À noter</span>
+            <h2>Information supplémentaire</h2>
+            <p>{escape(listing.get("additionalInfo") or "")}</p>
+          </div>"""
 
     body = f"""{head_block(
         title=listing.get("shareTitle") or listing.get("title") or "Propriété",
@@ -374,7 +504,7 @@ def generate_detail_page(listing: dict) -> None:
             <span class="prop-subtitle">{escape(listing.get('propertyType') or 'Propriété')}</span>
             <p class="prop-price">{escape(listing.get('price') or '')}</p>
             <h1>{escape(listing.get('address') or listing.get('title') or '')}</h1>
-            <p class="prop-city">{escape(listing.get('cityLabel') or '')}</p>
+            <p class="prop-city">{city_line}</p>
             <ul class="property-facts">
               {''.join(meta_rows)}
             </ul>
@@ -394,6 +524,13 @@ def generate_detail_page(listing: dict) -> None:
             <h2>Description de la propriété</h2>
             <p>{escape(listing.get('description') or 'Description à venir.')}</p>
           </div>
+          {highlights_html}
+          {details_html}
+          {inclusions_html}
+          {exclusions_html}
+          {rooms_html}
+          {taxes_html}
+          {additional_html}
         </div>
       </div>
     </div>

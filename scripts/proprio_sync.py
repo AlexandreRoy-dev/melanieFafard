@@ -315,22 +315,354 @@ def fetch_centris_html(listing_id: str, session: requests.Session) -> str | None
     return None
 
 
+HIGHLIGHT_LABELS = [
+    "Année de construction",
+    "Superficie habitable",
+    "Superficie brute",
+    "Aire habitable",
+    "Niveau",
+    "Frais de copropriété",
+    "Facilité d'accès",
+    "Stationnement (total)",
+    "Stationnement",
+    "Chambres à coucher",
+    "Salles de bain",
+    "Salles d'eau",
+    "Garage",
+    "Nombre de pièces",
+]
+
+DETAIL_LABELS = [
+    "Équipement disponible",
+    "Equipement disponible",
+    "Appareils en location",
+    "Toiture",
+    "Zonage",
+    "Mode de chauffage",
+    "Garage",
+    "Armoires",
+    "Système d'égouts",
+    "Systeme d'egouts",
+    "Stationnement (total)",
+    "Énergie pour le chauffage",
+    "Energie pour le chauffage",
+    "Fenêtres",
+    "Fenetres",
+    "Particularités",
+    "Particularites",
+    "Approvisionnement en eau",
+    "Facilité d'accès",
+    "Facilite d'acces",
+    "Vue",
+    "Piscine",
+    "Foyer",
+    "Climatisation",
+    "Genre de propriété",
+    "Type de bâtiment",
+]
+
+
+def html_to_lines(html: str) -> list[str]:
+    text = re.sub(r"<br\s*/?>", "\n", html, flags=re.I)
+    text = re.sub(r"</(tr|li|p|h\d|div|td|th|section)>", "\n", text, flags=re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html_lib.unescape(text)
+    lines: list[str] = []
+    for raw in text.splitlines():
+        line = re.sub(r"\s+", " ", raw).strip()
+        if line:
+            lines.append(line)
+    return lines
+
+
+def slice_section(lines: list[str], start: str, ends: list[str]) -> list[str]:
+    start_l = start.lower()
+    end_set = {e.lower() for e in ends}
+    begin = None
+    for i, line in enumerate(lines):
+        if line.lower() == start_l or line.lower().startswith(start_l + " "):
+            begin = i + 1
+            break
+    if begin is None:
+        return []
+    out: list[str] = []
+    for line in lines[begin:]:
+        low = line.lower()
+        if low in end_set:
+            break
+        out.append(line)
+    return out
+
+
+def pairs_from_labels(section_lines: list[str], labels: list[str]) -> dict[str, str]:
+    label_map = {label.lower(): label for label in labels}
+    result: dict[str, str] = {}
+    i = 0
+    while i < len(section_lines):
+        line = section_lines[i]
+        key = label_map.get(line.lower())
+        if key and i + 1 < len(section_lines):
+            value = section_lines[i + 1].strip()
+            # skip if next line is also a known label
+            if value.lower() not in label_map and value.lower() not in {
+                "détails",
+                "details",
+                "inclusions",
+                "exclusions",
+                "inclus",
+                "pièces",
+                "pieces",
+            }:
+                result[key] = value
+                i += 2
+                continue
+        i += 1
+    return result
+
+
+def parse_rooms(section_lines: list[str]) -> list[dict]:
+    flooring_tokens = (
+        "céramique",
+        "ceramique",
+        "bois",
+        "flottant",
+        "vinyle",
+        "tapis",
+        "béton",
+        "beton",
+        "marbre",
+        "linoléum",
+        "linoleum",
+        "autre",
+        "flexible",
+    )
+    rooms: list[dict] = []
+    i = 0
+    while i < len(section_lines) - 3:
+        name, level, dims, flooring = section_lines[i : i + 4]
+        level_l = level.lower()
+        flooring_l = flooring.lower()
+        has_floor = any(
+            token in level_l
+            for token in (
+                "étage",
+                "etage",
+                "niveau",
+                "rdc",
+                "sous-sol",
+                "rez-de",
+                "ss",
+            )
+        ) or bool(re.search(r"\b\d+(er|ère|e|ieme|ième)?\b", level_l))
+        has_dims = bool(re.search(r"\d", dims)) and (
+            "x" in dims.lower() or "×" in dims or "p" in dims.lower()
+        )
+        has_flooring = any(token in flooring_l for token in flooring_tokens)
+        if has_floor and has_dims and has_flooring:
+            rooms.append(
+                {
+                    "name": name,
+                    "level": level,
+                    "dimensions": dims,
+                    "flooring": flooring,
+                }
+            )
+            i += 4
+            continue
+        i += 1
+    return rooms
+
+
+def parse_taxes(section_lines: list[str]) -> dict[str, str]:
+    joined = "\n".join(section_lines)
+    taxes: dict[str, str] = {}
+    patterns = [
+        (r"Taxes municipales[^\n]*\n\s*([\d][\d\s,\.]*\s*\$)", "Taxes municipales"),
+        (r"Taxes scolaires[^\n]*\n\s*([\d][\d\s,\.]*\s*\$)", "Taxes scolaires"),
+        (
+            r"Évaluation municipale[^\n]*\n[\s\S]*?Terrain\n\s*([\d][\d\s,\.]*\s*\$)",
+            "Terrain",
+        ),
+        (r"Bâtiment\n\s*([\d][\d\s,\.]*\s*\$)", "Bâtiment"),
+        (
+            r"Évaluation municipale[\s\S]*?Total\n\s*([\d][\d\s,\.]*\s*\$)",
+            "Évaluation totale",
+        ),
+    ]
+    # Also catch annual tax total that appears before assessment
+    tax_total = re.search(
+        r"Taxes scolaires[\s\S]*?Total\n\s*([\d][\d\s,\.]*\s*\$)",
+        joined,
+        re.I,
+    )
+    if tax_total:
+        taxes["Total taxes"] = re.sub(r"\s+", " ", tax_total.group(1)).strip()
+
+    for pattern, label in patterns:
+        m = re.search(pattern, joined, re.I)
+        if m:
+            taxes[label] = re.sub(r"\s+", " ", m.group(1)).strip()
+    return taxes
+
+
+def parse_proprio_listing_html(html: str) -> dict:
+    """Extract full listing details from a Proprio Direct property page."""
+    detail: dict = {
+        "description": "",
+        "postalCode": "",
+        "highlights": {},
+        "details": {},
+        "inclusions": "",
+        "exclusions": "",
+        "rooms": [],
+        "taxes": {},
+        "additionalInfo": "",
+        "datePosted": "",
+    }
+
+    m = re.search(
+        r'<meta\s+property="og:description"\s+content="([^"]+)"',
+        html,
+        re.I,
+    )
+    if m:
+        detail["description"] = html_lib.unescape(m.group(1).replace("&amp;", "&"))
+
+    for block in re.findall(
+        r'<script[^>]*type="application/ld\+json"[^>]*>([\s\S]*?)</script>',
+        html,
+        re.I,
+    ):
+        try:
+            data = json.loads(block)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(data, dict) and data.get("@type") == "RealEstateListing":
+            detail["datePosted"] = str(data.get("datePosted") or "")
+            entity = data.get("mainEntity") or {}
+            address = entity.get("address") or {}
+            if address.get("postalCode"):
+                detail["postalCode"] = address["postalCode"]
+            if not detail["description"] and data.get("description"):
+                detail["description"] = data["description"]
+            if entity.get("numberOfRooms") is not None:
+                detail["bedsFromSchema"] = str(entity.get("numberOfRooms"))
+            if entity.get("numberOfBathroomsTotal") is not None:
+                detail["bathsFromSchema"] = str(entity.get("numberOfBathroomsTotal"))
+
+    lines = html_to_lines(html)
+
+    # Description paragraph after heading if OG missing
+    if not detail["description"]:
+        desc_lines = slice_section(
+            lines, "Description", ["Points saillants", "Détails", "Pièces", "Inclus"]
+        )
+        if desc_lines:
+            detail["description"] = " ".join(desc_lines[:3]).strip()
+
+    highlight_lines = slice_section(
+        lines,
+        "Points saillants",
+        ["Détails", "Details", "Pièces", "Pieces", "Inclus", "Coûts et évaluation"],
+    )
+    detail["highlights"] = pairs_from_labels(highlight_lines, HIGHLIGHT_LABELS)
+
+    detail_lines = slice_section(
+        lines,
+        "Détails",
+        ["Inclus", "Inclusions", "Exclusions", "Pièces", "Pieces", "Coûts et évaluation"],
+    )
+    if not detail_lines:
+        detail_lines = slice_section(
+            lines,
+            "Details",
+            ["Inclus", "Inclusions", "Exclusions", "Pièces", "Pieces", "Coûts et évaluation"],
+        )
+    detail["details"] = pairs_from_labels(detail_lines, DETAIL_LABELS)
+
+    incl_lines = slice_section(
+        lines,
+        "Inclus",
+        ["Exclusions", "Pièces", "Pieces", "Coûts et évaluation", "Info supplémentaire"],
+    )
+    if not incl_lines:
+        incl_lines = slice_section(
+            lines,
+            "Inclusions",
+            ["Exclusions", "Pièces", "Pieces", "Coûts et évaluation", "Info supplémentaire"],
+        )
+    if incl_lines:
+        detail["inclusions"] = " ".join(incl_lines).strip()
+
+    excl_lines = slice_section(
+        lines,
+        "Exclusions",
+        ["Pièces", "Pieces", "Coûts et évaluation", "Info supplémentaire", "Inclus"],
+    )
+    if excl_lines:
+        detail["exclusions"] = " ".join(excl_lines).strip()
+
+    room_lines = slice_section(
+        lines,
+        "Pièces",
+        ["Coûts et évaluation", "Taxes", "Info supplémentaire", "Style de vie"],
+    )
+    if not room_lines:
+        room_lines = slice_section(
+            lines,
+            "Pieces",
+            ["Coûts et évaluation", "Taxes", "Info supplémentaire", "Style de vie"],
+        )
+    detail["rooms"] = parse_rooms(room_lines)
+
+    tax_lines = slice_section(
+        lines,
+        "Coûts et évaluation",
+        ["Info supplémentaire", "Style de vie", "Propriétés suggérées", "Street view"],
+    )
+    if not tax_lines:
+        tax_lines = slice_section(
+            lines,
+            "Taxes",
+            ["Info supplémentaire", "Style de vie", "Propriétés suggérées"],
+        )
+    detail["taxes"] = parse_taxes(tax_lines)
+
+    info_lines = slice_section(
+        lines,
+        "Info supplémentaire",
+        ["Style de vie", "Propriétés suggérées", "Calculatrice hypothécaire", "Street view"],
+    )
+    if info_lines:
+        # Keep broker disclaimer but clean whitespace
+        detail["additionalInfo"] = " ".join(info_lines).strip()
+
+    # Convenience aliases for cards/summary
+    highlights = detail["highlights"]
+    detail["yearBuilt"] = highlights.get("Année de construction", "")
+    detail["livingArea"] = (
+        highlights.get("Superficie habitable")
+        or highlights.get("Aire habitable")
+        or highlights.get("Superficie brute")
+        or ""
+    )
+    detail["floorLevel"] = highlights.get("Niveau", "")
+    detail["condoFees"] = highlights.get("Frais de copropriété", "")
+    detail["parking"] = (
+        highlights.get("Stationnement (total)")
+        or highlights.get("Stationnement")
+        or detail["details"].get("Stationnement (total)", "")
+    )
+
+    return detail
+
+
 def fetch_proprio_detail(url: str, session: requests.Session) -> dict:
     try:
         html = http_get(url, session).text
     except requests.RequestException:
         return {}
-
-    meta: dict = {}
-    for key in ("og:title", "og:description", "og:image"):
-        m = re.search(
-            rf'<meta\s+property="{key}"\s+content="([^"]+)"',
-            html,
-            re.IGNORECASE,
-        )
-        if m:
-            meta[key] = html_lib.unescape(m.group(1).replace("&amp;", "&"))
-    return meta
+    return parse_proprio_listing_html(html)
 
 
 def download_bytes(url: str, session: requests.Session) -> bytes:
@@ -408,9 +740,6 @@ def sync_listing_images(
         photo_urls = list(listing.get("photoUrls") or [])
         source = "proprio"
 
-    detail_meta = fetch_proprio_detail(listing["proprioUrl"], session)
-    if detail_meta.get("og:description") and not listing.get("description"):
-        listing["description"] = detail_meta["og:description"]
     if centris_meta.get("description") and not listing.get("description"):
         listing["description"] = centris_meta["description"]
     if centris_meta.get("ogTitle"):
@@ -483,6 +812,10 @@ def enrich_listing(raw: dict) -> dict:
     else:
         share_title = f"{raw.get('propertyType') or 'Propriété'} — {title}"
 
+    size = raw.get("size") or raw.get("livingArea") or ""
+    beds = raw.get("beds") or raw.get("bedsFromSchema") or ""
+    baths = raw.get("baths") or raw.get("bathsFromSchema") or ""
+
     return {
         **seo,
         "uls": raw["uls"],
@@ -495,14 +828,28 @@ def enrich_listing(raw: dict) -> dict:
         "address": raw["address"],
         "cityLabel": raw["city"],
         "propertyType": raw["propertyType"],
-        "size": raw["size"],
-        "beds": raw["beds"],
-        "baths": raw["baths"],
+        "size": size,
+        "beds": beds,
+        "baths": baths,
         "description": raw.get("description") or "",
         "title": f"{title} — {raw['city']}" if raw.get("city") else title,
         "shareTitle": share_title,
         "fallbackImage": f"{raw['uls']}.jpg",
         "photoUrls": raw.get("photoUrls") or [],
+        "postalCode": raw.get("postalCode") or "",
+        "datePosted": raw.get("datePosted") or "",
+        "yearBuilt": raw.get("yearBuilt") or "",
+        "livingArea": raw.get("livingArea") or size,
+        "floorLevel": raw.get("floorLevel") or "",
+        "condoFees": raw.get("condoFees") or "",
+        "parking": raw.get("parking") or "",
+        "highlights": raw.get("highlights") or {},
+        "details": raw.get("details") or {},
+        "inclusions": raw.get("inclusions") or "",
+        "exclusions": raw.get("exclusions") or "",
+        "rooms": raw.get("rooms") or [],
+        "taxes": raw.get("taxes") or {},
+        "additionalInfo": raw.get("additionalInfo") or "",
     }
 
 
@@ -535,6 +882,20 @@ def write_properties_registry(listings: list[dict]) -> Path:
                 "centrisUrl": item["centrisUrl"],
                 "fallbackImage": item["fallbackImage"],
                 "publicPath": listing_public_path(item),
+                "postalCode": item.get("postalCode") or "",
+                "datePosted": item.get("datePosted") or "",
+                "yearBuilt": item.get("yearBuilt") or "",
+                "livingArea": item.get("livingArea") or "",
+                "floorLevel": item.get("floorLevel") or "",
+                "condoFees": item.get("condoFees") or "",
+                "parking": item.get("parking") or "",
+                "highlights": item.get("highlights") or {},
+                "details": item.get("details") or {},
+                "inclusions": item.get("inclusions") or "",
+                "exclusions": item.get("exclusions") or "",
+                "rooms": item.get("rooms") or [],
+                "taxes": item.get("taxes") or {},
+                "additionalInfo": item.get("additionalInfo") or "",
             }
             for item in listings
         ],
@@ -605,11 +966,39 @@ def main() -> int:
 
     enriched = [enrich_listing(item) for item in discovered]
 
-    # Prefer detail descriptions before generating pages
+    # Pull full Proprio Direct details (rooms, taxes, inclusions, etc.)
     for item in enriched:
+        print(f"Fetching details {item['uls']}...")
         detail = fetch_proprio_detail(item["proprioUrl"], session)
-        if detail.get("og:description"):
-            item["description"] = detail["og:description"]
+        if not detail:
+            time.sleep(0.4)
+            continue
+        if detail.get("description"):
+            item["description"] = detail["description"]
+        for key in (
+            "postalCode",
+            "datePosted",
+            "yearBuilt",
+            "livingArea",
+            "floorLevel",
+            "condoFees",
+            "parking",
+            "highlights",
+            "details",
+            "inclusions",
+            "exclusions",
+            "rooms",
+            "taxes",
+            "additionalInfo",
+        ):
+            if detail.get(key):
+                item[key] = detail[key]
+        if detail.get("livingArea") and not item.get("size"):
+            item["size"] = detail["livingArea"]
+        if detail.get("bedsFromSchema") and not item.get("beds"):
+            item["beds"] = detail["bedsFromSchema"]
+        if detail.get("bathsFromSchema") and not item.get("baths"):
+            item["baths"] = detail["bathsFromSchema"]
         time.sleep(0.4)
 
     images_root = Path(args.output_images_dir)
