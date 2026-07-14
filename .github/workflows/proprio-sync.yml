@@ -1,0 +1,77 @@
+name: Sync Proprio Direct listings
+
+on:
+  schedule:
+    # Daily at 08:00 Eastern (12:00 UTC during EDT)
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+    inputs:
+      max_listings:
+        description: Maximum number of listings to sync
+        required: false
+        default: "30"
+        type: string
+      delay_seconds:
+        description: Delay between listing requests (seconds)
+        required: false
+        default: "2"
+        type: string
+      include_sold:
+        description: Include sold listings from the broker page
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: proprio-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Sync Proprio Direct listings and Centris galleries
+        env:
+          PROPRIO_AGENT_URL: ${{ vars.PROPRIO_AGENT_URL }}
+        run: |
+          AGENT_URL="${PROPRIO_AGENT_URL:-https://propriodirect.com/melanie-fafard}"
+          INCLUDE_SOLD_FLAG=""
+          if [ "${{ github.event.inputs.include_sold }}" = "true" ]; then
+            INCLUDE_SOLD_FLAG="--include-sold"
+          fi
+          python scripts/proprio_sync.py \
+            --agent-url "$AGENT_URL" \
+            --max-listings "${{ github.event.inputs.max_listings || '30' }}" \
+            --delay-seconds "${{ github.event.inputs.delay_seconds || '2' }}" \
+            $INCLUDE_SOLD_FLAG
+
+      - name: Commit and push synced listings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/ assets/img/proprietes/ assets/js/property-gallery.js assets/js/property-share.js assets/css/properties.css proprietes.html ca/ *.html scripts/
+
+          if git diff --staged --quiet; then
+            echo "No listing changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: sync Proprio Direct listings [skip ci]"
+          git push

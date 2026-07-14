@@ -1,0 +1,514 @@
+/* Properties pages — aligned with Services / Programmes / site tokens */
+
+.proprietes-page .section,
+.property-details-page .section {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
+.properties-title-section {
+  padding-bottom: 20px;
+  margin-top: 100px;
+}
+
+.proprietes-page .section-title-wrapper,
+.property-details-page .section-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.proprietes-page .title-with-lines,
+.property-details-page .title-with-lines {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.proprietes-page .title-with-lines::before,
+.proprietes-page .title-with-lines::after,
+.property-details-page .title-with-lines::before,
+.property-details-page .title-with-lines::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background-color: var(--accent-color, #d0103a);
+}
+
+.proprietes-page .section-title-wrapper > p,
+.property-details-page .section-title-wrapper > p {
+  color: #444;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.prop-subtitle {
+  display: inline-block;
+  color: var(--accent-color, #d0103a);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Listing cards — same softness as service/testimonial cards */
+.prop-card {
+  background: var(--surface-color, #fff);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.prop-card-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #ece7e2;
+}
+
+.prop-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.prop-card:hover .prop-card-media img {
+  transform: scale(1.04);
+}
+
+.prop-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.prop-badge.new {
+  background: var(--accent-color, #d0103a);
+}
+
+.prop-badge.sold {
+  background: #282828;
+}
+
+.prop-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.prop-price {
+  color: var(--accent-color, #d0103a);
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.prop-type {
+  color: #6b6b6b;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.prop-address {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading-color, #282828);
+  margin: 0.2rem 0 0.35rem;
+}
+
+.prop-city {
+  color: #6b6b6b;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.prop-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.1rem;
+  color: #5b5b5b;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(40, 40, 40, 0.08);
+  margin-top: 0.35rem;
+}
+
+.prop-meta i {
+  color: var(--accent-color, #d0103a);
+  margin-right: 0.3rem;
+}
+
+.prop-cta,
+.properties-external-link .btn-primary,
+.property-actions .btn-primary,
+.property-actions a.btn-primary {
+  background-color: #d0103a !important;
+  color: #ffffff !important;
+  padding: 12px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-block;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.prop-cta {
+  margin-top: auto;
+  width: 100%;
+}
+
+.prop-cta:hover,
+.properties-external-link .btn-primary:hover,
+.property-actions .btn-primary:hover,
+.property-actions a.btn-primary:hover {
+  background-color: #b0001b !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.property-actions a.btn-outline,
+.properties-external-link a.btn-outline {
+  background: transparent !important;
+  color: #282828 !important;
+  border: 2px solid rgba(40, 40, 40, 0.15);
+  padding: 10px 26px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.property-actions a.btn-outline:hover,
+.properties-external-link a.btn-outline:hover {
+  border-color: var(--accent-color, #d0103a);
+  color: var(--accent-color, #d0103a) !important;
+}
+
+.properties-external-link {
+  margin-top: 2.5rem;
+}
+
+/* Detail page */
+.property-details-page .property-detail {
+  padding-top: 140px !important;
+}
+
+.prop-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+.prop-breadcrumb a {
+  color: var(--accent-color, #d0103a);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.prop-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.property-media {
+  background: var(--surface-color, #fff);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-main-wrap {
+  position: relative;
+  background: #ece7e2;
+}
+
+.gallery-main-wrap img {
+  width: 100%;
+  height: clamp(280px, 48vw, 540px);
+  object-fit: cover;
+  display: block;
+}
+
+#property-gallery-prev,
+#property-gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #282828;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#property-gallery-prev:hover,
+#property-gallery-next:hover {
+  background: var(--accent-color, #d0103a);
+  color: #fff;
+}
+
+#property-gallery-prev {
+  left: 0.85rem;
+}
+
+#property-gallery-next {
+  right: 0.85rem;
+}
+
+#property-gallery-counter {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+}
+
+.gallery-main-wrap .prop-badge {
+  bottom: auto;
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.55rem;
+  padding: 0.9rem;
+  max-height: 13rem;
+  overflow: auto;
+  background: #fff;
+}
+
+@media (min-width: 576px) {
+  .gallery-thumbs {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-thumbs {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.gallery-thumb {
+  border: 2px solid transparent;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 4rem;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-thumb.is-active {
+  border-color: var(--accent-color, #d0103a);
+}
+
+.gallery-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #6b6b6b;
+  font-size: 0.9rem;
+}
+
+.property-share {
+  border-top: 1px solid rgba(40, 40, 40, 0.08);
+  background: #f8f6f3;
+  padding: 1.1rem 1.25rem;
+}
+
+.property-share p {
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  color: #282828;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#property-share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.share-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.share-facebook { background: #1877f2; }
+.share-x { background: #111; }
+.share-linkedin { background: #0a66c2; }
+.share-whatsapp { background: #25d366; }
+.share-email { background: #282828; }
+.share-copy {
+  background: #fff;
+  color: #282828 !important;
+  border: 1px solid rgba(40, 40, 40, 0.15);
+}
+.share-native { background: var(--accent-color, #d0103a); }
+
+.property-summary {
+  background: var(--surface-color, #fff);
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.property-summary h1 {
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  margin: 0.25rem 0 0.5rem;
+  color: var(--heading-color, #282828);
+  font-weight: 700;
+}
+
+.property-summary .prop-price {
+  font-size: 1.75rem;
+  margin-bottom: 0.15rem;
+}
+
+.property-facts {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.property-facts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.08);
+  color: #444;
+}
+
+.property-facts li:first-child {
+  border-top: 1px solid rgba(40, 40, 40, 0.08);
+}
+
+.property-facts strong {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.78rem;
+  color: #6b6b6b;
+  font-weight: 700;
+}
+
+.property-actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.property-description {
+  background: var(--surface-color, #fff);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.property-description h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--heading-color, #282828);
+}
+
+.property-description p {
+  white-space: pre-wrap;
+  line-height: 1.75;
+  color: #444;
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+@media (max-width: 768px) {
+  .proprietes-page .title-with-lines,
+  .property-details-page .title-with-lines {
+    font-size: 22px;
+    gap: 12px;
+  }
+
+  .proprietes-page .title-with-lines::before,
+  .proprietes-page .title-with-lines::after,
+  .property-details-page .title-with-lines::before,
+  .property-details-page .title-with-lines::after {
+    width: 28px;
+  }
+
+  .property-summary,
+  .property-description {
+    padding: 1.35rem;
+  }
+}
