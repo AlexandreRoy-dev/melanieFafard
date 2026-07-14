@@ -7,3 +7,4 @@ venv/
 .env
 .DS_Store
 Thumbs.db
+data/geocode_cache.json

@@ -227,6 +227,10 @@ def upgrade_photo_url(url: str, width: int = 1260, height: int = 1024) -> str:
 
 
 def extract_mosaic_photo_urls(html: str) -> list[str]:
+    # Sold / missing Centris pages only expose the site logo as og:image
+    if "listingnotfound" in html.lower() or "logo-centris-ca-social" in html.lower():
+        return []
+
     match = re.search(r"window\.MosaicPhotoUrls\s*=\s*(\[[^\]]+\])", html)
     if match:
         raw = match.group(1).replace("\\u0026", "&")
@@ -235,6 +239,8 @@ def extract_mosaic_photo_urls(html: str) -> list[str]:
             if isinstance(urls, list) and urls:
                 upgraded = []
                 for index, url in enumerate(urls):
+                    if is_centris_placeholder_url(url):
+                        continue
                     if index == 0:
                         upgraded.append(upgrade_photo_url(url, width=1260, height=1024))
                     else:
@@ -249,8 +255,37 @@ def extract_mosaic_photo_urls(html: str) -> list[str]:
         re.IGNORECASE,
     )
     if og_match:
-        return [upgrade_photo_url(og_match.group(1).replace("&amp;", "&"))]
+        url = og_match.group(1).replace("&amp;", "&")
+        if not is_centris_placeholder_url(url):
+            return [upgrade_photo_url(url)]
     return []
+
+
+def is_centris_placeholder_url(url: str) -> bool:
+    lowered = (url or "").lower()
+    return "logo-centris" in lowered or "/logos/" in lowered
+
+
+def extract_proprio_photo_urls(html: str, listing_id: str) -> list[str]:
+    """Pull full Proprio CDN gallery for one ULS (large size preferred)."""
+    pattern = (
+        rf"https://cdn\.propriodirect\.com/properties/{re.escape(listing_id)}/"
+        r"(?:large|medium|small)/[^\"'?\s]+"
+    )
+    seen: set[str] = set()
+    urls: list[str] = []
+    for match in re.findall(pattern, html, flags=re.I):
+        url = re.sub(r"/(?:medium|small)/", "/large/", match, count=1)
+        url = url.split("?", 1)[0]
+        if url not in seen:
+            seen.add(url)
+            urls.append(url)
+    # Prefer numeric 001_, 002_ order when available
+    def sort_key(u: str) -> tuple:
+        m = re.search(r"/(\d{3})_", u)
+        return (int(m.group(1)) if m else 9999, u)
+
+    return sorted(urls, key=sort_key)
 
 
 def extract_centris_meta(html: str) -> dict:
@@ -308,8 +343,14 @@ def centris_urls_for_id(listing_id: str) -> list[str]:
 def fetch_centris_html(listing_id: str, session: requests.Session) -> str | None:
     for url in centris_urls_for_id(listing_id):
         try:
-            html = http_get(url, session).text
-            if "MosaicPhotoUrls" in html or 'property="og:image"' in html:
+            resp = http_get(url, session)
+            html = resp.text
+            final = (resp.url or url).lower()
+            if "listingnotfound" in final or "listingnotfound" in html.lower():
+                continue
+            if "MosaicPhotoUrls" in html:
+                return html
+            if 'property="og:image"' in html and "logo-centris" not in html.lower():
                 return html
         except requests.RequestException:
             continue
@@ -729,17 +770,34 @@ def sync_listing_images(
     photo_urls: list[str] = []
     centris_meta: dict = {}
     source = "proprio"
+    is_sold = bool(listing.get("sold"))
 
-    centris_html = fetch_centris_html(listing_id, session)
-    if centris_html:
-        photo_urls = extract_mosaic_photo_urls(centris_html)
-        centris_meta = extract_centris_meta(centris_html)
-        if photo_urls:
-            source = "centris"
+    # Active listings: prefer Centris mosaic. Sold ones are usually gone from Centris.
+    if not is_sold:
+        centris_html = fetch_centris_html(listing_id, session)
+        if centris_html:
+            photo_urls = extract_mosaic_photo_urls(centris_html)
+            centris_meta = extract_centris_meta(centris_html)
+            if photo_urls:
+                source = "centris"
 
-    if not photo_urls:
-        photo_urls = list(listing.get("photoUrls") or [])
-        source = "proprio"
+    # Proprio Direct CDN gallery (full set on detail page)
+    if len(photo_urls) < 2:
+        proprio_urls = list(listing.get("photoUrls") or [])
+        # Card thumbnails are incomplete; scrape the detail page for sold / weak galleries
+        detail_url = listing.get("proprioUrl")
+        if detail_url and (is_sold or len(proprio_urls) < 2):
+            try:
+                detail_html = http_get(detail_url, session).text
+                detail_photos = extract_proprio_photo_urls(detail_html, listing_id)
+                if len(detail_photos) > len(proprio_urls):
+                    proprio_urls = detail_photos
+            except requests.RequestException as exc:
+                print(f"  WARN: proprio detail photos failed: {exc}", file=sys.stderr)
+
+        if proprio_urls and (is_sold or len(photo_urls) < 2):
+            photo_urls = proprio_urls
+            source = "proprio"
 
     if centris_meta.get("description") and not listing.get("description"):
         listing["description"] = centris_meta["description"]
@@ -759,6 +817,9 @@ def sync_listing_images(
             photo_bytes = download_bytes(photo_url, session)
             if len(photo_bytes) < 1024:
                 raise requests.RequestException("empty or too-small image payload")
+            # Skip obvious Centris logo placeholders if they slip through
+            if is_centris_placeholder_url(photo_url):
+                continue
             dest.write_bytes(photo_bytes)
             saved_photos.append(filename)
             if first_bytes is None:
@@ -1051,6 +1112,13 @@ def main() -> int:
         from generate_property_pages import generate_all
 
         generate_all()
+
+        try:
+            from update_map_pins import run as update_map_pins
+
+            update_map_pins()
+        except Exception as exc:  # noqa: BLE001
+            print(f"WARN: map pins update failed: {exc}", file=sys.stderr)
 
     return 0
 

@@ -4908,13 +4908,14 @@ section,
 .about-3 .cta-group {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 @media (max-width: 576px) {
   .about-3 .cta-group {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 }
 
@@ -4926,9 +4927,14 @@ section,
   font-weight: 600;
   font-size: 15px;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  line-height: 1.25;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid var(--accent-color);
+  box-shadow: none;
 }
 
 .about-3 .cta-group .btn-primary:hover {
@@ -4946,7 +4952,10 @@ section,
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  margin-top: 0;
+  line-height: 1.25;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
   background-color: transparent;
@@ -5992,6 +6001,12 @@ section a.btn-primary {
   border: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Keep paired CTAs aligned (global margin-top breaks flex row alignment) */
+section .cta-group a.btn-primary,
+section .cta-group a.btn-secondary {
+  margin-top: 0 !important;
 }
 
 section a.btn-primary:hover {

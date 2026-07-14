@@ -886,120 +886,29 @@
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
     });
+    // Pins loaded from data/transaction_pins.json (sold + historical, street name only)
+    fetch('data/transaction_pins.json')
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        var properties = (data && data.pins) ? data.pins : [];
+        properties.forEach(function(prop) {
+          var badge = prop.status === 'vendu' ? 'VENDU' : 'TRANSACTION RÉUSSIE';
+          var marker = L.marker([prop.lat, prop.lng], {icon: redIcon})
+            .bindPopup(`
+              <div class="text-center" style="font-family: inherit;">
+                <div class="text-danger text-uppercase fw-bold mb-1" style="font-size: 10px; letter-spacing: 1px;">${prop.area}</div>
+                <div class="fw-bold text-dark mb-2" style="font-size: 14px;">${prop.title}</div>
+                <div class="badge bg-danger p-2 text-white">${badge}</div>
+              </div>
+            `);
+          markers.addLayer(marker);
+        });
+        map.addLayer(markers);
+      })
+      .catch(function(err) {
+        console.error('Map pins load failed', err);
+      });
 
-    // Dataset with precise street-level accuracy
-    var properties = [
-      { "lat": 46.82601, "lng": -71.15137, "title": "Rue Louis-Philippe Ruel", "area": "Lévis" },
-      { "lat": 46.85012, "lng": -71.26055, "title": "Rue de Liret", "area": "Charlesbourg" },
-      { "lat": 46.97025, "lng": -71.0153, "title": "Cadastre du Québec", "area": "Château-Richer" },
-      { "lat": 46.97741, "lng": -70.56598, "title": "9e Rue", "area": "Montmagny" },
-      { "lat": 46.50159, "lng": -70.88893, "title": "Route 275", "area": "Sainte-Marguerite" },
-      { "lat": 46.76357, "lng": -71.61612, "title": "Carré du Golf", "area": "Pont-Rouge" },
-      { "lat": 46.76809, "lng": -71.32314, "title": "Chemin Sainte-Foy", "area": "Sainte-Foy" },
-      { "lat": 46.96048, "lng": -70.63534, "title": "Boul Taché Ouest", "area": "Montmagny" },
-      { "lat": 46.50159, "lng": -70.88893, "title": "Route 275", "area": "Sainte-Marguerite" },
-      { "lat": 46.84775, "lng": -71.42582, "title": "Rue de l'Élysée", "area": "Val-Bélair" },
-      { "lat": 46.82601, "lng": -71.15137, "title": "Rue Louis-Philippe Ruel", "area": "Lévis" },
-      { "lat": 46.82574, "lng": -71.1494, "title": "Rue Létourneau", "area": "Lévis" },
-      { "lat": 46.72747, "lng": -71.59299, "title": "Chemin du Lac", "area": "Neuville" },
-      { "lat": 46.8854, "lng": -71.41015, "title": "Rue Vaillancourt", "area": "Charlesbourg" },
-      { "lat": 46.66435, "lng": -71.23427, "title": "Avenue Saint-Augustin", "area": "Lévis" },
-      { "lat": 46.76312, "lng": -71.30649, "title": "Rue France-Prime", "area": "Sainte-Foy" },
-      { "lat": 46.79357, "lng": -70.75518, "title": "Avenue Saint-Paul", "area": "Saint-Raphael" },
-      { "lat": 46.66435, "lng": -71.23427, "title": "Avenue Saint-Augustin", "area": "Lévis" },
-      { "lat": 46.75939, "lng": -71.35613, "title": "Rue de la Rivière", "area": "Cap-Rouge" },
-      { "lat": 46.7483, "lng": -71.23298, "title": "Av. Taniata", "area": "Lévis" },
-      { "lat": 46.56594, "lng": -71.42835, "title": "Rue Croteau", "area": "Saint-Agapit" },
-      { "lat": 46.7987, "lng": -71.25036, "title": "Ave des Jésuites", "area": "Québec" },
-      { "lat": 46.84691, "lng": -71.43103, "title": "Rue de l'Échiquier", "area": "Val-Bélair" },
-      { "lat": 46.73699, "lng": -71.30395, "title": "Rue de la Corniche", "area": "Saint-Nicolas" },
-      { "lat": 46.73256, "lng": -71.30027, "title": "Rue des Grives", "area": "Saint-Nicolas" },
-      { "lat": 46.80153, "lng": -71.33496, "title": "Boulevard Wilfrid-Hamel", "area": "Québec" },
-      { "lat": 46.8083, "lng": -71.28191, "title": "Boulevard Père-Lelièvre", "area": "Les Rivières" },
-      { "lat": 46.7865, "lng": -71.18256, "title": "Rue Charles-Rodrigue", "area": "Lévis" },
-      { "lat": 46.72308, "lng": -71.25395, "title": "Rue du Merlebleu", "area": "Charny" },
-      { "lat": 46.80703, "lng": -71.34326, "title": "Avenue Terriot", "area": "Les Rivières" },
-      { "lat": 46.85472, "lng": -71.42372, "title": "Rue Émond", "area": "Val-Bélair" },
-      { "lat": 46.74065, "lng": -71.46935, "title": "Rue du Mil", "area": "Saint-Augustin" },
-      { "lat": 46.88883, "lng": -71.20182, "title": "Rue du Ruisseau", "area": "Beauport" },
-      { "lat": 46.81376, "lng": -71.20204, "title": "Rue du Porche", "area": "Vieux-Québec" },
-      { "lat": 46.88185, "lng": -71.16004, "title": "Boulevard des Chutes", "area": "Beauport" },
-      { "lat": 46.6115, "lng": -71.49978, "title": "Rue des Orchidées", "area": "Saint-Apollinaire" },
-      { "lat": 46.61745, "lng": -71.50235, "title": "Rue Principale", "area": "Saint-Apollinaire" },
-      { "lat": 46.76249, "lng": -71.27377, "title": "Rue Ranvoyze", "area": "Sainte-Foy" },
-      { "lat": 46.81555, "lng": -71.22025, "title": "Rue des Prairies", "area": "Saint-Roch" },
-      { "lat": 46.80515, "lng": -71.3454, "title": "Rue Annette-Leclerc", "area": "L'Ancienne-Lorette" },
-      { "lat": 46.82253, "lng": -71.14458, "title": "Rue des Gaspésiennes", "area": "Lévis" },
-      { "lat": 46.84751, "lng": -71.41335, "title": "Rue des Camarades", "area": "Val-Bélair" },
-      { "lat": 46.94247, "lng": -71.31518, "title": "Chemin de la Cornière", "area": "Lac-Beauport" },
-      { "lat": 46.85115, "lng": -71.27045, "title": "Rue de la Griotte", "area": "Charlesbourg" },
-      { "lat": 46.68686, "lng": -71.88931, "title": "Rue Hélène", "area": "Portneuf" },
-      { "lat": 46.76049, "lng": -71.28546, "title": "Chemin Saint-Louis", "area": "Sainte-Foy" },
-      { "lat": 46.78053, "lng": -71.19815, "title": "Rue Saint-Georges", "area": "Lévis" },
-      { "lat": 46.85545, "lng": -71.26515, "title": "Rue La Fraîcheur", "area": "Charlesbourg" },
-      { "lat": 46.82874, "lng": -71.32166, "title": "Carré du Brûlé", "area": "Neufchâtel" },
-      { "lat": 46.73632, "lng": -71.30079, "title": "Rue du Château", "area": "Saint-Nicolas" },
-      { "lat": 46.86588, "lng": -71.1915, "title": "Rue d'Orléans", "area": "Beauport" },
-      { "lat": 46.82585, "lng": -71.15789, "title": "Rue Massé", "area": "Lévis" },
-      { "lat": 46.76809, "lng": -71.32314, "title": "Chemin Sainte-Foy", "area": "Sainte-Foy" },
-      { "lat": 46.91025, "lng": -71.3604, "title": "Rue Prénoveau", "area": "Lac-Saint-Charles" },
-      { "lat": 46.86513, "lng": -71.44695, "title": "Av. du Golf-de-Bélair", "area": "Val-Bélair" },
-      { "lat": 46.75643, "lng": -71.35775, "title": "Rue du Domaine", "area": "Cap-Rouge" },
-      { "lat": 46.6962, "lng": -71.06888, "title": "Rue Laliberté", "area": "Saint-Henri" },
-      { "lat": 46.67497, "lng": -71.75387, "title": "Rue du Manoir", "area": "Cap-Santé" },
-      { "lat": 46.88671, "lng": -71.1974, "title": "Av. Nordique", "area": "Beauport" },
-      { "lat": 46.78182, "lng": -71.25252, "title": "Av. Maguire", "area": "Sillery" },
-      { "lat": 46.78235, "lng": -71.28963, "title": "Rue Beauregard", "area": "Sainte-Foy" },
-      { "lat": 46.75545, "lng": -71.33015, "title": "Rue Pauline-Roy-Rouillard", "area": "Cap-Rouge" },
-      { "lat": 46.81179, "lng": -71.30216, "title": "Boul. Père-Lelièvre", "area": "Les Rivières" },
-      { "lat": 46.79026, "lng": -71.19192, "title": "Rue de la Falaise", "area": "Lévis" },
-      { "lat": 46.83248, "lng": -71.36067, "title": "Rue René-Chaloult", "area": "Haute-Saint-Charles" },
-      { "lat": 46.79701, "lng": -71.18311, "title": "Rue St-Édouard", "area": "Lévis" },
-      { "lat": 46.50082, "lng": -71.14214, "title": "Rue des Érables", "area": "Saint-Bernard" },
-      { "lat": 46.76081, "lng": -71.29214, "title": "Rue Chambalon", "area": "Sainte-Foy" },
-      { "lat": 46.54646, "lng": -71.36645, "title": "Route 269 Nord", "area": "Saint-Gilles" },
-      { "lat": 46.80848, "lng": -71.25409, "title": "Rue Général-Vanier", "area": "Limoilou" },
-      { "lat": 46.76312, "lng": -71.30649, "title": "Rue France-Prime", "area": "Sainte-Foy" },
-      { "lat": 46.79746, "lng": -71.24613, "title": "Av. Joffre", "area": "Limoilou" },
-      { "lat": 46.65556, "lng": -71.3007, "title": "Rue Bélanger", "area": "Chutes-de-la-Chaudière" },
-      { "lat": 46.74536, "lng": -71.25803, "title": "Rue Saint-Hilaire", "area": "Lévis" },
-      { "lat": 46.755, "lng": -71.24334, "title": "Rue Joseph-Garant", "area": "Lévis" },
-      { "lat": 46.81828, "lng": -71.30146, "title": "Rue d'Ars", "area": "Les Rivières" },
-      { "lat": 46.83486, "lng": -70.85597, "title": "Rue du Piedmont", "area": "La Durantaye" },
-      { "lat": 47.02322, "lng": -71.37863, "title": "Montée du Boisé", "area": "Stoneham" },
-      { "lat": 46.78011, "lng": -71.37027, "title": "Rue Jacqueline-Auriol", "area": "Aéroport" },
-      { "lat": 46.86104, "lng": -70.82926, "title": "Ch. d'Azur", "area": "Saint-Vallier" },
-      { "lat": 46.77424, "lng": -71.20245, "title": "Rue de la Fabrique", "area": "Lévis" },
-      { "lat": 46.82093, "lng": -71.18018, "title": "Rue Duplessis", "area": "Lévis" },
-      { "lat": 46.76537, "lng": -71.12982, "title": "Rue Félix-Leclerc", "area": "Lévis" },
-      { "lat": 46.86062, "lng": -71.39758, "title": "Rue des Incas", "area": "Val-Bélair" },
-      { "lat": 46.70855, "lng": -71.37646, "title": "Rue Léon-Provancher", "area": "Saint-Nicolas" },
-      { "lat": 46.53545, "lng": -71.35515, "title": "Rue du Havre", "area": "Saint-Gilles" },
-      { "lat": 46.65604, "lng": -71.24749, "title": "Rue du Marqueur", "area": "Lévis" },
-      { "lat": 46.9204, "lng": -71.36515, "title": "Av. de la Rivière-Jaune", "area": "Lac-Saint-Charles" },
-      { "lat": 46.74642, "lng": -71.25344, "title": "Ch. du Sault", "area": "Saint-Romuald" },
-      { "lat": 46.62416, "lng": -70.66307, "title": "Rue St-François", "area": "Saint-Damien" },
-      { "lat": 46.79822, "lng": -71.35833, "title": "Rue St-Charles", "area": "L'Ancienne-Lorette" },
-      { "lat": 46.84589, "lng": -71.61286, "title": "Rue Gingras", "area": "Sainte-Catherine-de-la-JC" },
-      { "lat": 46.99834, "lng": -70.98979, "title": "Av. Royale", "area": "Château-Richer" },
-      { "lat": 46.76312, "lng": -71.30649, "title": "Rue France-Prime", "area": "Sainte-Foy" }
-    ];
-
-    // Add properties to the Marker Cluster Group
-    properties.forEach(function(prop) {
-      var marker = L.marker([prop.lat, prop.lng], {icon: redIcon})
-        .bindPopup(`
-          <div class="text-center" style="font-family: inherit;">
-            <div class="text-danger text-uppercase fw-bold mb-1" style="font-size: 10px; letter-spacing: 1px;">${prop.area}</div>
-            <div class="fw-bold text-dark mb-2" style="font-size: 14px;">${prop.title}</div>
-            <div class="badge bg-danger p-2 text-white">TRANSACTION RÉUSSIE</div>
-          </div>
-        `);
-      markers.addLayer(marker);
-    });
-
-    // Add the Cluster Group to the Map
-    map.addLayer(markers);
   });
 </script>
 
