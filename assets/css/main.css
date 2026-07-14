@@ -5541,7 +5541,7 @@ section,
   background: transparent !important;
 }
 
-/* MOBILE FIX — Show the left side of the banner */
+/* MOBILE FIX - Show the left side of the banner */
 @media (max-width: 768px) {
   #hero-2.full-banner {
     background-position: 18% center !important; /* adjust left/right */
@@ -5579,7 +5579,7 @@ section,
   background: transparent !important;
 }
 
-/* MOBILE FIX — Show the left side of the banner */
+/* MOBILE FIX - Show the left side of the banner */
 @media (max-width: 768px) {
   #hero-3.full-banner {
     background-position: 18% center !important; /* adjust left/right */
@@ -5687,7 +5687,7 @@ section,
   overflow: hidden;
 }
 /* ================================= */
-/*  FEATURED BADGE – COUP DE COEUR   */
+/*  FEATURED BADGE - COUP DE COEUR   */
 /* ================================= */
 
 .testimonial-card {

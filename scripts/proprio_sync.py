@@ -808,9 +808,9 @@ def enrich_listing(raw: dict) -> dict:
     seo = seo_fields_from_slug(raw["slug"], raw["uls"])
     title = raw["address"] or f"Inscription {raw['uls']}"
     if raw.get("city"):
-        share_title = f"{raw.get('propertyType') or 'Propriété'} — {title}, {raw['city']}"
+        share_title = f"{raw.get('propertyType') or 'Propriété'} - {title}, {raw['city']}"
     else:
-        share_title = f"{raw.get('propertyType') or 'Propriété'} — {title}"
+        share_title = f"{raw.get('propertyType') or 'Propriété'} - {title}"
 
     size = raw.get("size") or raw.get("livingArea") or ""
     beds = raw.get("beds") or raw.get("bedsFromSchema") or ""
@@ -832,7 +832,7 @@ def enrich_listing(raw: dict) -> dict:
         "beds": beds,
         "baths": baths,
         "description": raw.get("description") or "",
-        "title": f"{title} — {raw['city']}" if raw.get("city") else title,
+        "title": f"{title} - {raw['city']}" if raw.get("city") else title,
         "shareTitle": share_title,
         "fallbackImage": f"{raw['uls']}.jpg",
         "photoUrls": raw.get("photoUrls") or [],
@@ -962,7 +962,7 @@ def main() -> int:
     print(f"Discovered {len(discovered)} listing(s):")
     for item in discovered:
         flag = "SOLD" if item["sold"] else "ACTIVE"
-        print(f"  - {item['uls']} [{flag}] {item['address']} — {item['price']}")
+        print(f" - {item['uls']} [{flag}] {item['address']} - {item['price']}")
 
     enriched = [enrich_listing(item) for item in discovered]
 

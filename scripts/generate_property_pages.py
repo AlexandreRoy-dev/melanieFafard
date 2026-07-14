@@ -254,7 +254,7 @@ def generate_listings_page(registry: dict) -> None:
         )
 
     html = f"""{head_block(
-        title="Propriétés – Mélanie Fafard, courtière immobilière",
+        title="Propriétés - Mélanie Fafard, courtière immobilière",
         description=description,
         canonical=f"{BASE_URL}/proprietes.html",
         og_image=og_image,

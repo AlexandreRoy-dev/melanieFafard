@@ -1,4 +1,4 @@
-/* Properties pages — aligned with Services / Programmes / site tokens */
+/* Properties pages - aligned with Services / Programmes / site tokens */
 
 .proprietes-page .section,
 .property-details-page .section {
@@ -59,7 +59,7 @@
   margin-bottom: 15px;
 }
 
-/* Listing cards — same softness as service/testimonial cards */
+/* Listing cards - same softness as service/testimonial cards */
 .prop-card {
   background: var(--surface-color, #fff);
   border-radius: 10px;
