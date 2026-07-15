@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-07-14T15:42:08.757755+00:00",
+  "generatedAt": "2026-07-15T13:25:14.005140+00:00",
   "listings": [
     {
       "uls": "15187483",
@@ -20,7 +20,7 @@
       "beds": "2",
       "baths": "2",
       "sold": false,
-      "isNew": true,
+      "isNew": false,
       "description": "Magnifique propriété clé en main sise sur un vaste terrain sans voisin à l'arrière, offrant une intimité exceptionnelle dans un secteur recherché. Vous serez charmé par son aire de vie lumineuse, sa superbe cuisine avec îlot en granite, ses 2 chambres à coucher (poss. de 1 ou 2 supp.), ses 2 salles de bains, son sous-sol entièrement aménagé avec entrée indépendante offrant de multiples possibilités, ainsi que son garage attaché. Profitez d'un superbe terrain paysager avec terrasses, gazebo et coin feu. À proximité des parcs, des pistes cyclables et avec un accès rapide aux sentiers de motoneige, cette propriété impeccable saura vous séduire !",
       "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-sainte-foy-sillery-cap-rouge/maison-de-plain-pied-a-vendre/1478-rue-milton-15187483/",
       "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/15187483",
@@ -316,128 +316,6 @@
       "additionalInfo": "Selon les informations disponibles, la location à court terme est permise par la copropriété et sa couverture d'assurance. L'acheteur devra toutefois effectuer ses propres vérifications quant aux autorisations et conditions applicables à l'usage projeté de l'immeuble. La copropriété compte actuellement trois espaces de stationnement pour les huit unités de l'immeuble, et l'aménagement de deux autres est prévu prochainement. Aucun des espaces de stationnement n'est attribué de façon exclusive à une unité en particulier. Selon les informations fournies par le vendeur, les espaces de stationnement disponibles sur le site et à proximité de l'immeuble sont suffisants pour répondre aux besoins des copropriétaires et de leurs visiteurs. Les animaux sont permis uniquement aux copropriétaires occupants, sauf exception préalablement autorisée par le syndicat. Les BBQ au propane sont autorisés. Les foyers au gaz sont interdits sur les balcons et terrasses. La location à court terme n'est pas permise. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
     {
-      "uls": "27739903",
-      "country": "ca",
-      "province": "qc",
-      "city": "quebec",
-      "sector": "les-rivieres",
-      "street": "1630-rue-claire-bonenfant-404",
-      "title": "1630, Rue Claire-Bonenfant, 404 - Québec (Neufchâtel-Est/Lebourgneuf)",
-      "shareTitle": "Appartement - 1630, Rue Claire-Bonenfant, 404, Québec (Neufchâtel-Est/Lebourgneuf)",
-      "price": "499 000 $",
-      "address": "1630, Rue Claire-Bonenfant, 404",
-      "cityLabel": "Québec (Neufchâtel-Est/Lebourgneuf)",
-      "propertyType": "Appartement",
-      "size": "109.4 mc",
-      "beds": "2",
-      "baths": "1",
-      "sold": false,
-      "isNew": false,
-      "description": "Magnifique condo situé dans le très recherché secteur de Lebourgneuf ! Occupant une position privilégiée au dernier étage, sur le coin arrière de l'immeuble, il vous séduira par sa tranquillité et sa luminosité abondante.Son vaste espace de vie à aire ouverte propose un décor contemporain et invitant. Offrant une cuisine moderne avec îlot, 2 chambres confortables, une salle de bain complète ainsi qu'une salle d'eau avec espace lavage, ce condo dispose aussi d'un agréable balcon avec vue apaisante, de deux espaces de rangement et d'un stationnement au garage intérieur. Excellente gestion de la copropriété. Une occasion à ne pas manquer !",
-      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-les-rivieres/appartement-a-vendre/1630-rue-claire-bonenfant-404-27739903/",
-      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/27739903",
-      "fallbackImage": "27739903.jpg",
-      "publicPath": "/ca/qc/quebec/les-rivieres/1630-rue-claire-bonenfant-404/",
-      "postalCode": "G2K0J7",
-      "datePosted": "2026/05/21",
-      "yearBuilt": "2015",
-      "livingArea": "109.4 mc",
-      "floorLevel": "4ième étage",
-      "condoFees": "364 $ / mois",
-      "parking": "Au garage",
-      "highlights": {
-        "Année de construction": "2015",
-        "Superficie habitable": "109.4 mc",
-        "Niveau": "4ième étage",
-        "Frais de copropriété": "364 $ / mois",
-        "Facilité d'accès": "Ascenseur",
-        "Stationnement (total)": "Au garage"
-      },
-      "details": {
-        "Équipement disponible": "Installation aspirateur central, Balcon privé, Climatiseur mural, Échangeur d'air, Porte de garage électrique",
-        "Appareils en location": "Chauffe-eau",
-        "Toiture": "Membrane élastomère",
-        "Zonage": "Résidentiel",
-        "Mode de chauffage": "Plinthes électriques",
-        "Garage": "Chauffé, Intégré",
-        "Armoires": "Mélamine",
-        "Système d'égouts": "Municipal",
-        "Stationnement (total)": "Au garage",
-        "Énergie pour le chauffage": "Électricité",
-        "Fenêtres": "PVC",
-        "Particularités": "Unité de coin",
-        "Approvisionnement en eau": "Municipalité",
-        "Facilité d'accès": "Ascenseur"
-      },
-      "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle, divan du salon, climatiseur mural, balayeuse centrale et accessoires, ouvre-porte électrique du garage.",
-      "exclusions": "",
-      "rooms": [
-        {
-          "name": "Hall d'entrée/Vestibule",
-          "level": "4ième étage",
-          "dimensions": "7.7x5.1 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Cuisine",
-          "level": "4ième étage",
-          "dimensions": "13.10x12.7 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salle à manger",
-          "level": "4ième étage",
-          "dimensions": "14.1x9.10 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salon",
-          "level": "4ième étage",
-          "dimensions": "20.7x13.6 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Chambre à coucher principale",
-          "level": "4ième étage",
-          "dimensions": "14.7x13.1 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Chambre à coucher",
-          "level": "4ième étage",
-          "dimensions": "13.7x10.6 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "4ième étage",
-          "dimensions": "11.10x8.5 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salle d'eau",
-          "level": "4ième étage",
-          "dimensions": "7.6x5.8 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Rangement",
-          "level": "4ième étage",
-          "dimensions": "5.8x5.3 P",
-          "flooring": "Céramique"
-        }
-      ],
-      "taxes": {
-        "Total taxes": "3,501 $",
-        "Taxes municipales": "3,268 $",
-        "Taxes scolaires": "233 $",
-        "Terrain": "39,500 $",
-        "Bâtiment": "320,500 $",
-        "Évaluation totale": "360,000 $"
-      },
-      "additionalInfo": "Nouveau certificat de localisation de la partie privative en commande. Chats et petits chiens permis. BBQ permis. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
-    },
-    {
       "uls": "26771434",
       "country": "ca",
       "province": "qc",
@@ -559,6 +437,128 @@
         "Évaluation totale": "256,100 $"
       },
       "additionalInfo": "Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
+    },
+    {
+      "uls": "27739903",
+      "country": "ca",
+      "province": "qc",
+      "city": "quebec",
+      "sector": "les-rivieres",
+      "street": "1630-rue-claire-bonenfant-404",
+      "title": "1630, Rue Claire-Bonenfant, 404 - Québec (Neufchâtel-Est/Lebourgneuf)",
+      "shareTitle": "Appartement - 1630, Rue Claire-Bonenfant, 404, Québec (Neufchâtel-Est/Lebourgneuf)",
+      "price": "499 000 $",
+      "address": "1630, Rue Claire-Bonenfant, 404",
+      "cityLabel": "Québec (Neufchâtel-Est/Lebourgneuf)",
+      "propertyType": "Appartement",
+      "size": "109.4 mc",
+      "beds": "2",
+      "baths": "1",
+      "sold": false,
+      "isNew": false,
+      "description": "Magnifique condo situé dans le très recherché secteur de Lebourgneuf ! Occupant une position privilégiée au dernier étage, sur le coin arrière de l'immeuble, il vous séduira par sa tranquillité et sa luminosité abondante.Son vaste espace de vie à aire ouverte propose un décor contemporain et invitant. Offrant une cuisine moderne avec îlot, 2 chambres confortables, une salle de bain complète ainsi qu'une salle d'eau avec espace lavage, ce condo dispose aussi d'un agréable balcon avec vue apaisante, de deux espaces de rangement et d'un stationnement au garage intérieur. Excellente gestion de la copropriété. Une occasion à ne pas manquer !",
+      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-les-rivieres/appartement-a-vendre/1630-rue-claire-bonenfant-404-27739903/",
+      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/27739903",
+      "fallbackImage": "27739903.jpg",
+      "publicPath": "/ca/qc/quebec/les-rivieres/1630-rue-claire-bonenfant-404/",
+      "postalCode": "G2K0J7",
+      "datePosted": "2026/05/21",
+      "yearBuilt": "2015",
+      "livingArea": "109.4 mc",
+      "floorLevel": "4ième étage",
+      "condoFees": "364 $ / mois",
+      "parking": "Au garage",
+      "highlights": {
+        "Année de construction": "2015",
+        "Superficie habitable": "109.4 mc",
+        "Niveau": "4ième étage",
+        "Frais de copropriété": "364 $ / mois",
+        "Facilité d'accès": "Ascenseur",
+        "Stationnement (total)": "Au garage"
+      },
+      "details": {
+        "Équipement disponible": "Installation aspirateur central, Balcon privé, Climatiseur mural, Échangeur d'air, Porte de garage électrique",
+        "Appareils en location": "Chauffe-eau",
+        "Toiture": "Membrane élastomère",
+        "Zonage": "Résidentiel",
+        "Mode de chauffage": "Plinthes électriques",
+        "Garage": "Chauffé, Intégré",
+        "Armoires": "Mélamine",
+        "Système d'égouts": "Municipal",
+        "Stationnement (total)": "Au garage",
+        "Énergie pour le chauffage": "Électricité",
+        "Fenêtres": "PVC",
+        "Particularités": "Unité de coin",
+        "Approvisionnement en eau": "Municipalité",
+        "Facilité d'accès": "Ascenseur"
+      },
+      "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle, divan du salon, climatiseur mural, balayeuse centrale et accessoires, ouvre-porte électrique du garage.",
+      "exclusions": "",
+      "rooms": [
+        {
+          "name": "Hall d'entrée/Vestibule",
+          "level": "4ième étage",
+          "dimensions": "7.7x5.1 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Cuisine",
+          "level": "4ième étage",
+          "dimensions": "13.10x12.7 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Salle à manger",
+          "level": "4ième étage",
+          "dimensions": "14.1x9.10 P",
+          "flooring": "Bois"
+        },
+        {
+          "name": "Salon",
+          "level": "4ième étage",
+          "dimensions": "20.7x13.6 P",
+          "flooring": "Bois"
+        },
+        {
+          "name": "Chambre à coucher principale",
+          "level": "4ième étage",
+          "dimensions": "14.7x13.1 P",
+          "flooring": "Bois"
+        },
+        {
+          "name": "Chambre à coucher",
+          "level": "4ième étage",
+          "dimensions": "13.7x10.6 P",
+          "flooring": "Bois"
+        },
+        {
+          "name": "Salle de bains",
+          "level": "4ième étage",
+          "dimensions": "11.10x8.5 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Salle d'eau",
+          "level": "4ième étage",
+          "dimensions": "7.6x5.8 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Rangement",
+          "level": "4ième étage",
+          "dimensions": "5.8x5.3 P",
+          "flooring": "Céramique"
+        }
+      ],
+      "taxes": {
+        "Total taxes": "3,501 $",
+        "Taxes municipales": "3,268 $",
+        "Taxes scolaires": "233 $",
+        "Terrain": "39,500 $",
+        "Bâtiment": "320,500 $",
+        "Évaluation totale": "360,000 $"
+      },
+      "additionalInfo": "Nouveau certificat de localisation de la partie privative en commande. Chats et petits chiens permis. BBQ permis. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
     {
       "uls": "21270396",
