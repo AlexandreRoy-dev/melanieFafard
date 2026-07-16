@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-07-15T13:25:14.005140+00:00",
+  "generatedAt": "2026-07-16T13:40:00.729004+00:00",
   "listings": [
     {
       "uls": "15187483",
@@ -128,107 +128,6 @@
         "Terrain": "207,000 $",
         "Bâtiment": "221,000 $",
         "Évaluation totale": "428,000 $"
-      },
-      "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
-    },
-    {
-      "uls": "9990226",
-      "country": "ca",
-      "province": "qc",
-      "city": "quebec",
-      "sector": "la-haute-saint-charles",
-      "street": "1618-rue-aladin",
-      "title": "1618, Rue Aladin - Québec (Val-Bélair)",
-      "shareTitle": "Maison de plain-pied - 1618, Rue Aladin, Québec (Val-Bélair)",
-      "price": "",
-      "address": "1618, Rue Aladin",
-      "cityLabel": "Québec (Val-Bélair)",
-      "propertyType": "Maison de plain-pied",
-      "size": "85.9 mc",
-      "beds": "3",
-      "baths": "1",
-      "sold": true,
-      "isNew": false,
-      "description": "Charmante propriété revêtue de brique sur trois côtés, sise sur un terrain de 10 000 pi² dans un secteur recherché de Val-Bélair. Dotée d'un abri d'auto double et d'une remise attenante, elle offre au rez-de-chaussée une aire de vie ouverte avec deux chambres et une salle de bain. Le sous-sol comprend une salle d'eau et est à aménager selon vos besoins. À l'extérieur, un grand patio donne accès à une magnifique cour agrémentée de plantes, d'arbustes et de fleurs. Une belle propriété offrant un excellent potentiel d'aménagement et de personnalisation. Visite libre samedi le 20 juin de 10h à midi.",
-      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-la-haute-saint-charles/maison-de-plain-pied-a-vendre/1618-rue-aladin-9990226/",
-      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/9990226",
-      "fallbackImage": "9990226.jpg",
-      "publicPath": "/ca/qc/quebec/la-haute-saint-charles/1618-rue-aladin/",
-      "postalCode": "G3K1G3",
-      "datePosted": "2026/06/18",
-      "yearBuilt": "1978",
-      "livingArea": "85.9 mc",
-      "floorLevel": "",
-      "condoFees": "",
-      "parking": "Abri d'auto, Extérieur",
-      "highlights": {
-        "Année de construction": "1978",
-        "Superficie habitable": "85.9 mc"
-      },
-      "details": {
-        "Équipement disponible": "Thermopompe murale",
-        "Toiture": "Bardeaux d'asphalte",
-        "Zonage": "Résidentiel",
-        "Mode de chauffage": "Plinthes électriques",
-        "Système d'égouts": "Municipal",
-        "Stationnement (total)": "Abri d'auto, Extérieur",
-        "Énergie pour le chauffage": "Électricité",
-        "Fenêtres": "PVC",
-        "Approvisionnement en eau": "Municipalité"
-      },
-      "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle (n'a pas été mis en fonction depuis longtemps, fonctionnement non-garanti), laveuse et sécheuse, 5 chaises de cuisine, déshumidificateur et étagères de rangement du sous-sol, outils dans l'établi du sous-sol, garage d'hiver, escabeau, échelle et outils, ensemble pour la fontaine d'eau, décorations de Noel et luminaires solaires dans la remise, foyer extérieur (usure normale), 2 ensembles de patio, barbecue. Exclu Tout ce qui est dans le rangement derrière le rideau orange dans le sous-sol.",
-      "exclusions": "",
-      "rooms": [
-        {
-          "name": "Cuisine",
-          "level": "1er niveau/RDC",
-          "dimensions": "14.1x9.8 P",
-          "flooring": "Linoléum"
-        },
-        {
-          "name": "Salle à manger",
-          "level": "1er niveau/RDC",
-          "dimensions": "11x10.4 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salon",
-          "level": "1er niveau/RDC",
-          "dimensions": "14.1x11.10 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle familiale",
-          "level": "Sous-sol",
-          "dimensions": "23x20.7 P",
-          "flooring": "Béton"
-        },
-        {
-          "name": "Autre",
-          "level": "Sous-sol",
-          "dimensions": "14.4x10.5 P",
-          "flooring": "Linoléum"
-        },
-        {
-          "name": "Atelier",
-          "level": "Sous-sol",
-          "dimensions": "13.2x8.11 P",
-          "flooring": "Béton"
-        },
-        {
-          "name": "Salle d'eau",
-          "level": "Sous-sol",
-          "dimensions": "7.3x5.11 P",
-          "flooring": "Bois"
-        }
-      ],
-      "taxes": {
-        "Total taxes": "3,238 $",
-        "Taxes municipales": "3,014 $",
-        "Taxes scolaires": "224 $",
-        "Terrain": "184,000 $",
-        "Bâtiment": "142,000 $",
-        "Évaluation totale": "326,000 $"
       },
       "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
@@ -447,7 +346,7 @@
       "street": "1630-rue-claire-bonenfant-404",
       "title": "1630, Rue Claire-Bonenfant, 404 - Québec (Neufchâtel-Est/Lebourgneuf)",
       "shareTitle": "Appartement - 1630, Rue Claire-Bonenfant, 404, Québec (Neufchâtel-Est/Lebourgneuf)",
-      "price": "499 000 $",
+      "price": "489 000 $",
       "address": "1630, Rue Claire-Bonenfant, 404",
       "cityLabel": "Québec (Neufchâtel-Est/Lebourgneuf)",
       "propertyType": "Appartement",
