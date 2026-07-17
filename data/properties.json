@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-07-16T13:40:00.729004+00:00",
+  "generatedAt": "2026-07-17T13:17:15.544779+00:00",
   "listings": [
     {
       "uls": "15187483",
@@ -130,89 +130,6 @@
         "Évaluation totale": "428,000 $"
       },
       "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
-    },
-    {
-      "uls": "11559911",
-      "country": "ca",
-      "province": "qc",
-      "city": "beaupre",
-      "sector": "centre",
-      "street": "360-l6-rue-dupont-2106",
-      "title": "360-L6, Rue Dupont, 2106 - Beaupré",
-      "shareTitle": "Appartement - 360-L6, Rue Dupont, 2106, Beaupré",
-      "price": "",
-      "address": "360-L6, Rue Dupont, 2106",
-      "cityLabel": "Beaupré",
-      "propertyType": "Appartement",
-      "size": "39.9 mc",
-      "beds": "2",
-      "baths": "1",
-      "sold": true,
-      "isNew": false,
-      "description": "Charmant condo entièrement meublé, offrant un plafond cathédrale et une vue spectaculaire sur le Mont-Sainte-Anne. Situé dans un secteur d'activités de plein air, il permet de profiter des activités de la région en toute saison. L'aire de vie regroupant la cuisine et le salon bénéfie d'une belle fenestration. On retrouve également une chambre principale ainsi qu'une salle de bain. Une charmante mezzanine accueille une seconde chambre (voir addenda). À l'extérieur, une terrasse à usage exclusif vous permettra de profiter pleinement du panorama exceptionnel. Un espace de stationnement et un rangement extérieur complètent cette belle propriété.",
-      "proprioUrl": "https://propriodirect.com/capitale-nationale/beaupre/appartement-a-vendre/360-l6-rue-dupont-2106-11559911/",
-      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/11559911",
-      "fallbackImage": "11559911.jpg",
-      "publicPath": "/ca/qc/beaupre/centre/360-l6-rue-dupont-2106/",
-      "postalCode": "G0A1E0",
-      "datePosted": "2026/06/03",
-      "yearBuilt": "1987",
-      "livingArea": "39.9 mc",
-      "floorLevel": "2ième étage",
-      "condoFees": "304 $ / mois",
-      "parking": "",
-      "highlights": {
-        "Année de construction": "1987",
-        "Superficie habitable": "39.9 mc",
-        "Niveau": "2ième étage",
-        "Frais de copropriété": "304 $ / mois"
-      },
-      "details": {
-        "Équipement disponible": "Climatiseur mural",
-        "Toiture": "Bardeaux d'asphalte",
-        "Zonage": "Résidentiel",
-        "Vue": "Sur la montagne",
-        "Système d'égouts": "Municipal",
-        "Énergie pour le chauffage": "Électricité",
-        "Fenêtres": "PVC",
-        "Approvisionnement en eau": "Municipalité"
-      },
-      "inclusions": "Luminaires, habillage des fenêtres, deux lits, réfrigérateur, cuisinière, table à manger avec 4 chaises, micro-ondes, vaisselle. Exclu Literie des deux lits ainsi que les rideaux de douche.",
-      "exclusions": "",
-      "rooms": [
-        {
-          "name": "Cuisine",
-          "level": "2ième étage",
-          "dimensions": "11.3x8.1 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salon",
-          "level": "2ième étage",
-          "dimensions": "11.3x6.11 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Chambre à coucher principale",
-          "level": "2ième étage",
-          "dimensions": "11.3x9.8 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "2ième étage",
-          "dimensions": "6.2x5.1 P",
-          "flooring": "Céramique"
-        }
-      ],
-      "taxes": {
-        "Total taxes": "1,662 $",
-        "Taxes municipales": "1,590 $",
-        "Taxes scolaires": "72 $",
-        "Bâtiment": "153,500 $",
-        "Évaluation totale": "153,500 $"
-      },
-      "additionalInfo": "Selon les informations disponibles, la location à court terme est permise par la copropriété et sa couverture d'assurance. L'acheteur devra toutefois effectuer ses propres vérifications quant aux autorisations et conditions applicables à l'usage projeté de l'immeuble. La copropriété compte actuellement trois espaces de stationnement pour les huit unités de l'immeuble, et l'aménagement de deux autres est prévu prochainement. Aucun des espaces de stationnement n'est attribué de façon exclusive à une unité en particulier. Selon les informations fournies par le vendeur, les espaces de stationnement disponibles sur le site et à proximité de l'immeuble sont suffisants pour répondre aux besoins des copropriétaires et de leurs visiteurs. Les animaux sont permis uniquement aux copropriétaires occupants, sauf exception préalablement autorisée par le syndicat. Les BBQ au propane sont autorisés. Les foyers au gaz sont interdits sur les balcons et terrasses. La location à court terme n'est pas permise. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
     {
       "uls": "26771434",
