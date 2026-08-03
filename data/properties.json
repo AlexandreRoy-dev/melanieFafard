@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-08-02T13:09:07.168799+00:00",
+  "generatedAt": "2026-08-03T14:27:53.365036+00:00",
   "listings": [
     {
       "uls": "15187483",
@@ -12,14 +12,14 @@
       "street": "1478-rue-milton",
       "title": "1478, Rue Milton - Québec (Aéroport)",
       "shareTitle": "Maison de plain-pied - 1478, Rue Milton, Québec (Aéroport)",
-      "price": "579 000 $",
+      "price": "",
       "address": "1478, Rue Milton",
       "cityLabel": "Québec (Aéroport)",
       "propertyType": "Maison de plain-pied",
       "size": "97.8 mc",
       "beds": "2",
       "baths": "2",
-      "sold": false,
+      "sold": true,
       "isNew": false,
       "description": "Magnifique propriété clé en main sise sur un vaste terrain sans voisin à l'arrière, offrant une intimité exceptionnelle dans un secteur recherché. Vous serez charmé par son aire de vie lumineuse, sa superbe cuisine avec îlot en granite, ses 2 chambres à coucher (poss. de 1 ou 2 supp.), ses 2 salles de bains, son sous-sol entièrement aménagé avec entrée indépendante offrant de multiples possibilités, ainsi que son garage attaché. Profitez d'un superbe terrain paysager avec terrasses, gazebo et coin feu. À proximité des parcs, des pistes cyclables et avec un accès rapide aux sentiers de motoneige, cette propriété impeccable saura vous séduire !",
       "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-sainte-foy-sillery-cap-rouge/maison-de-plain-pied-a-vendre/1478-rue-milton-15187483/",

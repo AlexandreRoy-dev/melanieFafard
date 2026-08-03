@@ -1,6 +1,6 @@
 {
   "generatedFrom": "scripts/update_map_pins.py",
-  "pinCount": 91,
+  "pinCount": 92,
   "pins": [
     {
       "lat": 46.82601,
@@ -640,6 +640,14 @@
       "area": "Chutes-Montmorency",
       "status": "vendu",
       "uls": "21270396"
+    },
+    {
+      "lat": 46.81033,
+      "lng": -71.39048,
+      "title": "Rue Milton",
+      "area": "Aéroport",
+      "status": "vendu",
+      "uls": "15187483"
     }
   ]
 }
