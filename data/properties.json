@@ -1,8 +1,131 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-08-06T13:52:34.680006+00:00",
+  "generatedAt": "2026-08-07T12:52:17.592397+00:00",
   "listings": [
+    {
+      "uls": "13802896",
+      "country": "ca",
+      "province": "qc",
+      "city": "quebec",
+      "sector": "beauport",
+      "street": "3882-boul-ste-anne-109",
+      "title": "3882, Boul. Ste-Anne, 109 - Québec (Chutes-Montmorency)",
+      "shareTitle": "Appartement - 3882, Boul. Ste-Anne, 109, Québec (Chutes-Montmorency)",
+      "price": "329 000 $",
+      "address": "3882, Boul. Ste-Anne, 109",
+      "cityLabel": "Québec (Chutes-Montmorency)",
+      "propertyType": "Appartement",
+      "size": "87.2 mc",
+      "beds": "2",
+      "baths": "2",
+      "sold": false,
+      "isNew": false,
+      "description": "Spacieux condo clé en main offrant des plafonds de 9 pieds, une aire de vie à concept ouvert et une cuisine moderne et fonctionnelle. La chambre principale vous séduira avec son walk-in, sa salle de bain attenante et son accès direct à un immense patio offrant une vue partielle sur le fleuve. En plus d'une deuxième salle de bain, le condo comprend une salle de lavage indépendante, un rangement à même l'unité et un second rangement au garage. Un stationnement intérieur et un stationnement extérieur sont inclus. Géré de façon exemplaire, l'immeuble est idéalement situé à proximité des chutes Montmorency, de l'Île d'Orléans et du Vieux-Québec.",
+      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-beauport/appartement-a-vendre/3882-boul-ste-anne-109-13802896/",
+      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/13802896",
+      "fallbackImage": "13802896.jpg",
+      "publicPath": "/ca/qc/quebec/beauport/3882-boul-ste-anne-109/",
+      "postalCode": "G1E3M3",
+      "datePosted": "2026/08/06",
+      "yearBuilt": "2011",
+      "livingArea": "87.2 mc",
+      "floorLevel": "Rez-de-chaussée",
+      "condoFees": "390 $ / mois",
+      "parking": "Extérieur, Au garage",
+      "highlights": {
+        "Année de construction": "2011",
+        "Superficie habitable": "87.2 mc",
+        "Niveau": "Rez-de-chaussée",
+        "Frais de copropriété": "390 $ / mois",
+        "Facilité d'accès": "Ascenseur",
+        "Stationnement (total)": "Extérieur, Au garage"
+      },
+      "details": {
+        "Équipement disponible": "Installation aspirateur central, Balcon privé, Échangeur d'air, Interphone, Porte de garage électrique, Thermopompe murale",
+        "Toiture": "Membrane élastomère",
+        "Zonage": "Résidentiel",
+        "Système d'égouts": "Municipal",
+        "Stationnement (total)": "Extérieur, Au garage",
+        "Énergie pour le chauffage": "Électricité",
+        "Fenêtres": "PVC",
+        "Approvisionnement en eau": "Municipalité",
+        "Facilité d'accès": "Ascenseur"
+      },
+      "inclusions": "Luminaires, habillage des fenêtres, meuble au mur dans la salle à manger, balayeuse centrale et accessoires, étagères dans la salle de lavage et la salle de rangement, thermopompe, toiles solaire du balcon. Exclu Lave-vaisselle",
+      "exclusions": "",
+      "rooms": [
+        {
+          "name": "Hall d'entrée/Vestibule",
+          "level": "1er niveau/RDC",
+          "dimensions": "8.3x3.10 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Cuisine",
+          "level": "1er niveau/RDC",
+          "dimensions": "12.3x9.0 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Salle à manger",
+          "level": "1er niveau/RDC",
+          "dimensions": "14.9x5.5 P",
+          "flooring": "Plancher flottant"
+        },
+        {
+          "name": "Salon",
+          "level": "1er niveau/RDC",
+          "dimensions": "14.9x11.1 P",
+          "flooring": "Plancher flottant"
+        },
+        {
+          "name": "Chambre à coucher principale",
+          "level": "1er niveau/RDC",
+          "dimensions": "13.10x11.1 P",
+          "flooring": "Plancher flottant"
+        },
+        {
+          "name": "Salle de bains",
+          "level": "1er niveau/RDC",
+          "dimensions": "9.10x4.11 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Bureau à domicile",
+          "level": "1er niveau/RDC",
+          "dimensions": "10.1x9.9 P",
+          "flooring": "Plancher flottant"
+        },
+        {
+          "name": "Salle de bains",
+          "level": "1er niveau/RDC",
+          "dimensions": "10.1x7.7 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Salle de lavage",
+          "level": "1er niveau/RDC",
+          "dimensions": "7.7x5.0 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Rangement",
+          "level": "1er niveau/RDC",
+          "dimensions": "6.2x5.11 P",
+          "flooring": "Céramique"
+        }
+      ],
+      "taxes": {
+        "Total taxes": "2,407 $",
+        "Taxes municipales": "2,268 $",
+        "Taxes scolaires": "139 $",
+        "Terrain": "41,000 $",
+        "Bâtiment": "185,000 $",
+        "Évaluation totale": "226,000 $"
+      },
+      "additionalInfo": "Seul le certificat de localisation de la partie privative produit par VRSB en 2015 sera fourni à l'ACHETEUR. Tout autre document exigé par le notaire sera aux frais de l'ACHETEUR. Stationnement intérieur No. 16 Stationnement extérieur No. 55 Rangement intérieur No. 9 Animaux permis : un seul animal domestique (chat ou chien) de petite taille par unité, avec règles strictes (aucun besoin sur les balcons, respect des aires désignées et absence de nuisance). Location court-terme non-permise. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitementbéquitable. Soyez également avisés qu'il vous sera possible de vous faire représenter parle titulaire de permis de votre choix."
+    },
     {
       "uls": "15187483",
       "country": "ca",
@@ -132,129 +255,6 @@
       "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
     {
-      "uls": "26771434",
-      "country": "ca",
-      "province": "qc",
-      "city": "levis",
-      "sector": "les-chutes-de-la-chaudiere-est",
-      "street": "1093a-rue-de-la-prairie",
-      "title": "1093A, Rue de la Prairie - Lévis (Saint-Jean-Chrysostome)",
-      "shareTitle": "Maison à étages - 1093A, Rue de la Prairie, Lévis (Saint-Jean-Chrysostome)",
-      "price": "",
-      "address": "1093A, Rue de la Prairie",
-      "cityLabel": "Lévis (Saint-Jean-Chrysostome)",
-      "propertyType": "Maison à étages",
-      "size": "91.4 mc",
-      "beds": "3",
-      "baths": "1",
-      "sold": true,
-      "isNew": false,
-      "description": "Magnifique condo de style maison de ville offrant 3 chambres et un espace de vie chaleureux et fonctionnel. Le rez-de-chaussée propose une aire ouverte regroupant le salon, la salle à manger, la cuisine ainsi qu'une salle d'eau. À l'étage, vous découvrirez une vaste chambre principale avec walk-in et une salle de bains idéale pour relaxer. Le sous-sol comprend une salle familiale, deux chambres supplémentaires. Profitez de 2 stationnements et d'un espace extérieur intime avec balcon et terrasse, parfait pour profiter de l'été. Frais de copropriété de seulement 70$/mois. Aucune restriction concernant les animaux.",
-      "proprioUrl": "https://propriodirect.com/chaudiere-appalaches/levis-les-chutes-de-la-chaudiere-est/maison-a-etages-a-vendre/1093a-rue-de-la-prairie-26771434/",
-      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/26771434",
-      "fallbackImage": "26771434.jpg",
-      "publicPath": "/ca/qc/levis/les-chutes-de-la-chaudiere-est/1093a-rue-de-la-prairie/",
-      "postalCode": "G6Z3C9",
-      "datePosted": "2026/05/21",
-      "yearBuilt": "1992",
-      "livingArea": "91.4 mc",
-      "floorLevel": "",
-      "condoFees": "70 $ / mois",
-      "parking": "Extérieur",
-      "highlights": {
-        "Année de construction": "1992",
-        "Superficie habitable": "91.4 mc",
-        "Frais de copropriété": "70 $ / mois"
-      },
-      "details": {
-        "Toiture": "Bardeaux d'asphalte",
-        "Stationnement (total)": "Extérieur",
-        "Zonage": "Résidentiel",
-        "Fenêtres": "PVC",
-        "Approvisionnement en eau": "Municipalité",
-        "Système d'égouts": "Municipal"
-      },
-      "inclusions": "Luminaires, habillage des fenêtres, 2 supports à téléviseur, tablettes en bois de la salle à manger et du salon sauf support en bois de la guitare, rangement du walk-in, réfrigérateur du sous-sol, table et deux banquettes de la terrasse. Exclu Lave-vaisselle, support en bois à guitare.",
-      "exclusions": "",
-      "rooms": [
-        {
-          "name": "Hall d'entrée/Vestibule",
-          "level": "1er niveau/RDC",
-          "dimensions": "4.4x4.2 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Cuisine",
-          "level": "1er niveau/RDC",
-          "dimensions": "9.7x9.2 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salle à manger",
-          "level": "1er niveau/RDC",
-          "dimensions": "11.11x9.2 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salon",
-          "level": "1er niveau/RDC",
-          "dimensions": "12.6x11.7 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salle d'eau",
-          "level": "1er niveau/RDC",
-          "dimensions": "7.3x3.0 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Chambre à coucher principale",
-          "level": "2ième étage",
-          "dimensions": "15.4x12.6 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Penderie (Walk-in)",
-          "level": "2ième étage",
-          "dimensions": "6.5x4.9 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "2ième étage",
-          "dimensions": "12.2x11.7 P",
-          "flooring": "Vinyle clic"
-        },
-        {
-          "name": "Salle familiale",
-          "level": "Sous-sol",
-          "dimensions": "13x9 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Chambre à coucher",
-          "level": "Sous-sol",
-          "dimensions": "12.3x9.7 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Rangement",
-          "level": "Sous-sol",
-          "dimensions": "9.8x9.6 P",
-          "flooring": "Plancher flottant"
-        }
-      ],
-      "taxes": {
-        "Total taxes": "2,557 $",
-        "Taxes municipales": "2,415 $",
-        "Taxes scolaires": "142 $",
-        "Terrain": "71,600 $",
-        "Bâtiment": "184,500 $",
-        "Évaluation totale": "256,100 $"
-      },
-      "additionalInfo": "Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
-    },
-    {
       "uls": "27739903",
       "country": "ca",
       "province": "qc",
@@ -375,121 +375,6 @@
         "Évaluation totale": "360,000 $"
       },
       "additionalInfo": "Nouveau certificat de localisation de la partie privative en commande. Chats et petits chiens permis. BBQ permis. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
-    },
-    {
-      "uls": "21270396",
-      "country": "ca",
-      "province": "qc",
-      "city": "quebec",
-      "sector": "beauport",
-      "street": "3882-boul-ste-anne-305",
-      "title": "3882, Boul. Ste-Anne, 305 - Québec (Chutes-Montmorency)",
-      "shareTitle": "Appartement - 3882, Boul. Ste-Anne, 305, Québec (Chutes-Montmorency)",
-      "price": "",
-      "address": "3882, Boul. Ste-Anne, 305",
-      "cityLabel": "Québec (Chutes-Montmorency)",
-      "propertyType": "Appartement",
-      "size": "87.4 mc",
-      "beds": "2",
-      "baths": "1",
-      "sold": true,
-      "isNew": false,
-      "description": "Superbe unité de coin située au dernier étage, offrant une vue remarquable sur le fleuve et l'Île d'Orléans. Baignée de lumière naturelle grâce à une fenestration abondante, cette propriété propose un espace de vie ouvert au design épuré, agrémenté de hauts plafonds. Deux chambres confortables et lumineuses, une cuisine ouverte et moderne, ainsi que des finitions soignées complètent l'ensemble. Profitez d'un vaste balcon, d'un garage intérieur, d'un stationnement extérieur et d'un rangement. Immeuble avec ascenseur, géré de façon impeccable, idéalement situé à proximité des chutes Montmorency, de l'Île d'Orléans et du Vieux-Québec.",
-      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-beauport/appartement-a-vendre/3882-boul-ste-anne-305-21270396/",
-      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/21270396",
-      "fallbackImage": "21270396.jpg",
-      "publicPath": "/ca/qc/quebec/beauport/3882-boul-ste-anne-305/",
-      "postalCode": "G1E3M3",
-      "datePosted": "2026/04/29",
-      "yearBuilt": "2011",
-      "livingArea": "87.4 mc",
-      "floorLevel": "3ième étage",
-      "condoFees": "391 $ / mois",
-      "parking": "Extérieur, Au garage",
-      "highlights": {
-        "Année de construction": "2011",
-        "Superficie habitable": "87.4 mc",
-        "Niveau": "3ième étage",
-        "Frais de copropriété": "391 $ / mois",
-        "Facilité d'accès": "Ascenseur",
-        "Stationnement (total)": "Extérieur, Au garage"
-      },
-      "details": {
-        "Équipement disponible": "Installation aspirateur central, Climatiseur mural, Échangeur d'air, Porte de garage électrique",
-        "Appareils en location": "Chauffe-eau",
-        "Zonage": "Résidentiel",
-        "Mode de chauffage": "Plinthes électriques",
-        "Vue": "Îles d'Orléans, Sur l'eau, Panoramique, Sur la ville",
-        "Garage": "Chauffé, Intégré",
-        "Système d'égouts": "Municipal",
-        "Stationnement (total)": "Extérieur, Au garage",
-        "Énergie pour le chauffage": "Électricité",
-        "Fenêtres": "PVC",
-        "Particularités": "Unité de coin",
-        "Approvisionnement en eau": "Municipalité",
-        "Facilité d'accès": "Ascenseur"
-      },
-      "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle, tablette de la salle à manger.",
-      "exclusions": "",
-      "rooms": [
-        {
-          "name": "Hall d'entrée/Vestibule",
-          "level": "3ième étage",
-          "dimensions": "10.2x4.4 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Cuisine",
-          "level": "3ième étage",
-          "dimensions": "10.11x8.11 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salle à manger",
-          "level": "3ième étage",
-          "dimensions": "10.9x9.9 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salon",
-          "level": "3ième étage",
-          "dimensions": "13.1x12.9 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Chambre à coucher principale",
-          "level": "3ième étage",
-          "dimensions": "12.7x10.11 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Chambre à coucher",
-          "level": "3ième étage",
-          "dimensions": "11.6x9.11 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "3ième étage",
-          "dimensions": "9.10x6.2 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salle de lavage",
-          "level": "3ième étage",
-          "dimensions": "9.4x4.11 P",
-          "flooring": "Céramique"
-        }
-      ],
-      "taxes": {
-        "Total taxes": "3,236 $",
-        "Taxes municipales": "3,014 $",
-        "Taxes scolaires": "222 $",
-        "Terrain": "41,500 $",
-        "Bâtiment": "284,500 $",
-        "Évaluation totale": "326,000 $"
-      },
-      "additionalInfo": "Animaux permis : un seul animal domestique (chat ou chien) de petite taille par unité, avec règles strictes (aucun besoin sur les balcons, respect des aires désignées et absence de nuisance). Location court-terme non-permise. Stationnement et rangement intérieur portent le no. 25 Stationnement extérieur: no. 48 Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     }
   ]
 }

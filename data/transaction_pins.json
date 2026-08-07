@@ -630,16 +630,14 @@
       "lng": -71.21504,
       "title": "Rue de la Prairie",
       "area": "Saint-Jean-Chrysostome",
-      "status": "vendu",
-      "uls": "26771434"
+      "status": "vendu"
     },
     {
       "lat": 46.88123,
       "lng": -71.15177,
       "title": "Boul. Ste-Anne",
       "area": "Chutes-Montmorency",
-      "status": "vendu",
-      "uls": "21270396"
+      "status": "vendu"
     },
     {
       "lat": 46.81033,
