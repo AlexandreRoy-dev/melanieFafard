@@ -1,14 +1,9 @@
 {
-  "generatedAt": "2026-08-07T12:52:17.593054+00:00",
+  "generatedAt": "2026-08-08T12:36:37.243694+00:00",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
   "includeSold": true,
   "maxListings": 30,
-  "removedStale": [
-    "/home/runner/work/melanieFafard/melanieFafard/assets/img/proprietes/21270396",
-    "/home/runner/work/melanieFafard/melanieFafard/assets/img/proprietes/21270396.jpg",
-    "/home/runner/work/melanieFafard/melanieFafard/assets/img/proprietes/26771434",
-    "/home/runner/work/melanieFafard/melanieFafard/assets/img/proprietes/26771434.jpg"
-  ],
+  "removedStale": [],
   "listings": [
     {
       "uls": "13802896",
