@@ -1,6 +1,6 @@
 {
   "generatedFrom": "scripts/update_map_pins.py",
-  "pinCount": 92,
+  "pinCount": 93,
   "pins": [
     {
       "lat": 46.82601,
@@ -646,6 +646,14 @@
       "area": "Aéroport",
       "status": "vendu",
       "uls": "15187483"
+    },
+    {
+      "lat": 46.81376,
+      "lng": -71.20204,
+      "title": "Rue du Porche",
+      "area": "Vieux-Québec/Cap-Blanc/Colline parlem.",
+      "status": "vendu",
+      "uls": "14816556"
     }
   ]
 }

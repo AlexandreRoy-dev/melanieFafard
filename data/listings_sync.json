@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T15:42:03.950049+00:00",
+  "generatedAt": "2026-09-11T15:43:43.642333+00:00",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
   "includeSold": true,
   "maxListings": 30,
@@ -36,13 +36,13 @@
         "25.jpg",
         "26.jpg"
       ],
-      "source": "centris",
+      "source": "proprio",
       "publicPath": "/ca/qc/quebec/la-cite-limoilou/205-rue-du-porche-411/",
       "ogShareImage": "assets/img/proprietes/14816556/og-share.jpg"
     },
     {
       "uls": "13802896",
-      "photoCount": 27,
+      "photoCount": 28,
       "photos": [
         "01.jpg",
         "02.jpg",
@@ -70,7 +70,8 @@
         "24.jpg",
         "25.jpg",
         "26.jpg",
-        "27.jpg"
+        "27.jpg",
+        "28.jpg"
       ],
       "source": "centris",
       "publicPath": "/ca/qc/quebec/beauport/3882-boul-ste-anne-109/",
