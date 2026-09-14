@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-09-13T15:29:10.274296+00:00",
+  "generatedAt": "2026-09-14T17:28:07.021932+00:00",
   "listings": [
     {
       "uls": "14816556",
@@ -213,134 +213,6 @@
         "Évaluation totale": "226,000 $"
       },
       "additionalInfo": "Seul le certificat de localisation de la partie privative produit par VRSB en 2015 sera fourni à l'ACHETEUR. Tout autre document exigé par le notaire sera aux frais de l'ACHETEUR. Stationnement intérieur No. 16 Stationnement extérieur No. 55 Rangement intérieur No. 9 Animaux permis : un seul animal domestique (chat ou chien) de petite taille par unité, avec règles strictes (aucun besoin sur les balcons, respect des aires désignées et absence de nuisance). Location court-terme non-permise. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitementbéquitable. Soyez également avisés qu'il vous sera possible de vous faire représenter parle titulaire de permis de votre choix."
-    },
-    {
-      "uls": "15187483",
-      "country": "ca",
-      "province": "qc",
-      "city": "quebec",
-      "sector": "sainte-foy-sillery-cap-rouge",
-      "street": "1478-rue-milton",
-      "title": "1478, Rue Milton - Québec (Aéroport)",
-      "shareTitle": "Maison de plain-pied - 1478, Rue Milton, Québec (Aéroport)",
-      "price": "",
-      "address": "1478, Rue Milton",
-      "cityLabel": "Québec (Aéroport)",
-      "propertyType": "Maison de plain-pied",
-      "size": "97.8 mc",
-      "beds": "2",
-      "baths": "2",
-      "sold": true,
-      "isNew": false,
-      "description": "Magnifique propriété clé en main sise sur un vaste terrain sans voisin à l'arrière, offrant une intimité exceptionnelle dans un secteur recherché. Vous serez charmé par son aire de vie lumineuse, sa superbe cuisine avec îlot en granite, ses 2 chambres à coucher (poss. de 1 ou 2 supp.), ses 2 salles de bains, son sous-sol entièrement aménagé avec entrée indépendante offrant de multiples possibilités, ainsi que son garage attaché. Profitez d'un superbe terrain paysager avec terrasses, gazebo et coin feu. À proximité des parcs, des pistes cyclables et avec un accès rapide aux sentiers de motoneige, cette propriété impeccable saura vous séduire !",
-      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-sainte-foy-sillery-cap-rouge/maison-de-plain-pied-a-vendre/1478-rue-milton-15187483/",
-      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/15187483",
-      "fallbackImage": "15187483.jpg",
-      "publicPath": "/ca/qc/quebec/sainte-foy-sillery-cap-rouge/1478-rue-milton/",
-      "postalCode": "G2G1T5",
-      "datePosted": "2026/07/08",
-      "yearBuilt": "1980",
-      "livingArea": "97.8 mc",
-      "floorLevel": "",
-      "condoFees": "",
-      "parking": "Extérieur, Au garage",
-      "highlights": {
-        "Année de construction": "1980",
-        "Superficie habitable": "97.8 mc",
-        "Garage": "Attaché"
-      },
-      "details": {
-        "Équipement disponible": "Installation aspirateur central, Climatiseur mural, Porte de garage électrique",
-        "Toiture": "Bardeaux d'asphalte",
-        "Zonage": "Résidentiel",
-        "Mode de chauffage": "Plinthes électriques",
-        "Garage": "Attaché",
-        "Système d'égouts": "Municipal",
-        "Stationnement (total)": "Extérieur, Au garage",
-        "Énergie pour le chauffage": "Électricité",
-        "Fenêtres": "PVC",
-        "Particularités": "Aucun voisin à l'arrière",
-        "Approvisionnement en eau": "Municipalité"
-      },
-      "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle, meuble suspendu de télévision au salon, tablette en bois de la chambre principale, étagère blanche de la salle de bain, établi dans l'atelier (pas étagères noires), balayeuse centrale et accessoires, gazebo extérieur, outils de jardinage et bois de chauffage dans le cabanon.",
-      "exclusions": "",
-      "rooms": [
-        {
-          "name": "Cuisine",
-          "level": "1er niveau/RDC",
-          "dimensions": "19.9x10.8 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salon",
-          "level": "1er niveau/RDC",
-          "dimensions": "14.3x11.3 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle à manger",
-          "level": "1er niveau/RDC",
-          "dimensions": "11.3x10.10 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Chambre à coucher principale",
-          "level": "1er niveau/RDC",
-          "dimensions": "11.10x11.1 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Chambre à coucher",
-          "level": "1er niveau/RDC",
-          "dimensions": "9.10x9.6 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "1er niveau/RDC",
-          "dimensions": "10.5x6.10 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salle familiale",
-          "level": "1er niveau/RDC",
-          "dimensions": "24.4x14.1 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Bureau à domicile",
-          "level": "1er niveau/RDC",
-          "dimensions": "12.4x10.3 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salle de lavage",
-          "level": "1er niveau/RDC",
-          "dimensions": "10.6x6.7 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "1er niveau/RDC",
-          "dimensions": "8.3x6.5 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Atelier",
-          "level": "1er niveau/RDC",
-          "dimensions": "14.1x12.11 P",
-          "flooring": "Plancher flottant"
-        }
-      ],
-      "taxes": {
-        "Total taxes": "4,060 $",
-        "Taxes municipales": "3,776 $",
-        "Taxes scolaires": "284 $",
-        "Terrain": "207,000 $",
-        "Bâtiment": "221,000 $",
-        "Évaluation totale": "428,000 $"
-      },
-      "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
     {
       "uls": "27739903",
