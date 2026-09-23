@@ -38,6 +38,18 @@ OG_WIDTH = 1200
 OG_HEIGHT = 630
 
 
+def salle_eau_count(raw: dict) -> str:
+    value = raw.get("sallesEau")
+    if value not in (None, "", "0", 0):
+        return str(value)
+    count = 0
+    for room in raw.get("rooms") or []:
+        name = (room.get("name") or "").lower().replace("’", "'")
+        if "salle d'eau" in name:
+            count += 1
+    return str(count) if count else ""
+
+
 def slugify(value: str) -> str:
     value = unicodedata.normalize("NFKD", value)
     value = value.encode("ascii", "ignore").decode("ascii")
@@ -116,13 +128,15 @@ def parse_agent_listings(html: str) -> list[dict]:
             card,
             re.IGNORECASE,
         )
-        beds = baths = None
+        beds = baths = salles_eau = None
         if numbers:
             nums = re.findall(r">\s*(\d+)\s*<", numbers[0])
             if len(nums) >= 1:
                 beds = nums[0]
             if len(nums) >= 2:
                 baths = nums[1]
+            if len(nums) >= 3:
+                salles_eau = nums[2]
 
         imgs = re.findall(
             r'(?:data-src|src)="(https://cdn\.propriodirect\.com/properties/[^"]+)"',
@@ -163,6 +177,7 @@ def parse_agent_listings(html: str) -> list[dict]:
                 else "",
                 "beds": beds,
                 "baths": baths,
+                "sallesEau": salles_eau,
                 "photoUrls": photo_urls,
             }
         )
@@ -877,6 +892,7 @@ def enrich_listing(raw: dict) -> dict:
     size = raw.get("size") or raw.get("livingArea") or ""
     beds = raw.get("beds") or raw.get("bedsFromSchema") or ""
     baths = raw.get("baths") or raw.get("bathsFromSchema") or ""
+    salles_eau = salle_eau_count(raw)
 
     return {
         **seo,
@@ -893,6 +909,7 @@ def enrich_listing(raw: dict) -> dict:
         "size": size,
         "beds": beds,
         "baths": baths,
+        "sallesEau": salles_eau,
         "description": raw.get("description") or "",
         "title": f"{title} - {raw['city']}" if raw.get("city") else title,
         "shareTitle": share_title,
@@ -937,6 +954,7 @@ def write_properties_registry(listings: list[dict]) -> Path:
                 "size": item["size"],
                 "beds": item["beds"],
                 "baths": item["baths"],
+                "sallesEau": item.get("sallesEau") or "",
                 "sold": item["sold"],
                 "isNew": item["isNew"],
                 "description": item.get("description") or "",

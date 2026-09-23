@@ -27,6 +27,18 @@ def asset_prefix(depth: int) -> str:
     return "../" * depth if depth else ""
 
 
+def salle_eau_count(listing: dict) -> str:
+    raw = listing.get("sallesEau")
+    if raw not in (None, "", "0", 0):
+        return str(raw)
+    count = 0
+    for room in listing.get("rooms") or []:
+        name = (room.get("name") or "").lower().replace("’", "'")
+        if "salle d'eau" in name:
+            count += 1
+    return str(count) if count else ""
+
+
 def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
     p = asset_prefix(depth)
     nav_items = [
@@ -207,6 +219,11 @@ def listing_card_html(listing: dict, depth: int = 0) -> str:
         meta_bits.append(
             f'<span><i class="bi bi-droplet"></i> {escape(str(listing["baths"]))} sdb</span>'
         )
+    sde = salle_eau_count(listing)
+    if sde:
+        meta_bits.append(
+            f'<span><i class="bi bi-droplet-half"></i> {escape(sde)} sde</span>'
+        )
     size_value = listing.get("livingArea") or listing.get("size")
     if size_value:
         meta_bits.append(
@@ -361,6 +378,11 @@ def generate_detail_page(listing: dict) -> None:
     if listing.get("baths"):
         meta_rows.append(
             f"<li><strong>Salles de bain</strong><span>{escape(str(listing['baths']))}</span></li>"
+        )
+    sde = salle_eau_count(listing)
+    if sde:
+        meta_rows.append(
+            f"<li><strong>Salles d'eau</strong><span>{escape(sde)}</span></li>"
         )
     size_value = listing.get("livingArea") or listing.get("size")
     if size_value:
