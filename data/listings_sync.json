@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-25T12:37:26.909333+00:00",
+  "generatedAt": "2026-09-22T16:07:11.305887+00:00",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
   "includeSold": true,
   "maxListings": 30,
   "removedStale": [],
   "listings": [
     {
-      "uls": "13802896",
-      "photoCount": 27,
+      "uls": "14816556",
+      "photoCount": 26,
       "photos": [
         "01.jpg",
         "02.jpg",
@@ -34,16 +34,15 @@
         "23.jpg",
         "24.jpg",
         "25.jpg",
-        "26.jpg",
-        "27.jpg"
+        "26.jpg"
       ],
-      "source": "centris",
-      "publicPath": "/ca/qc/quebec/beauport/3882-boul-ste-anne-109/",
-      "ogShareImage": "assets/img/proprietes/13802896/og-share.jpg"
+      "source": "proprio",
+      "publicPath": "/ca/qc/quebec/la-cite-limoilou/205-rue-du-porche-411/",
+      "ogShareImage": "assets/img/proprietes/14816556/og-share.jpg"
     },
     {
-      "uls": "15187483",
-      "photoCount": 39,
+      "uls": "13802896",
+      "photoCount": 28,
       "photos": [
         "01.jpg",
         "02.jpg",
@@ -72,22 +71,11 @@
         "25.jpg",
         "26.jpg",
         "27.jpg",
-        "28.jpg",
-        "29.jpg",
-        "30.jpg",
-        "31.jpg",
-        "32.jpg",
-        "33.jpg",
-        "34.jpg",
-        "35.jpg",
-        "36.jpg",
-        "37.jpg",
-        "38.jpg",
-        "39.jpg"
+        "28.jpg"
       ],
-      "source": "proprio",
-      "publicPath": "/ca/qc/quebec/sainte-foy-sillery-cap-rouge/1478-rue-milton/",
-      "ogShareImage": "assets/img/proprietes/15187483/og-share.jpg"
+      "source": "centris",
+      "publicPath": "/ca/qc/quebec/beauport/3882-boul-ste-anne-109/",
+      "ogShareImage": "assets/img/proprietes/13802896/og-share.jpg"
     },
     {
       "uls": "27739903",

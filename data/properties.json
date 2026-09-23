@@ -1,8 +1,96 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-08-25T12:37:26.874487+00:00",
+  "generatedAt": "2026-09-22T16:07:11.305139+00:00",
   "listings": [
+    {
+      "uls": "14816556",
+      "country": "ca",
+      "province": "qc",
+      "city": "quebec",
+      "sector": "la-cite-limoilou",
+      "street": "205-rue-du-porche-411",
+      "title": "205, Rue du Porche, 411 - Québec (Vieux-Québec/Cap-Blanc/Colline parlem.)",
+      "shareTitle": "Appartement - 205, Rue du Porche, 411, Québec (Vieux-Québec/Cap-Blanc/Colline parlem.)",
+      "price": "",
+      "address": "205, Rue du Porche, 411",
+      "cityLabel": "Québec (Vieux-Québec/Cap-Blanc/Colline parlem.)",
+      "propertyType": "Appartement",
+      "size": "48.2 mc",
+      "beds": "1",
+      "baths": "1",
+      "sold": true,
+      "isNew": false,
+      "description": "Charmant loft au cachet unique situé au coeur du Vieux-Québec. Entièrement meublé et équipé, il propose un bel espace de vie avec de beaux planchers de bois franc. Sa grande fenêtre et sa magnifique baie vitrée lui procurent une superbe luminosité ainsi qu'une vue partielle sur le fleuve Saint-Laurent. Fraîchement peint et prêt à vous accueillir, il est idéal comme pied-à-terre, petit cocon dans un décor enchanteur, ou pour un esprit libre et créatif à la recherche d'un lieu différent. Sa grande terrasse sur le toit offre un espace en plein air avec des points de vue exceptionnels. Stationnement couvert disponible en location à quelques pas.",
+      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-la-cite-limoilou/appartement-a-vendre/205-rue-du-porche-411-14816556/",
+      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/14816556",
+      "fallbackImage": "14816556.jpg",
+      "publicPath": "/ca/qc/quebec/la-cite-limoilou/205-rue-du-porche-411/",
+      "postalCode": "G1K8R9",
+      "datePosted": "2026/08/27",
+      "yearBuilt": "1986",
+      "livingArea": "48.2 mc",
+      "floorLevel": "4ième étage",
+      "condoFees": "312 $ / mois",
+      "parking": "",
+      "highlights": {
+        "Année de construction": "1986",
+        "Superficie habitable": "48.2 mc",
+        "Niveau": "4ième étage",
+        "Frais de copropriété": "312 $ / mois",
+        "Facilité d'accès": "Ascenseur"
+      },
+      "details": {
+        "Équipement disponible": "Baie vitrée, Interphone, Meublé",
+        "Zonage": "Résidentiel",
+        "Mode de chauffage": "Plinthes à convection, Plinthes électriques",
+        "Vue": "Sur l'eau, Sur la ville",
+        "Armoires": "Mélamine",
+        "Système d'égouts": "Municipal",
+        "Particularités": "Accès à l'eau",
+        "Énergie pour le chauffage": "Électricité",
+        "Fenêtres": "PVC",
+        "Approvisionnement en eau": "Municipalité",
+        "Facilité d'accès": "Ascenseur"
+      },
+      "inclusions": "Électroménagers, tout le contenu de la cuisine (vaisselle, ustensiles, petits électros, etc.), table, et chaise de cuisine, lit, literie, tapis, divan MUST (valeur de 1800 $), chaise en cuir noire, 2 tables d'appoint, coussins, téléviseur et 2 lampes sur pied, ventilateur, banc et tapis d'entrée, tapis et rideau de douche de la salle de bain, meuble de chevet brun.",
+      "exclusions": "",
+      "rooms": [
+        {
+          "name": "Hall d'entrée/Vestibule",
+          "level": "4ième étage",
+          "dimensions": "15.7x3.1 P",
+          "flooring": "Céramique"
+        },
+        {
+          "name": "Loft",
+          "level": "4ième étage",
+          "dimensions": "23x13 P",
+          "flooring": "Bois"
+        },
+        {
+          "name": "Cuisine",
+          "level": "4ième étage",
+          "dimensions": "8.6x8.5 P",
+          "flooring": "Bois"
+        },
+        {
+          "name": "Salle de bains",
+          "level": "4ième étage",
+          "dimensions": "8.8x6.0 P",
+          "flooring": "Céramique"
+        }
+      ],
+      "taxes": {
+        "Total taxes": "2,239 $",
+        "Taxes municipales": "2,111 $",
+        "Taxes scolaires": "128 $",
+        "Terrain": "21,000 $",
+        "Bâtiment": "184,000 $",
+        "Évaluation totale": "205,000 $"
+      },
+      "additionalInfo": "Espace de rangement à même l'étage du condo, à seulement quelques pas. La buanderie, située au 2e étage, n'est utilisée que par les propriétaires qui n'ont pas de laveuse-sécheuse dans leur unité. Les machines fonctionnement avec de la monnaie. Possibilité de louer un espace de stationnement couvert tout près de l'immeuble à la place des Canotiers, au coût de 115$/mois. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
+    },
     {
       "uls": "13802896",
       "country": "ca",
@@ -12,7 +100,7 @@
       "street": "3882-boul-ste-anne-109",
       "title": "3882, Boul. Ste-Anne, 109 - Québec (Chutes-Montmorency)",
       "shareTitle": "Appartement - 3882, Boul. Ste-Anne, 109, Québec (Chutes-Montmorency)",
-      "price": "329 000 $",
+      "price": "324 900 $",
       "address": "3882, Boul. Ste-Anne, 109",
       "cityLabel": "Québec (Chutes-Montmorency)",
       "propertyType": "Appartement",
@@ -21,7 +109,7 @@
       "baths": "2",
       "sold": false,
       "isNew": false,
-      "description": "Spacieux condo clé en main offrant des plafonds de 9 pieds, une aire de vie à concept ouvert et une cuisine moderne et fonctionnelle. La chambre principale vous séduira avec son walk-in, sa salle de bain attenante et son accès direct à un immense patio offrant une vue partielle sur le fleuve. En plus d'une deuxième salle de bain, le condo comprend une salle de lavage indépendante, un rangement à même l'unité et un second rangement au garage. Un stationnement intérieur et un stationnement extérieur sont inclus. Géré de façon exemplaire, l'immeuble est idéalement situé à proximité des chutes Montmorency, de l'Île d'Orléans et du Vieux-Québec.",
+      "description": "Spacieux condo clé en main offrant près de 940 pi², des plafonds de 9 pieds et une aire de vie ouverte. La chambre principale comprend un walk-in, une salle de bain attenante et un accès direct au grand patio avec vue partielle sur le Fleuve. Deux salles de bain, salle de lavage indépendante, nombreux rangements et deux stationnements, dont un au garage. Profitez également de la piste cyclable longeant le fleuve, accessible à proximité immédiate de l'immeuble, idéale pour les promenades et les sorties à vélo. À quelques minutes des Chutes Montmorency, de l'Île d'Orléans et du Vieux-Québec.",
       "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-beauport/appartement-a-vendre/3882-boul-ste-anne-109-13802896/",
       "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/13802896",
       "fallbackImage": "13802896.jpg",
@@ -125,134 +213,6 @@
         "Évaluation totale": "226,000 $"
       },
       "additionalInfo": "Seul le certificat de localisation de la partie privative produit par VRSB en 2015 sera fourni à l'ACHETEUR. Tout autre document exigé par le notaire sera aux frais de l'ACHETEUR. Stationnement intérieur No. 16 Stationnement extérieur No. 55 Rangement intérieur No. 9 Animaux permis : un seul animal domestique (chat ou chien) de petite taille par unité, avec règles strictes (aucun besoin sur les balcons, respect des aires désignées et absence de nuisance). Location court-terme non-permise. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitementbéquitable. Soyez également avisés qu'il vous sera possible de vous faire représenter parle titulaire de permis de votre choix."
-    },
-    {
-      "uls": "15187483",
-      "country": "ca",
-      "province": "qc",
-      "city": "quebec",
-      "sector": "sainte-foy-sillery-cap-rouge",
-      "street": "1478-rue-milton",
-      "title": "1478, Rue Milton - Québec (Aéroport)",
-      "shareTitle": "Maison de plain-pied - 1478, Rue Milton, Québec (Aéroport)",
-      "price": "",
-      "address": "1478, Rue Milton",
-      "cityLabel": "Québec (Aéroport)",
-      "propertyType": "Maison de plain-pied",
-      "size": "97.8 mc",
-      "beds": "2",
-      "baths": "2",
-      "sold": true,
-      "isNew": false,
-      "description": "Magnifique propriété clé en main sise sur un vaste terrain sans voisin à l'arrière, offrant une intimité exceptionnelle dans un secteur recherché. Vous serez charmé par son aire de vie lumineuse, sa superbe cuisine avec îlot en granite, ses 2 chambres à coucher (poss. de 1 ou 2 supp.), ses 2 salles de bains, son sous-sol entièrement aménagé avec entrée indépendante offrant de multiples possibilités, ainsi que son garage attaché. Profitez d'un superbe terrain paysager avec terrasses, gazebo et coin feu. À proximité des parcs, des pistes cyclables et avec un accès rapide aux sentiers de motoneige, cette propriété impeccable saura vous séduire !",
-      "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-sainte-foy-sillery-cap-rouge/maison-de-plain-pied-a-vendre/1478-rue-milton-15187483/",
-      "centrisUrl": "https://www.centris.ca/fr/propriete~a-vendre/15187483",
-      "fallbackImage": "15187483.jpg",
-      "publicPath": "/ca/qc/quebec/sainte-foy-sillery-cap-rouge/1478-rue-milton/",
-      "postalCode": "G2G1T5",
-      "datePosted": "2026/07/08",
-      "yearBuilt": "1980",
-      "livingArea": "97.8 mc",
-      "floorLevel": "",
-      "condoFees": "",
-      "parking": "Extérieur, Au garage",
-      "highlights": {
-        "Année de construction": "1980",
-        "Superficie habitable": "97.8 mc",
-        "Garage": "Attaché"
-      },
-      "details": {
-        "Équipement disponible": "Installation aspirateur central, Climatiseur mural, Porte de garage électrique",
-        "Toiture": "Bardeaux d'asphalte",
-        "Zonage": "Résidentiel",
-        "Mode de chauffage": "Plinthes électriques",
-        "Garage": "Attaché",
-        "Système d'égouts": "Municipal",
-        "Stationnement (total)": "Extérieur, Au garage",
-        "Énergie pour le chauffage": "Électricité",
-        "Fenêtres": "PVC",
-        "Particularités": "Aucun voisin à l'arrière",
-        "Approvisionnement en eau": "Municipalité"
-      },
-      "inclusions": "Luminaires, habillage des fenêtres, lave-vaisselle, meuble suspendu de télévision au salon, tablette en bois de la chambre principale, étagère blanche de la salle de bain, établi dans l'atelier (pas étagères noires), balayeuse centrale et accessoires, gazebo extérieur, outils de jardinage et bois de chauffage dans le cabanon.",
-      "exclusions": "",
-      "rooms": [
-        {
-          "name": "Cuisine",
-          "level": "1er niveau/RDC",
-          "dimensions": "19.9x10.8 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salon",
-          "level": "1er niveau/RDC",
-          "dimensions": "14.3x11.3 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle à manger",
-          "level": "1er niveau/RDC",
-          "dimensions": "11.3x10.10 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Chambre à coucher principale",
-          "level": "1er niveau/RDC",
-          "dimensions": "11.10x11.1 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Chambre à coucher",
-          "level": "1er niveau/RDC",
-          "dimensions": "9.10x9.6 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "1er niveau/RDC",
-          "dimensions": "10.5x6.10 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Salle familiale",
-          "level": "1er niveau/RDC",
-          "dimensions": "24.4x14.1 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Bureau à domicile",
-          "level": "1er niveau/RDC",
-          "dimensions": "12.4x10.3 P",
-          "flooring": "Plancher flottant"
-        },
-        {
-          "name": "Salle de lavage",
-          "level": "1er niveau/RDC",
-          "dimensions": "10.6x6.7 P",
-          "flooring": "Bois"
-        },
-        {
-          "name": "Salle de bains",
-          "level": "1er niveau/RDC",
-          "dimensions": "8.3x6.5 P",
-          "flooring": "Céramique"
-        },
-        {
-          "name": "Atelier",
-          "level": "1er niveau/RDC",
-          "dimensions": "14.1x12.11 P",
-          "flooring": "Plancher flottant"
-        }
-      ],
-      "taxes": {
-        "Total taxes": "4,060 $",
-        "Taxes municipales": "3,776 $",
-        "Taxes scolaires": "284 $",
-        "Terrain": "207,000 $",
-        "Bâtiment": "221,000 $",
-        "Évaluation totale": "428,000 $"
-      },
-      "additionalInfo": "Nouveau certificat de localisation en commande. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     },
     {
       "uls": "27739903",
@@ -375,7 +335,7 @@
         "Bâtiment": "320,500 $",
         "Évaluation totale": "360,000 $"
       },
-      "additionalInfo": "Nouveau certificat de localisation de la partie privative en commande. Chats et petits chiens permis. BBQ permis. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
+      "additionalInfo": "Chats et petits chiens permis. BBQ permis. Acheteurs, soyez informés que le courtier étant lié par contrat de courtage avec le vendeur, protège et promeut les intérêts de son client. Il vous donnera un traitement équitable. Soyez également avisés qu'il vous sera possible de vous faire représenter par le titulaire de permis de votre choix."
     }
   ]
 }
