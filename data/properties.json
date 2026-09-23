@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-09-22T16:07:11.305139+00:00",
+  "generatedAt": "2026-09-23T15:58:02.405850+00:00",
   "listings": [
     {
       "uls": "14816556",
@@ -19,6 +19,7 @@
       "size": "48.2 mc",
       "beds": "1",
       "baths": "1",
+      "sallesEau": "",
       "sold": true,
       "isNew": false,
       "description": "Charmant loft au cachet unique situé au coeur du Vieux-Québec. Entièrement meublé et équipé, il propose un bel espace de vie avec de beaux planchers de bois franc. Sa grande fenêtre et sa magnifique baie vitrée lui procurent une superbe luminosité ainsi qu'une vue partielle sur le fleuve Saint-Laurent. Fraîchement peint et prêt à vous accueillir, il est idéal comme pied-à-terre, petit cocon dans un décor enchanteur, ou pour un esprit libre et créatif à la recherche d'un lieu différent. Sa grande terrasse sur le toit offre un espace en plein air avec des points de vue exceptionnels. Stationnement couvert disponible en location à quelques pas.",
@@ -107,6 +108,7 @@
       "size": "87.2 mc",
       "beds": "2",
       "baths": "2",
+      "sallesEau": "",
       "sold": false,
       "isNew": false,
       "description": "Spacieux condo clé en main offrant près de 940 pi², des plafonds de 9 pieds et une aire de vie ouverte. La chambre principale comprend un walk-in, une salle de bain attenante et un accès direct au grand patio avec vue partielle sur le Fleuve. Deux salles de bain, salle de lavage indépendante, nombreux rangements et deux stationnements, dont un au garage. Profitez également de la piste cyclable longeant le fleuve, accessible à proximité immédiate de l'immeuble, idéale pour les promenades et les sorties à vélo. À quelques minutes des Chutes Montmorency, de l'Île d'Orléans et du Vieux-Québec.",
@@ -230,7 +232,7 @@
       "size": "109.4 mc",
       "beds": "2",
       "baths": "1",
-      "sallesEau": "1",
+      "sallesEau": "",
       "sold": false,
       "isNew": false,
       "description": "Magnifique condo situé dans le très recherché secteur de Lebourgneuf ! Occupant une position privilégiée au dernier étage, sur le coin arrière de l'immeuble, il vous séduira par sa tranquillité et sa luminosité abondante.Son vaste espace de vie à aire ouverte propose un décor contemporain et invitant. Offrant une cuisine moderne avec îlot, 2 chambres confortables, une salle de bain complète ainsi qu'une salle d'eau avec espace lavage, ce condo dispose aussi d'un agréable balcon avec vue apaisante, de deux espaces de rangement et d'un stationnement au garage intérieur. Excellente gestion de la copropriété. Une occasion à ne pas manquer !",
