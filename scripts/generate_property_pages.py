@@ -112,6 +112,7 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
           <li><i class="bi bi-chevron-right"></i> <a href="{p}proprietes.html">Propriétés</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}temoignages.html">Témoignages</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}index.html#contact">Contact</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="{p}politique-de-confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
       <div class="col-lg-2 col-md-3 footer-links">
@@ -135,7 +136,7 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
     </div>
   </div>
   <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">Mélanie Fafard</strong> <span>Tous droits réservés</span> - Conception web par <a href="https://roymarketing.ca/">Roy Marketing</a></p>
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Mélanie Fafard</strong> <span>Tous droits réservés</span> - Conception web par <a href="https://roymarketing.ca/">Roy Marketing</a> · <a href="{p}politique-de-confidentialite.html">Politique de confidentialité</a></p>
   </div>
 </footer>
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -145,6 +146,7 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
 <script src="{p}assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="{p}assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="{p}assets/js/main.js"></script>
+<script src="{p}assets/js/cookie-consent.js"></script>
 <a href="https://m.me/melanie.fafard.865146" class="messenger-float" target="_blank" title="Discuter sur Messenger"><i class="bi bi-messenger"></i></a>"""
 
     return header, footer
