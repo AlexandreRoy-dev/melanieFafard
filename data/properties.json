@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-10-18T15:15:10.772611+00:00",
+  "generatedAt": "2026-10-19T18:11:55.100522+00:00",
   "listings": [
     {
       "uls": "21078820",
@@ -12,7 +12,7 @@
       "street": "164-rue-de-la-dentelliere",
       "title": "164, Rue de la Dentellière - Saint-Augustin-de-Desmaures (Ouest)",
       "shareTitle": "Maison à paliers multiples - 164, Rue de la Dentellière, Saint-Augustin-de-Desmaures (Ouest)",
-      "price": "449 000 $",
+      "price": "",
       "address": "164, Rue de la Dentellière",
       "cityLabel": "Saint-Augustin-de-Desmaures (Ouest)",
       "propertyType": "Maison à paliers multiples",
@@ -20,7 +20,7 @@
       "beds": "3",
       "baths": "2",
       "sallesEau": "",
-      "sold": false,
+      "sold": true,
       "isNew": false,
       "description": "Jolie maison à paliers soigneusement entretenue par ses propriétaires depuis 20 ans! Située dans un secteur familial, à proximité des écoles primaire et secondaire des Pionniers, du parc Delphis-Marois et de tous les services. Vous apprécierez son salon avec plafond cathédrale, sa cuisine fonctionnelle et ses trois chambres de belles dimensions, dont une au sous-sol. Deux salles de bain, une salle familiale et un atelier pratique complètent l'espace intérieur. À l'extérieur, vous profiterez d'un terrain aménagé de plus de 7 500 pi² avec patio, piscine hors terre 18' et cabanon. Une propriété accueillante, idéale pour la famille!",
       "proprioUrl": "https://propriodirect.com/capitale-nationale/saint-augustin-de-desmaures/maison-a-paliers-multiples-a-vendre/164-rue-de-la-dentelliere-21078820/",

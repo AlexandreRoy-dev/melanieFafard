@@ -1,6 +1,6 @@
 {
   "generatedFrom": "scripts/update_map_pins.py",
-  "pinCount": 93,
+  "pinCount": 94,
   "pins": [
     {
       "lat": 46.82601,
@@ -652,6 +652,14 @@
       "title": "Rue du Porche",
       "area": "Vieux-Québec/Cap-Blanc/Colline parlem.",
       "status": "vendu"
+    },
+    {
+      "lat": 46.74088,
+      "lng": -71.46403,
+      "title": "Rue de la Dentellière",
+      "area": "Ouest",
+      "status": "vendu",
+      "uls": "21078820"
     }
   ]
 }
