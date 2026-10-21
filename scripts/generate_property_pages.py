@@ -27,6 +27,87 @@ def asset_prefix(depth: int) -> str:
     return "../" * depth if depth else ""
 
 
+def clip_meta_description(text: str, limit: int = 155) -> str:
+    """SERP description: one sentence or a word boundary, under `limit` characters."""
+    cleaned = re.sub(r"\s+", " ", (text or "").replace("\u00a0", " ")).strip()
+    cleaned = cleaned.replace("\u2014", ", ").replace("\u2013", ", ")
+    cleaned = re.sub(r"\s+,", ",", cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned).strip()
+    if len(cleaned) <= limit:
+        return cleaned
+    best = ""
+    for match in re.finditer(r"[.!?]", cleaned[: limit + 1]):
+        end = match.end()
+        if end <= limit:
+            candidate = cleaned[:end].strip()
+            if len(candidate) >= 40:
+                best = candidate
+    if best:
+        return best
+    clipped = cleaned[:limit]
+    if " " in clipped:
+        clipped = clipped.rsplit(" ", 1)[0]
+    return clipped.rstrip(" ,;:")
+
+
+def agent_json_ld() -> str:
+    return """  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "@id": "https://melaniefafardimmo.com/#courtiere",
+    "name": "Mélanie Fafard",
+    "legalName": "Mélanie Fafard Immobilier Inc.",
+    "url": "https://melaniefafardimmo.com/",
+    "image": [
+      "https://melaniefafardimmo.com/assets/img/herobanner.webp",
+      "https://melaniefafardimmo.com/assets/img/about1.webp"
+    ],
+    "logo": "https://melaniefafardimmo.com/assets/img/logo.svg",
+    "telephone": "+1-581-305-4442",
+    "email": "mfafardimmobilier@gmail.com",
+    "description": "Courtière immobilière résidentielle à Québec et Lévis, bannière Proprio Direct. Vente, achat et évaluation.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Québec",
+      "addressRegion": "QC",
+      "addressCountry": "CA"
+    },
+    "areaServed": [
+      "Québec",
+      "Lévis",
+      "St-Augustin-de-Desmaures",
+      "Ste-Foy-Sillery-Cap-Rouge",
+      "Les Rivières",
+      "La Haute-St-Charles",
+      "La Cité-Limoilou",
+      "Charlesbourg",
+      "Saint-Jean-Chrysostome",
+      "Beauport",
+      "Lac-Beauport",
+      "Shannon",
+      "Stoneham-et-Tewkesbury",
+      "St-Nicolas",
+      "Charny",
+      "St-Romuald",
+      "Desjardins"
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": "Proprio Direct"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61575817391811",
+      "https://www.instagram.com/melaniefafardimmo/",
+      "https://x.com/mfafardimmo",
+      "https://www.linkedin.com/in/m%C3%A9lanie-fafard-b595672a9/",
+      "https://propriodirect.com/melanie-fafard"
+    ]
+  }
+  </script>
+"""
+
+
 def salle_eau_count(listing: dict) -> str:
     raw = listing.get("sallesEau")
     if raw not in (None, "", "0", 0):
@@ -42,13 +123,13 @@ def salle_eau_count(listing: dict) -> str:
 def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
     p = asset_prefix(depth)
     nav_items = [
-        ("accueil", f"{p}index.html", "Accueil"),
+        ("accueil", "/", "Accueil"),
         ("apropos", f"{p}apropos.html", "À propos"),
         ("proprietes", f"{p}proprietes.html", "Propriétés"),
         ("services", f"{p}services.html", "Services"),
         ("programmes", f"{p}programmes.html", "Programmes"),
         ("temoignages", f"{p}temoignages.html", "Témoignages"),
-        ("contact", f"{p}index.html#contact", "Contact"),
+        ("contact", "/#contact", "Contact"),
     ]
 
     def nav_class(key: str) -> str:
@@ -61,7 +142,7 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
 
     header = f"""<header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-    <a href="{p}index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+    <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
       <img src="{p}assets/img/logo.svg" alt="Mélanie Fafard" class="header-logo">
     </a>
     <nav id="navmenu" class="navmenu">
@@ -96,7 +177,7 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
   <div class="container footer-top">
     <div class="row gy-4">
       <div class="col-lg-4 col-md-6 footer-about">
-        <a href="{p}index.html" class="d-flex align-items-center"><span class="sitename">Mélanie Fafard</span></a>
+        <a href="/" class="d-flex align-items-center"><span class="sitename">Mélanie Fafard</span></a>
         <div class="footer-contact pt-3">
           <p>Québec &amp; Lévis</p>
           <p>Secteurs résidentiels et investissements</p>
@@ -107,11 +188,11 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
       <div class="col-lg-2 col-md-3 footer-links">
         <h4>Navigation</h4>
         <ul>
-          <li><i class="bi bi-chevron-right"></i> <a href="{p}index.html#hero">Accueil</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="/#hero">Accueil</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}apropos.html">À propos</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}proprietes.html">Propriétés</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}temoignages.html">Témoignages</a></li>
-          <li><i class="bi bi-chevron-right"></i> <a href="{p}index.html#contact">Contact</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="/#contact">Contact</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}politique-de-confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
@@ -198,6 +279,7 @@ def head_block(
   <meta name="twitter:description" content="{escape(description)}">
   <meta name="twitter:image" content="{escape(og_image)}">
   <meta name="twitter:image:alt" content="{escape(title)}">
+{agent_json_ld()}
 {extra}
 </head>"""
 
@@ -362,9 +444,9 @@ def generate_detail_page(listing: dict) -> None:
     canonical = BASE_URL + path
     og_image = f"{BASE_URL}/assets/img/proprietes/{listing['uls']}/og-share.jpg"
     fallback = f"{p}assets/img/proprietes/{listing['fallbackImage']}"
-    description = listing.get("description") or listing.get("shareTitle") or listing.get("title")
-    if len(description) > 300:
-        description = description[:297].rstrip() + "…"
+    description = clip_meta_description(
+        listing.get("description") or listing.get("shareTitle") or listing.get("title") or ""
+    )
 
     badge = ""
     if listing.get("sold"):
@@ -437,7 +519,7 @@ def generate_detail_page(listing: dict) -> None:
     else:
         actions_html = f"""
             <div class="property-actions">
-              <a class="btn-primary" href="{p}index.html#contact">Demander une visite</a>
+              <a class="btn-primary" href="/#contact">Demander une visite</a>
               <a class="btn-outline" href="{escape(listing.get('proprioUrl') or '#')}" target="_blank" rel="noopener">Voir sur Proprio Direct</a>
               <a class="btn-outline" href="{escape(listing.get('centrisUrl') or '#')}" target="_blank" rel="noopener">Voir sur Centris</a>
             </div>"""
@@ -666,6 +748,37 @@ def update_nav_links() -> None:
             print(f"updated Propriétés links in {path.name}")
 
 
+STATIC_SITEMAP = [
+    f"{BASE_URL}/",
+    f"{BASE_URL}/apropos.html",
+    f"{BASE_URL}/proprietes.html",
+    f"{BASE_URL}/services.html",
+    f"{BASE_URL}/programmes.html",
+    f"{BASE_URL}/temoignages.html",
+    f"{BASE_URL}/article-acheteroulouer.html",
+    f"{BASE_URL}/article-homestaging.html",
+    f"{BASE_URL}/article-levis.html",
+    f"{BASE_URL}/politique-de-confidentialite.html",
+]
+
+
+def write_sitemap(registry: dict) -> None:
+    urls = list(STATIC_SITEMAP)
+    for listing in registry.get("listings", []):
+        urls.append(BASE_URL + public_path(listing))
+    body = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for url in urls:
+        body.append("  <url>")
+        body.append(f"    <loc>{escape(url)}</loc>")
+        body.append("  </url>")
+    body.append("</urlset>")
+    (ROOT / "sitemap.xml").write_text("\n".join(body) + "\n", encoding="utf-8")
+    print(f"wrote sitemap.xml ({len(urls)} urls)")
+
+
 def generate_all() -> None:
     registry = load_registry()
     generate_listings_page(registry)
@@ -673,6 +786,7 @@ def generate_all() -> None:
         generate_detail_page(listing)
     prune_stale_detail_pages(registry)
     update_nav_links()
+    write_sitemap(registry)
 
 
 if __name__ == "__main__":
