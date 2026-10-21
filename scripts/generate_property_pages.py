@@ -42,13 +42,13 @@ def salle_eau_count(listing: dict) -> str:
 def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
     p = asset_prefix(depth)
     nav_items = [
-        ("accueil", f"{p}index.html", "Accueil"),
+        ("accueil", "/", "Accueil"),
         ("apropos", f"{p}apropos.html", "À propos"),
         ("proprietes", f"{p}proprietes.html", "Propriétés"),
         ("services", f"{p}services.html", "Services"),
         ("programmes", f"{p}programmes.html", "Programmes"),
         ("temoignages", f"{p}temoignages.html", "Témoignages"),
-        ("contact", f"{p}index.html#contact", "Contact"),
+        ("contact", "/#contact", "Contact"),
     ]
 
     def nav_class(key: str) -> str:
@@ -61,7 +61,7 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
 
     header = f"""<header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-    <a href="{p}index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+    <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
       <img src="{p}assets/img/logo.svg" alt="Mélanie Fafard" class="header-logo">
     </a>
     <nav id="navmenu" class="navmenu">
@@ -96,7 +96,7 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
   <div class="container footer-top">
     <div class="row gy-4">
       <div class="col-lg-4 col-md-6 footer-about">
-        <a href="{p}index.html" class="d-flex align-items-center"><span class="sitename">Mélanie Fafard</span></a>
+        <a href="/" class="d-flex align-items-center"><span class="sitename">Mélanie Fafard</span></a>
         <div class="footer-contact pt-3">
           <p>Québec &amp; Lévis</p>
           <p>Secteurs résidentiels et investissements</p>
@@ -107,11 +107,11 @@ def site_chrome(active: str, depth: int = 0) -> tuple[str, str]:
       <div class="col-lg-2 col-md-3 footer-links">
         <h4>Navigation</h4>
         <ul>
-          <li><i class="bi bi-chevron-right"></i> <a href="{p}index.html#hero">Accueil</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="/#hero">Accueil</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}apropos.html">À propos</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}proprietes.html">Propriétés</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}temoignages.html">Témoignages</a></li>
-          <li><i class="bi bi-chevron-right"></i> <a href="{p}index.html#contact">Contact</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="/#contact">Contact</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="{p}politique-de-confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
@@ -437,7 +437,7 @@ def generate_detail_page(listing: dict) -> None:
     else:
         actions_html = f"""
             <div class="property-actions">
-              <a class="btn-primary" href="{p}index.html#contact">Demander une visite</a>
+              <a class="btn-primary" href="/#contact">Demander une visite</a>
               <a class="btn-outline" href="{escape(listing.get('proprioUrl') or '#')}" target="_blank" rel="noopener">Voir sur Proprio Direct</a>
               <a class="btn-outline" href="{escape(listing.get('centrisUrl') or '#')}" target="_blank" rel="noopener">Voir sur Centris</a>
             </div>"""
