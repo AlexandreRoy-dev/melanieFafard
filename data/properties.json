@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://melaniefafardimmo.com",
   "agentUrl": "https://propriodirect.com/melanie-fafard",
-  "generatedAt": "2026-10-26T18:07:04.736928+00:00",
+  "generatedAt": "2026-10-27T17:17:19.524548+00:00",
   "listings": [
     {
       "uls": "21078820",
@@ -250,7 +250,7 @@
       "street": "205-rue-du-porche-506",
       "title": "205, Rue du Porche, 506 - Québec (Vieux-Québec/Cap-Blanc/Colline parlem.)",
       "shareTitle": "Appartement - 205, Rue du Porche, 506, Québec (Vieux-Québec/Cap-Blanc/Colline parlem.)",
-      "price": "279 500 $",
+      "price": "",
       "address": "205, Rue du Porche, 506",
       "cityLabel": "Québec (Vieux-Québec/Cap-Blanc/Colline parlem.)",
       "propertyType": "Appartement",
@@ -258,7 +258,7 @@
       "beds": "1",
       "baths": "1",
       "sallesEau": "",
-      "sold": false,
+      "sold": true,
       "isNew": false,
       "description": "Élégant condo situé au dernier étage d'un immeuble de qualité supérieure au coeur du Vieux-Québec (Place Royale-Vieux-Port) à deux pas du fleuve, de la traverse, des activités maritimes et culturelles, et d'un vaste choix de restaurants. Cette unité d'une chambre est vendue entièrement meublée et équipée et comprend un stationnement et un rangement intérieurs et un coin lavage. Profitez d'une terrasse commune sur le toit avec vue panoramique sur le fleuve et le Château Frontenac. Idéal comme pied-à-terre, résidence pour étudiant ou travailleur, chalet urbain ou investissement. Une occasion unique de vivre le Vieux-Québec à son meilleur !",
       "proprioUrl": "https://propriodirect.com/capitale-nationale/quebec-la-cite-limoilou/appartement-a-vendre/205-rue-du-porche-506-16582662/",
