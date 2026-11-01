@@ -1,6 +1,6 @@
 {
   "generatedFrom": "scripts/update_map_pins.py",
-  "pinCount": 94,
+  "pinCount": 96,
   "pins": [
     {
       "lat": 46.82601,
@@ -651,16 +651,30 @@
       "lng": -71.20204,
       "title": "Rue du Porche",
       "area": "Vieux-Québec/Cap-Blanc/Colline parlem.",
-      "status": "vendu",
-      "uls": "16582662"
+      "status": "vendu"
     },
     {
       "lat": 46.74088,
       "lng": -71.46403,
       "title": "Rue de la Dentellière",
       "area": "Ouest",
+      "status": "vendu"
+    },
+    {
+      "lat": 46.74088,
+      "lng": -71.46403,
+      "title": "Rue de la Dentellière",
+      "area": "Saint-Augustin-de-Desmaures",
       "status": "vendu",
       "uls": "21078820"
+    },
+    {
+      "lat": 46.81376,
+      "lng": -71.20204,
+      "title": "Rue du Porche",
+      "area": "La Cité-Limoilou",
+      "status": "vendu",
+      "uls": "16582662"
     }
   ]
 }
